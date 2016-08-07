@@ -58,11 +58,11 @@ function loadJS(url, callback, el) {
  */
 
 var duoshuoQuery = {
-    short_name: "luolei"
+    short_name: "halfrost"
 };
 
 var GlobalConfigue = {
-    duoshuoDomain: 'https://luolei.org',
+    duoshuoDomain: 'https://halfrost.com',
 }
 
 
@@ -238,8 +238,8 @@ var General = {
     rewardLoader: function() {
 
         var loadQR = {
-            alipay: '/assets/images/qr-alipay-256.png',
-            wechat: '/assets/images/qr-wechat-256.png'
+            alipay: '/assets/images/qr-alipay-255.png',
+            wechat: '/assets/images/qr-wechat-255.png'
         }
         var loadQRUrl;
         if (!!General.isWechat) {
