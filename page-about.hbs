@@ -48,7 +48,7 @@
 						{{/if}}
 						<h1 class="post-title" style="padding-bottom: 30px;margin-bottom: 30px;">{{title}}</h1>
 						<div class="post-meta">
-              <span class="post-meta-wrap">{{#if author.profile_image}}<img class="author-avatar" src="{{author.profile_image}}" />{{/if}} <span class="post-author">{{author}}</span> <time class="published" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time></span> <span class="reading-time">Estimate {{reading_time}}</span>
+              <span class="post-meta-wrap">{{#if primary_author.profile_image}}<img class="author-avatar" src="{{primary_author.profile_image}}" />{{/if}} <span class="post-author">{{authors}}</span> <time class="published" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time></span> <span class="reading-time">Estimate {{reading_time}}</span>
 
 							<!-- by <span class="post-author">{{authors}}</span> on <time class="published" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time> <span class="reading-time">Estimate {{reading_time}}</span> -->
 						</div><!-- .post-meta -->
@@ -64,7 +64,7 @@
 
     <article class="{{post_class}}">
 
-    {{#author}}
+    {{#primary_author}}
                 <section class="author">
                  {{#if profile_image}}
             <figure class="author-image">
@@ -90,7 +90,7 @@
 
             </section>
         </section>
-        {{/author}}
+        {{/primary_author}}
 
     </article>
 
