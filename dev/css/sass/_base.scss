@@ -1428,3 +1428,11 @@ Copyright (c) 2014 Daniel Eden
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+.kg-width-wide img {
+  max-width: 85vw;
+}
+
+.kg-width-full img {
+  max-width: 100vw;
+}
