@@ -52,6 +52,24 @@
     <script type="text/javascript" src="{{asset "js/all.min.js"}}"></script>
 
 
+    {{! // 这面这一行是分享图标在CDN上的css，加载方式是font-class引用 }}
+    <link rel="stylesheet" type="text/css" href="//ob6mci30g.qnssl.com/font/iconfont.css">
+
+
+    {{! // 这面这一行是分享图标在CDN上的css，加载方式是symbol引用，这种方式可以支持彩色的iconfont }}
+    <script src="//ob6mci30g.qnssl.com/font/iconfont.js"></script>
+    {{! // 这面这一行是symbol引用必须要加入的css，这种方式可以支持彩色的iconfont }}
+    <style type="text/css">
+      .icon {
+        width: 60px; height: 60px;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+      }
+    </style>
+
+
+
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

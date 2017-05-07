@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot'); /* IE9*/
-  src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1494148848627'); /* IE9*/
+  src: url('iconfont.eot?t=1494148848627#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1494148848627') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1494148848627') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1494148848627#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -12,16 +12,118 @@
   font-size:16px;
   font-style:normal;
   -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-iconfontdouban:before { content: "\e600"; }
-.icon-iconfontfacebook:before { content: "\e601"; }
-.icon-iconfontgoogle:before { content: "\e602"; }
-.icon-iconfontinstagram:before { content: "\e603"; }
-.icon-iconfonttwitter:before { content: "\e604"; }
-.icon-iconfontv2ex:before { content: "\e605"; }
-.icon-iconfontwechat:before { content: "\e606"; }
-.icon-iconfontweibo:before { content: "\e607"; }
-.icon-iconfontwikipedia:before { content: "\e608"; }
-.icon-iconfontzhihu:before { content: "\e609"; }
+
+.icon-pinterest:before { content: "\e82d"; }
+
+.icon-ios:before { content: "\e658"; }
+
+.icon-dribbblecircled:before { content: "\e6a9"; }
+
+.icon-qzone:before { content: "\e605"; }
+
+.icon-iconfontgoogle0:before { content: "\e600"; }
+
+.icon-and:before { content: "\e61f"; }
+
+.icon-iconfontdouban:before { content: "\e636"; }
+
+.icon-iconfontfacebook:before { content: "\e637"; }
+
+.icon-iconfontgoogle:before { content: "\e638"; }
+
+.icon-iconfontinstagram:before { content: "\e639"; }
+
+.icon-iconfonttwitter:before { content: "\e63a"; }
+
+.icon-iconfontv2ex:before { content: "\e63b"; }
+
+.icon-iconfontwechat:before { content: "\e63c"; }
+
+.icon-iconfontweibo:before { content: "\e63d"; }
+
+.icon-iconfontwikipedia:before { content: "\e63e"; }
+
+.icon-iconfontzhihu:before { content: "\e63f"; }
+
+.icon-github:before { content: "\e640"; }
+
+.icon-jianshu:before { content: "\e644"; }
+
+.icon-iconfontyouku:before { content: "\e645"; }
+
+.icon-youtube:before { content: "\e647"; }
+
+.icon-luolei:before { content: "\e649"; }
+
+.icon-evernotec:before { content: "\e634"; }
+
+.icon-iconsf-copy:before { content: "\e611"; }
+
+.icon-path78:before { content: "\e646"; }
+
+.icon-stackoverflow:before { content: "\e8fb"; }
+
+.icon-telegram:before { content: "\e916"; }
+
+.icon-iconfontqq:before { content: "\e666"; }
+
+.icon-iconfontandroidwechat:before { content: "\e641"; }
+
+.icon-gmail:before { content: "\e601"; }
+
+.icon-pocket:before { content: "\e602"; }
+
+.icon-line:before { content: "\e603"; }
+
+.icon-css3:before { content: "\e70d"; }
+
+.icon-html5:before { content: "\e6c5"; }
+
+.icon-socialcss3:before { content: "\e60e"; }
+
+.icon-image-icon_python:before { content: "\e64f"; }
+
+.icon-JS:before { content: "\e635"; }
+
+.icon-socialangular:before { content: "\e604"; }
+
+.icon-dingding:before { content: "\e6f5"; }
+
+.icon-wechat_moment_F:before { content: "\e61d"; }
+
+.icon-java:before { content: "\e60c"; }
+
+.icon-ruby_rough:before { content: "\e642"; }
+
+.icon-ziyuan:before { content: "\e630"; }
+
+.icon-npm-logo:before { content: "\e610"; }
+
+.icon-d-sketch:before { content: "\e608"; }
+
+.icon-baidu:before { content: "\e643"; }
+
+.icon-download_react-native:before { content: "\e65f"; }
+
+.icon-vuejs:before { content: "\e617"; }
+
+.icon-PS:before { content: "\e606"; }
+
+.icon-h:before { content: "\e6e1"; }
+
+.icon-element:before { content: "\e607"; }
+
+.icon-juejin:before { content: "\e609"; }
+
+.icon-Combined-Shape:before { content: "\e60a"; }
+
+.icon-h5:before { content: "\e60f"; }
+
+.icon-h5-copy:before { content: "\e60b"; }
+
+.icon-element1:before { content: "\e60d"; }
+
+.icon-Webpack:before { content: "\e648"; }
+

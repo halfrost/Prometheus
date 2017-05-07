@@ -107,25 +107,125 @@
 
           <section class="share">
             <div class="share-icons" id="share-icons">
-               <a class="icon-share" href="http://weibo.com/halfrost">
-                    <span class=""><i class="iconfont iconfont-weibo">&#xe607;</i></span>
-                </a>
 
-                <a class="icon-share" href="">
-                    <span class=""><i class="iconfont iconfont-weixin">&#xe606;</i></span>
-                </a>
-                <a class="icon-share" href="http://www.jianshu.com/users/12201cdd5d7a/latest_articles">
-                    <span class=""><i class="iconfont  iconfont-jianshu">&#xe60b;</i></span>
-                </a>
-                <a class="icon-share icon-github" href="https://github.com/halfrost">
-                    <span class=""><i class="iconfont  iconfont-github">&#xe60d;</i></span>
-                </a>
-                <a class="icon-share icon-gmail" href="mailto:ydz627@gamil.com">
-                    <span class=""><i class="iconfont  iconfont-gmail">&#xe602;</i></span>
-                </a>
-                <a class="icon-share iconfont-v2ex" href="">
-                    <span class=""><i class="iconfont  iconfont-v2ex">&#xe605;</i></span>
-                </a>
+              {{! 以下都是分享的图标，用font-class 和 symbol 两种方式引用
+                  font-class 用这种形式加载<i class="iconfont icon-xxx"></i>
+                  icon-xxx是加载的形状，具体见fonts/demo_fontclass.html这个文档
+
+                  其他的是css，比如要加载一个新浪微博，那么前面需要加 iconfont iconfont-weibo 这两个css，第一个是控制大小的，第二个是红颜色。
+                  因为font-class加载是单色图片，所以需要加上颜色。
+
+                  symbol的方式不需要加颜色了，不过主要要加偏移量transform=translate(0,20)，因为坐标系不一样。
+
+            }}
+
+              <a class="icon-share iconfont-weibo" href="http://weibo.com/halfrost">
+                <span class=""><i class="iconfont iconfont-weibo icon-iconfontweibo"></i></span>
+              </a>
+
+              <a class="icon-share iconfont-weixin" href="https://ob6mci30g.qnssl.com/me/IMG_1791.JPG">
+                  <span class=""><i class="iconfont iconfont-weixin icon-iconfontwechat"></i></span>
+              </a>
+
+              <a class="icon-share iconfont-jianshu" href="http://www.jianshu.com/u/12201cdd5d7a">
+                  <span class=""><i class="iconfont iconfont-jianshu icon-jianshu"></i></span>
+              </a>
+
+              <a class="icon-share iconfont-juejin" href="https://juejin.im/user/5692e1e000b09aa2e8dcd422">
+                  <span class=""><i class="iconfont iconfont-juejin icon-juejin"></i></span>
+              </a>
+
+              <a class="icon-share" href="https://github.com/halfrost">
+                  <span class=""><i class="iconfont iconfont-github icon-github"></i></span>
+              </a>
+
+              <a class="icon-share iconfont-zhihu" href="https://www.zhihu.com/people/halfrost/activities">
+                  <span class=""><i class="iconfont iconfont-zhihu icon-iconfontzhihu"></i></span>
+              </a>
+
+              <a class="icon-share iconfont-twitter" href="https://twitter.com/halffrost">
+                  <span class=""><i class="iconfont iconfont-twitter icon-iconfonttwitter"></i></span>
+              </a>
+
+              <a class="icon-share " href="mailto:ydz627@gamil.com">
+                  <span class=""><i class="iconfont  iconfont-gmail icon-iconfontgoogle"></i></span>
+              </a>
+
+              <a class="icon-share iconfont-sf" href="https://segmentfault.com/u/halfrost">
+                    <span class=""><i class="iconfont iconfont-sf icon-iconsf-copy"></i></span>
+              </a>
+
+              <br></br>
+              <br></br>
+
+              <svg class="icon" aria-hidden="true" transform=scale(2.5)>
+              <use xlink:href="#icon-element"></use>
+              </svg>
+
+              <!-- <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-element1"></use>
+              </svg> -->
+
+              <br></br>
+              <br></br>
+
+
+                <svg class="icon" aria-hidden="true" transform=translate(0,0)>
+                <use xlink:href="#icon-PS"></use>
+                </svg>
+
+                <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-d-sketch"></use>
+                </svg>
+
+                <svg class="icon" aria-hidden="true" transform=translate(0,0)>
+                <use xlink:href="#icon-ios"></use>
+                </svg>
+
+                <svg class="icon iconfont-swift" aria-hidden="true" transform=translate(0,0)>
+                <use xlink:href="#icon-path78"></use>
+                </svg>
+
+                <svg class="icon" aria-hidden="true" transform=translate(0,0)>
+                <use xlink:href="#icon-h5-copy"></use>
+                </svg>
+
+                <svg class="icon" aria-hidden="true" transform="translate(0,0) scale(1.10,1.09)">
+                <use xlink:href="#icon-socialcss3"></use>
+                </svg>
+
+                <svg class="icon" aria-hidden="true" transform=translate(0,0)>
+                <use xlink:href="#icon-JS"></use>
+                </svg>
+
+
+                <svg class="icon" aria-hidden="true" transform=translate(0,0)>
+                <use xlink:href="#icon-vuejs"></use>
+                </svg>
+
+
+                <svg class="icon" aria-hidden="true" transform=translate(0,0)>
+                <use xlink:href="#icon-download_react-native"></use>
+                </svg>
+
+
+                <svg class="icon" aria-hidden="true" transform=translate(0,0)>
+                <use xlink:href="#icon-socialangular"></use>
+                </svg>
+
+                <svg class="icon" aria-hidden="true" transform="translate(0,0) scale(1.3)">
+                <use xlink:href="#icon-java"></use>
+                </svg>
+
+                <svg class="icon iconfont-weibo" aria-hidden="true" transform="translate(0,0) scale(0.8)">
+                <use xlink:href="#icon-ruby_rough"></use>
+                </svg>
+
+                <!-- <svg class="icon" aria-hidden="true" transform=translate(0,20)>
+                <use xlink:href="#icon-image-icon_python"></use>
+                </svg> -->
+
+
             </div>
         </section>
 <aside class="read-next">
