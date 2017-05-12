@@ -180,22 +180,24 @@ var General = {
             _output;
         var iconFontTag = 'iconfont';
         var iconMap = { /*索引 可在这里添加匹配规则*/
-            'twitter': iconFontTag + '-twitter',
-            'qzone': iconFontTag + '-qzone',
-            'weibo': iconFontTag + '-weibo',
-            'facebook': iconFontTag + '-facebook',
-            'github': iconFontTag + '-github',
-            'douban': iconFontTag + '-douban',
-            'google': iconFontTag + '-google',
-            'luolei': iconFontTag + '-luolei',
-            'dribble': iconFontTag + '-dribble',
-            'v2ex': iconFontTag + '-v2ex',
-            'zhihu': iconFontTag + '-zhihu',
-            'wikipedia': iconFontTag + '-wikipedia',
-            'jianshu': iconFontTag + '-jianshu',
-            'youku': iconFontTag + '-youku',
-            'youtube': iconFontTag + '-youtube'
-
+            'twitter': 'iconfont-twitter icon-iconfonttwitter',
+            'qzone': 'iconfont-qzone icon-qzone',
+            'weibo': 'iconfont-weibo icon-iconfontweibo',
+            'facebook': 'iconfont-facebook icon-iconfontfacebook',
+            'github': 'iconfont-github icon-github',
+            'douban': 'iconfont-douban icon-iconfontdouban',
+            'google': 'iconfont-google icon-iconfontgoogle',
+            'luolei': 'iconfont-luolei icon-luolei',
+            'dribble': 'iconfont-dribble icon-dribbblecircled',
+            'v2ex': 'iconfont-v2ex icon-iconfontv2ex',
+            'zhihu': 'iconfont-zhihu icon-iconfontzhihu',
+            'wikipedia': 'iconfont-wikipedia icon-iconfontwikipedia',
+            'jianshu': 'iconfont-jianshu icon-jianshu',
+            'youku': 'iconfont-youku icon-iconfontyouku',
+            'youtube': 'iconfont-youtube icon-youtube',
+            'juejin':'iconfont-juejin icon-juejin',
+            'weixin':'iconfont-weixin icon-iconfontwechat',
+            'segmentfault':'iconfont-sf icon-iconsf-copy'
         }
 
         for (var name in iconMap) {
