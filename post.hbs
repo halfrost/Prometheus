@@ -5,8 +5,8 @@
 
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
-    {{#if image}}
-    <header id="header" class="home-header blog-background banner-mask lazy" data-url="{{image}}">
+    {{#if feature_image}}
+    <header id="header" class="home-header blog-background banner-mask lazy" data-url="{{feature_image}}">
     {{else}}
     <img src="https://ob6mci30g.qnssl.com/Blog/me.png" class="hide">
     <header id="header" class="home-header blog-background banner-mask lazy" data-url="https://ob6mci30g.qnssl.com/Blog/ArticleTitleImage/background-cover1.png" style="background-image:no-cover">
@@ -75,9 +75,9 @@
 
     {{#author}}
                 <section class="author">
-                 {{#if image}}
+                 {{#if profile_image}}
             <figure class="author-image">
-                <a class="img" href="javascript:;" style="background-image: url('{{image}}')"><span class="hide">{{name}}'s Picture</span></a>
+                <a class="img" href="javascript:;" style="background-image: url('{{profile_image}}')"><span class="hide">{{name}}'s Picture</span></a>
             </figure>
               {{/if}}
 
@@ -215,7 +215,7 @@
                 <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-telegram-copy"></use>
                 </svg>--}}
-                
+
                 {{!--<svg class="icon" aria-hidden="true" transform=translate(0,0)>
                 <use xlink:href="#icon-socialangular"></use>
                 </svg>
@@ -237,7 +237,7 @@
         </section>
 <aside class="read-next">
     {{#next_post}}
-    <a class="read-next-story {{#if image}} lazy" data-url="{{image}}" style="background-image: url(){{else}}no-cover{{/if}}" href="{{url}}">
+    <a class="read-next-story {{#if feature_image}} lazy" data-url="{{feature_image}}" style="background-image: url(){{else}}no-cover{{/if}}" href="{{url}}">
         <section class="post">
             <h2>{{title}}</h2>
             <p>{{excerpt words="6"}}&hellip;</p>
@@ -245,7 +245,7 @@
     </a>
     {{/next_post}}
     {{#prev_post}}
-    <a class="read-next-story prev {{#if image}} lazy" data-url="{{image}}" style="background-image: url(){{else}}no-cover{{/if}}" href="{{url}}">
+    <a class="read-next-story prev {{#if feature_image}} lazy" data-url="{{feature_image}}" style="background-image: url(){{else}}no-cover{{/if}}" href="{{url}}">
         <section class="post">
             <h2>{{title}}</h2>
             <p>{{excerpt words="6"}}&hellip;</p>
