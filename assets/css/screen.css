@@ -2062,6 +2062,65 @@ body:not(.post-template) .post-title {
     }
 }
 
+/* ==========================================================================
+   14. Subscribe - Generate those email subscribers
+   ========================================================================== */
+
+.gh-subscribe {
+    border: #e7eef2 1px solid;
+    padding: 3rem;
+    margin-top: 3rem;
+    text-align: center;
+    background: #f5f8fa;
+    border-radius: 5px;
+}
+
+.gh-subscribe-title {
+    margin-bottom: 0;
+    font-size: 2.7rem
+}
+
+.gh-subscribe p {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.gh-subscribe form {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 0;
+}
+
+.gh-subscribe .form-group {
+    flex-grow: 1;
+    max-width: 300px;
+}
+
+.gh-subscribe .subscribe-email {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    border-radius: 4px 0 0 4px;
+    transition: all ease 0.5s;
+    font-weight: normal;
+}
+
+.gh-subscribe .subscribe-email:focus {
+    border: #5ba4e5 1px solid;
+    transition: all ease 0.2s;
+}
+
+.gh-subscribe button {
+    margin-left: -1px;
+    border-radius: 0 4px 4px 0;
+    font-weight: 600;
+}
+
+.gh-subscribe-rss {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.4em;
+}
 
 /* ==========================================================================
    End of file. Animations should be the last thing here. Do not add stuff
