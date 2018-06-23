@@ -57,15 +57,6 @@ function loadJS(url, callback, el) {
  * 多说评论调用等
  */
 
-var duoshuoQuery = {
-    short_name: "halfrost"
-};
-
-var GlobalConfigue = {
-    duoshuoDomain: 'https://halfrost.com',
-}
-
-
 var General = {
     isMobile: false,
     isWechat: false,
@@ -274,35 +265,6 @@ var General = {
         })
 
 
-    },
-    commentLoader: function() {
-        if (!$('body').hasClass('post-template')) {
-            return false;
-        }
-        var dataThreadKey = GlobalConfigue.duoshuoDomain + location.pathname;
-        $(window).scroll(function() {
-            if ($('.comment-area').has('div').length > 0) {
-                return false
-            } else {
-                console.log('增加评论');
-                if (($('.author-image').isOnScreenVisible() || $('.read-next').isOnScreenVisible()) && $('.author-image').hasClass('duoshuo-loaded') == false) {
-                    $('.author-image').addClass('duoshuo-loaded');
-                    loadJS(General.absUrl + '/assets/js/duoshuo.modify.js', function() {
-                        var el = document.createElement('div');
-                        el.setAttribute('data-thread-key', dataThreadKey);
-                        el.setAttribute('data-url', location.href);
-                        el.setAttribute('data-title', $('title').html());
-                        DUOSHUO.EmbedThread(el);
-                        scrollStop = true;
-                        setTimeout(function() {
-                            $('.comment-area').append(el);
-                        }, 250)
-
-                    })
-                }
-            }
-
-        });
     }
 }
 
