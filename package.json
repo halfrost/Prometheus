@@ -5,6 +5,9 @@
   "author": {
     "email": "i@luolei.org"
   },
+  "config": {
+    "posts_per_page": 10
+  },
   "homepage": "https://halfrost.com",
   "devDependencies": {
     "chalk": "^1.1.1",
