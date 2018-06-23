@@ -6,8 +6,8 @@ css/*.map
 # bundling output
 build/*
 build
-dist/*
-dist
+#dist/*
+#dist
 
 # Node Modules (use `npm install` to generate these)
 node_modules/*

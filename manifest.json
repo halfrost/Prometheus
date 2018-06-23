@@ -1,0 +1,16 @@
+{
+  "short_name": "Halfrost's Field",
+  "name": "Halfrost's Field | 冰霜之地",
+  "icons": [
+    {
+      "src": "assets/images/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "density": "3.0"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff"
+}
