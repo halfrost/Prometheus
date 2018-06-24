@@ -1,0 +1,50 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+    {{#if feature_image}}
+    <header id="header" class="home-header blog-background banner-mask lazy" data-url="{{feature_image}}">
+    {{else}}
+    <img src="https://ob6mci30g.qnssl.com/Blog/me.png" class="hide">
+    <header id="header" class="home-header blog-background banner-mask lazy" data-url="https://ob6mci30g.qnssl.com/Blog/ArticleTitleImage/background-cover1.png" style="background-image:no-cover">
+    {{/if}}
+
+        <div class="nav-header">
+        <div class="nav-header-container">
+            <button class="back-home" onclick="window.history.back()">Back</button>
+        </div>
+
+        </div>
+        <div class="header-wrap" >
+            <div class="post-info-container">
+                <h2 class="post-page-title ">
+                {{title}}
+                </h2>
+                <time class="post-page-time">{{date format="DD MMMM YYYY"}}</time>
+                <span class="post-page-author">{{#author}}{{name}}{{/author}}</span>
+                <span class="post-page-tags">
+                    {{tags prefix="" separator=" "}}
+               </span>
+               <span class="post-page-time">{{reading_time}}</span>
+            </div>
+        </div>
+        <div class="arrow_down">
+               <a href="javascript:;"></a>
+        </div>
+    </header>
+
+<main class="content" id="main" role="main">
+
+    <article class="{{post_class}}">
+
+     <section class="post-content">
+     <div class="single-post-inner">
+        {{content}}
+     </div>
+    </section>
+    </article>
+</main>
+{{/post}}
