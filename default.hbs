@@ -34,16 +34,21 @@
 <body class="{{body_class}} nav-closed">
 
 {{! Everything else gets inserted here }}
-{{{body}}}
-    <footer class="site-footer clearfix">
-        <section class="copyright "><a href="{{@blog.url}} ">{{@blog.title}}</a> &copy; {{date format="YYYY "}}</section>
+    {{{body}}}
+
+    <footer class="site-footer clearfix" style="background-color: #444">
+        <section class="copyright " style="color: #ffffff"><a href="{{@blog.url}} " style="color: #ffffff">{{@blog.title}}</a> &copy; 2015 - {{date format="YYYY "}}</section>
+        <section class="copyright " style="color: #ffffff"><a href="https://halfrost.com/archives-post/" style="color: #ffffff">文章归档</a> • <a href="https://halfrost.com/links/" style="color: #ffffff">友情链接</a> • <a href="https://halfrost.com/about/" style="color: #ffffff">关于我</a> • <a href="https://halfrost.com/subscribe/" style="color: #ffffff">订阅邮件</a></section>
         <section>
-        <a href="https://github.com/foru17/Yasuko">Theme Yasuko  </a> <a href="https://github.com/foru17/Yasuko" class="github-repo"><span class="gadget-github"></span>Star</a>
-        <section class="poweredby ">Powered by  <a href="https://ghost.org ">Ghost</a></section>
+        <a href="https://github.com/foru17/Yasuko" style="color: #ffffff">Theme Yasuko  </a> <a href="https://github.com/foru17/Yasuko" class="github-repo"><span class="gadget-github"></span>Star</a>
+        <section class="poweredby " style="color: #ffffff">Powered by  <a href="https://ghost.org " style="color: #ffffff">Ghost</a></section>
         </section>
-            <section><a href="http://www.miitbeian.gov.cn/">鄂ICP备16014744号</a></section>
-            <section class="footer__copyright">友情链接 ：<a href="http://www.desgard.com/">Guardia | 瓜地</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://bestswifter.com/">bestswifter</a>&nbsp;&nbsp;&nbsp;&nbsp;  <a href="http://kuailejim.com/">kuailejim</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="http://valiantcat.com/">南栀倾寒</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.jianshu.com/users/9c51a213b02e">Martin_Joy</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="http://bluelich.com/">bluelich</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="http://enumsblog.com/">Enum</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.eyrefree.org/">EyreFree</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="http://lishuo.me">Lis`s Blog</a></section>
-            <section><a href="https://www.qiniu.com " target="_blank"><img src="https://ob6mci30g.qnssl.com/Blog/ArticleTitleImage/qiniunomalfooter.png" border=0 /></a></section>
+        <section><a href="http://www.miitbeian.gov.cn/" style="color: #ffffff">鄂ICP备16014744号</a></section>
+
+        {{!<section class="footer__copyright" style="color: #ffffff">友情链接 ：<a href="http://www.desgard.com/">Guardia | 瓜地</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://bestswifter.com/">bestswifter</a>&nbsp;&nbsp;&nbsp;&nbsp;  <a href="http://kuailejim.com/">kuailejim</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="http://valiantcat.com/">南栀倾寒</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.jianshu.com/users/9c51a213b02e">Martin_Joy</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="http://bluelich.com/">bluelich</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="http://enumsblog.com/">Enum</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.eyrefree.org/">EyreFree</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="http://lishuo.me">Lis`s Blog</a></section>}}
+
+        {{!七牛云存储的广告图片}}
+        {{!<section><a href="https://www.qiniu.com " target="_blank"><img src="https://ob6mci30g.qnssl.com/Blog/ArticleTitleImage/qiniunomalfooter.png" border=0 /></a></section>}}
     </footer>
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
