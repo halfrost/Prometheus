@@ -149,7 +149,7 @@ h1
  */
 mark
 {
-    color: #000;
+    color: #000; 
     background: #ff0;
 }
 
@@ -324,7 +324,7 @@ html input[disabled]
 button::-moz-focus-inner,
 input::-moz-focus-inner
 {
-    padding: 0;
+    padding: 0; 
 
     border: 0;
 }
@@ -395,7 +395,7 @@ input[type='search']::-webkit-search-decoration
 fieldset
 {
     margin: 0 2px;
-    padding: .35em .625em .75em;
+    padding: .35em .625em .75em; 
 
     border: 1px solid #c0c0c0;
 }
@@ -437,7 +437,7 @@ optgroup
  */
 table
 {
-    border-spacing: 0;
+    border-spacing: 0; 
     border-collapse: collapse;
 }
 
@@ -457,151 +457,180 @@ th
     @include use-sprite($icon-search,$normal,$retina)
 }
 */
-/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript+bash+c+git+haskell+objectivec+python+ruby+scheme+smalltalk+swift&plugins=line-highlight+line-numbers+autolinker+show-language+highlight-keywords */
+/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript+actionscript+applescript+aspnet+bash+basic+c+bison+csharp+cpp+coffeescript+ruby+css-extras+diff+docker+erlang+fsharp+fortran+git+go+haskell+http+icon+java+json+latex+lua+makefile+markdown+matlab+nasm+nginx+objectivec+pascal+perl+php+php-extras+properties+python+r+jsx+rust+scala+scheme+smalltalk+sql+swift+vim+wiki */
 /**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
  * @author ocodia
  */
+code[class*='language-'],
+pre[class*='language-']
+{
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    line-height: 1.5;
 
- code[class*="language-"],
- pre[class*="language-"] {
- 	color: #f8f8f2;
- 	background: none;
- 	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
- 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
- 	text-align: left;
- 	white-space: pre;
- 	word-spacing: normal;
- 	word-break: normal;
- 	word-wrap: normal;
- 	line-height: 1.5;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-wrap: normal;
+    word-break: normal;
+    -moz-tab-size: 4;
+      -o-tab-size: 4;
+         tab-size: 4;
+    -webkit-hyphens: none;
+       -moz-hyphens: none;
+            hyphens: none; 
 
- 	-moz-tab-size: 4;
- 	-o-tab-size: 4;
- 	tab-size: 4;
+    color: #f8f8f2;
+    background: none;
+    text-shadow: 0 1px rgba(0, 0, 0, .3);
 
- 	-webkit-hyphens: none;
- 	-moz-hyphens: none;
- 	-ms-hyphens: none;
- 	hyphens: none;
- }
+        -ms-hyphens: none;
+}
 
- /* Code blocks */
- pre[class*="language-"] {
- 	padding: 1em;
- 	margin: .5em 0;
- 	overflow: auto;
- 	border-radius: 0.3em;
- }
+/* Code blocks */
+pre[class*='language-']
+{
+    overflow: auto;
 
- :not(pre) > code[class*="language-"],
- pre[class*="language-"] {
- 	background: #272822;
- }
+    margin: .5em 0;
+    padding: 1em;
 
- /* Inline code */
- :not(pre) > code[class*="language-"] {
- 	padding: .1em;
- 	border-radius: .3em;
- 	white-space: normal;
- }
+    border-radius: .3em;
+}
 
- .token.comment,
- .token.prolog,
- .token.doctype,
- .token.cdata {
- 	color: slategray;
- }
+:not(pre) > code[class*='language-'],
+pre[class*='language-']
+{
+    background: #272822;
+}
 
- .token.punctuation {
- 	color: #f8f8f2;
- }
+/* Inline code */
+:not(pre) > code[class*='language-']
+{
+    padding: .1em;
 
- .namespace {
- 	opacity: .7;
- }
+    white-space: normal; 
 
- .token.property,
- .token.tag,
- .token.constant,
- .token.symbol,
- .token.deleted {
- 	color: #f92672;
- }
+    border-radius: .3em;
+}
 
- .token.boolean,
- .token.number {
- 	color: #ae81ff;
- }
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata
+{
+    color: slategray;
+}
 
- .token.selector,
- .token.attr-name,
- .token.string,
- .token.char,
- .token.builtin,
- .token.inserted {
- 	color: #a6e22e;
- }
+.token.punctuation
+{
+    color: #f8f8f2;
+}
 
- .token.operator,
- .token.entity,
- .token.url,
- .language-css .token.string,
- .style .token.string,
- .token.variable {
- 	color: #f8f8f2;
- }
+.namespace
+{
+    opacity: .7;
+}
 
- .token.atrule,
- .token.attr-value,
- .token.function {
- 	color: #e6db74;
- }
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted
+{
+    color: #f92672;
+}
 
- .token.keyword {
- 	color: #66d9ef;
- }
+.token.boolean,
+.token.number
+{
+    color: #ae81ff;
+}
 
- .token.regex,
- .token.important {
- 	color: #fd971f;
- }
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted
+{
+    color: #a6e22e;
+}
 
- .token.important,
- .token.bold {
- 	font-weight: bold;
- }
- .token.italic {
- 	font-style: italic;
- }
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable
+{
+    color: #f8f8f2;
+}
 
- .token.entity {
- 	cursor: help;
- }
+.token.atrule,
+.token.attr-value,
+.token.function
+{
+    color: #e6db74;
+}
 
- div.prism-show-language {
-     position: relative;
- }
+.token.keyword
+{
+    color: #66d9ef;
+}
 
- div.prism-show-language > div.prism-show-language-label[data-language] {
-   content: attr(data-language);
- 	color: black;
- 	background-color: #CFCFCF;
- 	display: inline-block;
- 	position: absolute;
- 	top: 0;
- 	right: 0;
- 	font-size: 0.9em;
- 	border-radius: 0 0 0 5px;
- 	padding: 0 0.5em;
- 	text-shadow: none;
- }
+.token.regex,
+.token.important
+{
+    color: #fd971f;
+}
+
+.token.important,
+.token.bold
+{
+    font-weight: bold;
+}
+
+.token.italic
+{
+    font-style: italic;
+}
+
+.token.entity
+{
+    cursor: help;
+}
+
+div.prism-show-language
+{
+    position: relative;
+}
+
+div.prism-show-language > div.prism-show-language-label[data-language]
+{
+    font-size: .9em;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: inline-block;
+
+    padding: 0 .5em;
+
+    content: attr(data-language);
+
+    color: black;
+    border-radius: 0 0 0 5px;
+    background-color: #cfcfcf;
+    text-shadow: none;
+}
 
 body,
 html
 {
-    position: relative;
+    position: relative; 
 
     width: 100%;
     height: 100%;
@@ -612,7 +641,7 @@ html
 
 html
 {
-    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
     font-size: 62.5%;
 
     max-height: 100%;
@@ -677,7 +706,7 @@ h1
 .clearfix:before,
 .clearfix:after
 {
-    display: table;
+    display: table; 
 
     content: ' ';
 }
@@ -708,7 +737,7 @@ h1
 #header
 {
     position: relative;
-    z-index: 0;
+    z-index: 0; 
 
     display: table;
 
@@ -724,7 +753,7 @@ h1
 #footer
 {
     position: relative;
-    z-index: 1;
+    z-index: 1; 
 
     display: table;
 
@@ -745,7 +774,7 @@ h1
     margin: 8rem 0 0 0;
     padding: 1.5rem;
 
-    text-align: center;
+    text-align: center; 
 
     color: #666665;
     border-top: #ebf2f6 1px solid;
@@ -762,7 +791,7 @@ h1
 }
 .site-footer .github-repo
 {
-    line-height: 12px;
+    line-height: 12px; 
 
     position: relative;
 
@@ -785,7 +814,7 @@ h1
 .site-footer .github-repo:hover,
 .site-footer .github-repo:active
 {
-    color: #fff;
+    color: #fff; 
     background-color: #ddd;
 }
 .site-footer .gadget-github
@@ -801,7 +830,7 @@ h1
     margin-right: 4px;
 
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjQwcHgiIGhlaWdodD0iNDBweCIgdmlld0JveD0iMTIgMTIgNDAgNDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMTIgMTIgNDAgNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiMzMzMzMzMiIGQ9Ik0zMiAxMy40Yy0xMC41IDAtMTkgOC41LTE5IDE5YzAgOC40IDUuNSAxNS41IDEzIDE4YzEgMC4yIDEuMy0wLjQgMS4zLTAuOWMwLTAuNSAwLTEuNyAwLTMuMiBjLTUuMyAxLjEtNi40LTIuNi02LjQtMi42QzIwIDQxLjYgMTguOCA0MSAxOC44IDQxYy0xLjctMS4yIDAuMS0xLjEgMC4xLTEuMWMxLjkgMC4xIDIuOSAyIDIuOSAyYzEuNyAyLjkgNC41IDIuMSA1LjUgMS42IGMwLjItMS4yIDAuNy0yLjEgMS4yLTIuNmMtNC4yLTAuNS04LjctMi4xLTguNy05LjRjMC0yLjEgMC43LTMuNyAyLTUuMWMtMC4yLTAuNS0wLjgtMi40IDAuMi01YzAgMCAxLjYtMC41IDUuMiAyIGMxLjUtMC40IDMuMS0wLjcgNC44LTAuN2MxLjYgMCAzLjMgMC4yIDQuNyAwLjdjMy42LTIuNCA1LjItMiA1LjItMmMxIDIuNiAwLjQgNC42IDAuMiA1YzEuMiAxLjMgMiAzIDIgNS4xYzAgNy4zLTQuNSA4LjktOC43IDkuNCBjMC43IDAuNiAxLjMgMS43IDEuMyAzLjVjMCAyLjYgMCA0LjYgMCA1LjJjMCAwLjUgMC40IDEuMSAxLjMgMC45YzcuNS0yLjYgMTMtOS43IDEzLTE4LjFDNTEgMjEuOSA0Mi41IDEzLjQgMzIgMTMuNHoiLz48L3N2Zz4=);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
     background-size: 100% 100%;
 }
 .site-footer .github-repo
@@ -818,7 +847,7 @@ h1
 {
     font-size: 0;
 
-    display: block;
+    display: block; 
 
     width: 0;
     height: 0;
@@ -858,7 +887,7 @@ h1
     -webkit-animation-name: animate-bg;
     -webkit-animation-duration: 20s;
     -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite; 
 
     opacity: .25;
     background: url('../../assets/images/escheresque_ste.png');
@@ -893,7 +922,7 @@ h1
     -webkit-animation-duration: 1.5s;
     -webkit-animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+            animation-iteration-count: infinite; 
 
     border-bottom: .1rem solid #fff;
     border-left: .1rem solid #fff;
@@ -940,7 +969,7 @@ h1
 
 .post-in-list .post-excerpt img
 {
-    font-size: 0;
+    font-size: 0; 
 
     display: block;
 
@@ -952,7 +981,7 @@ h1
 }
 .post-in-list .post-excerpt img.loading
 {
-    visibility: hidden;
+    visibility: hidden; 
 
     background: #efefef;
 }
@@ -990,7 +1019,7 @@ h1
 {
     display: block;
     overflow: hidden;
-    overflow: hidden;
+    overflow: hidden; 
 
     width: 100%;
 
@@ -1008,7 +1037,7 @@ h1
     width: 100%;
     height: auto;
     min-height: 20rem;
-    max-height: 50rem;
+    max-height: 50rem; 
 
     -webkit-transform: scaleY(-1);
        -moz-transform: scaleY(-1);
@@ -1021,7 +1050,7 @@ h1
 
 .post-short-intro
 {
-    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
     font-size: 1.2rem;
     line-height: 1.8rem;
 
@@ -1039,7 +1068,7 @@ h1
 .post-excerpt-mirror-mask
 {
     position: relative;
-    z-index: 2;
+    z-index: 2; 
 
     display: none;
 
@@ -1057,12 +1086,12 @@ h1
 
     content: '';
 
-    opacity: .88;
+    opacity: .88; 
     background: #060505;
 }
 .post-excerpt-mirror-mask .mask-wrapper
 {
-    position: relative;
+    position: relative; 
     z-index: 1024;
 }
 .post-excerpt-mirror-mask img.loading
@@ -1082,7 +1111,7 @@ h1
     left: 50%;
 
     width: 90%;
-    margin-left: -45%;
+    margin-left: -45%; 
     padding: 1.5rem 0rem;
 }
 
@@ -1097,7 +1126,7 @@ a.btn-post-excerpt
 
     width: auto;
     height: 2rem;
-    margin-top: 3rem;
+    margin-top: 3rem; 
     padding: .5rem 1rem;
 
     text-align: center;
@@ -1116,7 +1145,7 @@ a.btn-post-excerpt
     font-size: 3.6rem;
 
     overflow: hidden;
-    overflow: hidden;
+    overflow: hidden; 
 
     margin: 1.2rem 0;
 
@@ -1133,7 +1162,7 @@ a.btn-post-excerpt
 
 .post-meta span
 {
-    font-family: 'Exo';
+    font-family: 'Exo'; 
     font-size: 1.6rem;
 
     display: inline-block;
@@ -1156,7 +1185,7 @@ a.btn-post-excerpt
     margin-left: .6rem;
     padding: 0rem 1rem;
 
-    border-radius: .3rem;
+    border-radius: .3rem; 
     background: rgba(255, 255, 255, .3);
 }
 
@@ -1167,7 +1196,7 @@ a.btn-post-excerpt
 
 #footer .svg-wrapper
 {
-    top: 0;
+    top: 0; 
     bottom: auto;
 }
 
@@ -1175,7 +1204,7 @@ a.btn-post-excerpt
 {
     position: absolute;
     z-index: 2;
-    bottom: -1px;
+    bottom: -1px; 
     left: 0;
 
     width: 100%;
@@ -1189,7 +1218,7 @@ a.btn-post-excerpt
 
 .pagination
 {
-    width: 70%;
+    width: 70%; 
     margin: 0 auto;
     margin-top: 2rem;
     margin-bottom: 3rem;
@@ -1207,7 +1236,7 @@ a.btn-post-excerpt
     display: inline-block;
 
     height: 2.4rem;
-    padding: .3rem .8rem;
+    padding: .3rem .8rem; 
 
     text-align: center;
 
@@ -1231,7 +1260,7 @@ a.btn-post-excerpt
 
 .single-post-inner
 {
-    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
     font-size: 1.8rem;
 
     overflow: hidden;
@@ -1266,7 +1295,7 @@ a.btn-post-excerpt
 }
 .single-post-inner .lazy.full-img
 {
-    visibility: visible;
+    visibility: visible; 
 
     height: auto;
 }
@@ -1292,7 +1321,7 @@ a.btn-post-excerpt
 
     padding: 0 .5rem;
 
-    vertical-align: top;
+    vertical-align: top; 
 
     color: #54b5db;
 }
@@ -1306,7 +1335,7 @@ a.btn-post-excerpt
 }
 .single-post-inner p
 {
-    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
     font-size: 1.6rem;
     line-height: 2.8rem;
 
@@ -1321,17 +1350,6 @@ a.btn-post-excerpt
 
     -webkit-transition: padding .15s linear;
             transition: padding .15s linear;
-}
-.single-post-inner h1,
-.single-post-inner h2,
-.single-post-inner h3,
-.single-post-inner h4,
-.single-post-inner h5,
-.single-post-inner h6,
-.single-post-inner pre,
-.single-post-inner code
-{
-    color: #595959;
 }
 .single-post-inner h2,
 .single-post-inner h3,
@@ -1377,7 +1395,7 @@ a.btn-post-excerpt
     font-style: italic;
     line-height: 2.2rem;
 
-    padding-left: 1rem;
+    padding-left: 1rem; 
 
     color: #333;
     border-left: 3px solid #efefef;
@@ -1399,7 +1417,7 @@ a.btn-post-excerpt
 }
 .single-post-inner pre code
 {
-    line-height: 2rem;
+    line-height: 2rem; 
 
     border: 0 none;
     background: none;
@@ -1408,7 +1426,7 @@ a.btn-post-excerpt
 .tag-box a
 {
     font-size: 1.4rem;
-    line-height: 2rem;
+    line-height: 2rem; 
 
     display: inline-block;
 
@@ -1444,7 +1462,7 @@ a.btn-post-excerpt
     font-style: italic;
     line-height: 1.4rem;
 
-    margin: 1rem auto;
+    margin: 1rem auto; 
 
     text-align: center;
 
@@ -1465,7 +1483,7 @@ a.btn-post-excerpt
     margin: 0 auto;
     padding: 0;
 
-    -webkit-user-select: none;
+    -webkit-user-select: none; 
     text-align: center;
     vertical-align: middle;
 
@@ -1541,7 +1559,7 @@ a.btn-post-excerpt
 {
     line-height: 2rem;
 
-    margin-top: -1rem;
+    margin-top: -1rem; 
 
     color: #999;
 }
@@ -1556,7 +1574,7 @@ a.btn-post-excerpt
 }
 .money-like .money-code:after
 {
-    bottom: -19px;
+    bottom: -19px; 
     left: 50%;
 
     margin-left: -10px;
@@ -1565,7 +1583,7 @@ a.btn-post-excerpt
 }
 .money-like .money-code:before
 {
-    bottom: -20px;
+    bottom: -20px; 
     left: 50%;
 
     margin-left: -10px;
@@ -1597,7 +1615,7 @@ a.btn-post-excerpt
 
     display: block;
 
-    margin-top: .6rem;
+    margin-top: .6rem; 
 
     text-align: center;
 
@@ -1606,7 +1624,7 @@ a.btn-post-excerpt
 
 .nav-header
 {
-    position: relative;
+    position: relative; 
 
     width: 100%;
 }
@@ -1628,7 +1646,7 @@ a.btn-post-excerpt
 
 .home-logo
 {
-    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
     font-size: 2.2rem;
     font-weight: bold;
     line-height: 4rem;
@@ -1656,7 +1674,7 @@ a.btn-post-excerpt
     line-height: 2.4rem;
 
     position: absolute;
-    z-index: 99;
+    z-index: 99; 
     top: 2rem;
     left: 0;
 
@@ -1678,7 +1696,7 @@ a.btn-post-excerpt
 .svg-logo
 {
     position: absolute;
-    top: 2rem;
+    top: 2rem; 
     left: 0;
 }
 
@@ -1689,7 +1707,7 @@ a.btn-post-excerpt
 #svg-luolei:hover,
 #svg-luolei:active
 {
-    opacity: .4;
+    opacity: .4; 
 
     fill: #999;
 }
@@ -1736,7 +1754,7 @@ a.btn-post-excerpt
     display: block;
     clear: both;
 
-    margin-top: 1rem;
+    margin-top: 1rem; 
 
     text-align: left;
 }
@@ -1751,7 +1769,7 @@ a.btn-post-excerpt
     padding: 0rem 1rem;
 
     color: #fff;
-    border-radius: .3rem;
+    border-radius: .3rem; 
     background: rgba(255, 255, 255, .3);
 }
 .post-page-tags a:first-child
@@ -1789,7 +1807,7 @@ a.btn-post-excerpt
     float: left;
 
     height: 2rem;
-    margin-left: 2rem;
+    margin-left: 2rem; 
 
     text-align: left;
 
@@ -1823,7 +1841,7 @@ a.btn-post-excerpt
 .share
 {
     width: 100%;
-    margin: 2rem auto;
+    margin: 2rem auto; 
 
     text-align: center;
 }
@@ -1832,7 +1850,7 @@ a.btn-post-excerpt
     display: block;
 
     width: 10rem;
-    margin: 0 auto;
+    margin: 0 auto; 
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     padding: .5rem 1.6rem;
@@ -1847,14 +1865,14 @@ a.btn-post-excerpt
 
 .share-icons
 {
-    margin: 1.5rem auto 3rem;
+    margin: 1.5rem auto 3rem; 
 
     text-align: center;
 }
 .share-icons a
 {
     font-size: 2rem;
-    line-height: 2.5rem;
+    line-height: 2.5rem; 
 
     display: inline-block;
 }
@@ -1868,7 +1886,7 @@ a.btn-post-excerpt
 #to-top
 {
     position: fixed;
-    z-index: 1000;
+    z-index: 1000; 
     right: 20px;
     bottom: 20px;
 
@@ -1896,7 +1914,7 @@ a.btn-post-excerpt
 
 .to-top-wrap
 {
-    position: relative;
+    position: relative; 
 
     width: 100%;
     height: 100%;
@@ -1920,7 +1938,7 @@ a.btn-post-excerpt
     -webkit-animation-name: shine;
     -webkit-animation-duration: 1.5s;
     -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite; 
 
     border-top: 10px solid rgba(255, 255, 255, .5);
     border-right: 10px solid transparent;
@@ -1945,7 +1963,7 @@ a.btn-post-excerpt
     -webkit-animation-name: shine;
     -webkit-animation-duration: 3s;
     -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite; 
 
     border-top: 20px solid rgba(255, 255, 255, .5);
     border-right: 15px solid transparent;
@@ -1954,7 +1972,7 @@ a.btn-post-excerpt
 
 .author
 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif; 
 
     position: relative;
 
@@ -1994,7 +2012,7 @@ a.btn-post-excerpt
     width: 100%;
     height: 100%;
 
-    border-radius: 100%;
+    border-radius: 100%; 
     background-position: center center;
     background-size: cover;
 }
@@ -2018,7 +2036,7 @@ a.btn-post-excerpt
 .author-detail p
 {
     font-size: 1.4rem;
-    line-height: 1.75em;
+    line-height: 1.75em; 
 
     margin: 1rem 0;
 
@@ -2039,13 +2057,13 @@ a.btn-post-excerpt
 
     list-style: none;
 
-    word-wrap: break-word;
+    word-wrap: break-word; 
 
     color: #9eabb3;
 }
 .author-meta span
 {
-    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'Exo', '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
 
     margin-right: 1rem;
 
@@ -2063,13 +2081,13 @@ a.btn-post-excerpt
 
 .comment-area
 {
-    padding: 0 1.6rem;
+    padding: 0 1.6rem; 
 
     background: #fff;
 }
 .comment-area h4
 {
-    font-family: '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
     font-style: italic;
 
     display: block;
@@ -2138,14 +2156,14 @@ a.btn-post-excerpt
     0%
     {
         -webkit-transform: translate3d(0, 100px, 0);
-                transform: translate3d(0, 100px, 0);
+                transform: translate3d(0, 100px, 0); 
 
         opacity: 0;
     }
     100%
     {
         -webkit-transform: none;
-                transform: none;
+                transform: none; 
 
         opacity: 1;
     }
@@ -2183,14 +2201,14 @@ Copyright (c) 2014 Daniel Eden
     0%
     {
         -webkit-transform: translate3d(0, 2000px, 0);
-                transform: translate3d(0, 2000px, 0);
+                transform: translate3d(0, 2000px, 0); 
 
         opacity: 0;
     }
     100%
     {
         -webkit-transform: none;
-                transform: none;
+                transform: none; 
 
         opacity: 1;
     }
@@ -2201,14 +2219,14 @@ Copyright (c) 2014 Daniel Eden
     0%
     {
         -webkit-transform: translate3d(0, 2000px, 0);
-                transform: translate3d(0, 2000px, 0);
+                transform: translate3d(0, 2000px, 0); 
 
         opacity: 0;
     }
     100%
     {
         -webkit-transform: none;
-                transform: none;
+                transform: none; 
 
         opacity: 1;
     }
@@ -2285,7 +2303,7 @@ Copyright (c) 2014 Daniel Eden
     display:         flex;
 
     max-width: 86rem;
-    margin: 5rem auto;
+    margin: 5rem auto; 
     margin-top: 5rem;
 
     -webkit-box-align: stretch;
@@ -2297,7 +2315,7 @@ Copyright (c) 2014 Daniel Eden
 .read-next-story
 {
     position: relative;
-    position: relative;
+    position: relative; 
 
     display: -webkit-box;
     display: -webkit-flex;
@@ -2331,20 +2349,20 @@ Copyright (c) 2014 Daniel Eden
 
     content: '';
 
-    opacity: .1;
+    opacity: .1; 
     background: #060505;
 }
 
 .read-next-story:hover:before
 {
-    transition: all .2s ease;
+    transition: all .2s ease; 
 
     background: rgba(0, 0, 0, .5);
 }
 
 .read-next-story:hover .post:before
 {
-    transition: all .2s ease;
+    transition: all .2s ease; 
 
     color: #222;
     background: #fff;
@@ -2366,14 +2384,14 @@ Copyright (c) 2014 Daniel Eden
 
 .read-next-story .post
 {
-    padding: 4rem 3rem;
+    padding: 4rem 3rem; 
 
     background: transparent;
 }
 
 .read-next-story h2
 {
-    position: relative;
+    position: relative; 
     z-index: 100;
 
     margin-top: 1rem;
@@ -2385,7 +2403,7 @@ Copyright (c) 2014 Daniel Eden
 {
     font-size: 1.4rem;
 
-    position: relative;
+    position: relative; 
     z-index: 100;
 
     margin: 0;
@@ -2426,7 +2444,7 @@ Copyright (c) 2014 Daniel Eden
 {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
-            box-sizing: border-box;
+            box-sizing: border-box; 
 
     border-left: rgba(0, 0, 100, .04) 1px solid;
 }
@@ -2565,6 +2583,21 @@ Copyright (c) 2014 Daniel Eden
     color: #e78170;
 }
 
+.iconfont-juejin
+{
+    color: #006cff;
+}
+
+.iconfont-swift
+{
+    color: #fd6f32;
+}
+
+.iconfont-sf
+{
+    color: #009a61;
+}
+
 .iconfont-youku
 {
     color: #06a7e1;
@@ -2575,177 +2608,148 @@ Copyright (c) 2014 Daniel Eden
     color: #e52413;
 }
 
+.iconfont-sketch
+{
+    color: #fdcd48;
+}
+
+.iconfont-ele
+{
+    color: #1993e3;
+}
+
 /* 自定义IconFont CSS 才用:before的形式 */
-.single-post-inner .iconfont-local:before
+.archives .item
 {
-    content: '\0f00ac';
+    overflow: hidden;
+
+    padding: 20px 0 12px 120px;
+
+    border-bottom: 1px solid #eee;
 }
 
-.single-post-inner .iconfont-twitter:before
+.archives h3
 {
-    content: '\00e604';
+    font-size: 15px;
+    font-weight: bold;
+
+    float: left; 
+
+    margin: 4px 0 0 -120px;
 }
 
-.single-post-inner .iconfont-wechat:before
+.archives-list
 {
-    content: '\00e606';
+    font-size: 14px;
+    line-height: 20px; 
+
+    list-style: none;
 }
 
-.single-post-inner .iconfont-weibo:before
+.archives-list li
 {
-    content: '\00e607';
+    overflow: hidden; 
+
+    padding: 3px 0;
 }
 
-.single-post-inner .iconfont-facebook:before
+.archives-list time
 {
-    content: '\00e601';
+    font-family: monospace; 
+
+    display: inline-block;
+
+    width: 35px;
+    margin-right: 5px;
+
+    color: #999;
 }
 
-.single-post-inner .iconfont-google:before
+.archives .item
 {
-    content: '\00e602';
+    overflow: hidden;
+
+    padding: 20px 0 12px 120px;
+
+    border-bottom: 1px solid #eee;
 }
 
-.single-post-inner .iconfont-github:before
+.gh-subscribe
 {
-    content: '\00e60d';
+    margin-top: 3rem;
+    padding: 3rem;
+
+    text-align: center;
+
+    border: #e7eef2 1px solid;
+    border-radius: 5px; 
+    background: #f5f8fa;
 }
 
-.single-post-inner .iconfont-douban:before
+.gh-subscribe-title
 {
-    content: '\0e600';
+    font-size: 2.7rem; 
+
+    margin-bottom: 0;
 }
 
-.single-post-inner .iconfont-luolei:before
+.gh-subscribe p
 {
-    content: '\0';
+    font-size: 1.5rem; 
+
+    margin-top: 0;
 }
 
-.single-post-inner .iconfont-v2ex:before
+.gh-subscribe form
 {
-    content: '\00e605';
+    display: flex;
+
+    margin: 20px 0 0 0; 
+
+    justify-content: center;
 }
 
-.single-post-inner .iconfont-zhihu:before
+.gh-subscribe .form-group
 {
-    content: '\00e609';
+    max-width: 300px; 
+
+    flex-grow: 1;
 }
 
-.single-post-inner .iconfont-wikipedia:before
+.gh-subscribe .subscribe-email
 {
-    content: '\00e608';
+    font-weight: normal; 
+
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+
+    transition: all ease .5s;
+
+    border-radius: 4px 0 0 4px;
 }
 
-.single-post-inner .iconfont-jianshu:before
+.gh-subscribe .subscribe-email:focus
 {
-    content: '\00e60b';
+    transition: all ease .2s; 
+
+    border: #5ba4e5 1px solid;
 }
 
-.single-post-inner .iconfont-youku:before
+.gh-subscribe button
 {
-    content: '\00e60c';
+    font-weight: 600; 
+
+    margin-left: -1px;
+
+    border-radius: 0 4px 4px 0;
 }
 
-.single-post-inner .iconfont-youtube:before
+.gh-subscribe-rss
 {
-    content: '\00e60a';
-}
-
-.single-post-inner .iconfont-luolei:before
-{
-    content: '\00e60e';
-}
-
-.yasuko-only #ds-reset .ds-avatar img
-{
-    width: 54px;
-    height: 54px;
-
-    -webkit-transition: .3s;
-    -webkit-transition: -webkit-transform .4s ease-out;
-            transition:         transform .4s ease-out;
-
-    border-radius: 50%;
-    box-shadow: 0;
-}
-
-.yasuko-only #ds-reset .ds-avatar img:hover
-{
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg);
-
-    -webkit-box-shadow: 0 0 10px #fff;
-            box-shadow: 0 0 10px #fff;
-}
-
-.yasuko-only #ds-thread #ds-reset .ds-textarea-wrapper
-{
-    border: 1px solid #efefef;
-    border-bottom: 0;
-    background: #fff;
-}
-
-.yasuko-only #ds-reset .ds-rounded-top
-{
-    border-radius: 0;
-}
-
-.yasuko-only #ds-reset .ds-gradient-bg
-{
-    background: #fff;
-}
-
-.yasuko-only #ds-thread #ds-reset .ds-post-options
-{
-    position: relative;
-
-    height: 30px;
-    margin-right: 100px;
-
-    border: 1px solid #efefef;
-    border-right: none;
-}
-
-.yasuko-only #ds-thread #ds-reset .ds-post-button
-{
-    color: #fff;
-    border: 0 none;
-    border-radius: 0;
-    background: #00bcd4;
-}
-
-.yasuko-only #ds-thread #ds-reset .ds-post-button:hover
-{
-    color: #fff;
-    background: #04aac2;
-}
-
-.yasuko-only #ds-thread #ds-reset .ds-post-toolbar
-{
-    box-shadow: 0;
-}
-
-.yasuko-only #ds-thread #ds-reset li.ds-tab a.ds-current
-{
-    border: 0;
-    background-color: rgba(0, 0, 0, .06);
-}
-
-.yasuko-only #ds-reset .ds-rounded-top
-{
-    border-radius: 0;
-}
-
-.yasuko-only #ds-thread #ds-reset .ds-post-button
-{
-    text-shadow: none;
-}
-
-.yasuko-only #ds-wrapper #ds-reset .ds-dialog-inner
-{
-    background: #fff;
-    box-shadow: 0;
-    text-shadow: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.4em;
 }
 
 @media only screen and (min-width: 1024px)
@@ -2773,7 +2777,7 @@ Copyright (c) 2014 Daniel Eden
     }
     .arrow_down
     {
-        display: block;
+        display: none;
     }
     .back-home
     {
@@ -2797,7 +2801,7 @@ Copyright (c) 2014 Daniel Eden
     {
                 flex-direction: column;
 
-        margin-top: 4rem;
+        margin-top: 4rem; 
 
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -2838,7 +2842,7 @@ Copyright (c) 2014 Daniel Eden
     }
     .wechat-webview .money-code
     {
-        top: -19rem;
+        top: -19rem; 
 
         width: 14rem;
         height: 13rem;
@@ -2910,7 +2914,7 @@ Copyright (c) 2014 Daniel Eden
     }
     .post-title
     {
-        line-height: 2.2rem;
+        line-height: 2.2rem; 
 
         margin: .2rem 0;
     }
@@ -2953,7 +2957,7 @@ Copyright (c) 2014 Daniel Eden
     }
     .post-excerpt-mirror a
     {
-        font-family: '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+        font-family: '-apple-system', 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
         font-size: 2rem;
     }
     .post-excerpt-mirror a.btn-post-excerpt
@@ -2965,7 +2969,7 @@ Copyright (c) 2014 Daniel Eden
     }
     .post-excerpt-mirror .post-short-intro
     {
-        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight';
+        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight'; 
         font-size: 1.4rem;
         line-height: 2rem;
 
@@ -3072,7 +3076,7 @@ Copyright (c) 2014 Daniel Eden
     .home-logo,
     .svg-logo
     {
-        top: 0rem;
+        top: 0rem; 
 
         opacity: .8;
     }
@@ -3085,7 +3089,7 @@ Copyright (c) 2014 Daniel Eden
     .tag-box a
     {
         font-size: 1.2rem;
-        line-height: 1.8rem;
+        line-height: 1.8rem; 
 
         height: 1.8rem;
         margin-right: .4rem;
@@ -3107,7 +3111,7 @@ Copyright (c) 2014 Daniel Eden
     }
     .read-next-story .post
     {
-        padding: 5rem 3rem;
+        padding: 5rem 3rem; 
 
         background: transparent;
     }
@@ -3117,7 +3121,7 @@ Copyright (c) 2014 Daniel Eden
 {
     .site-footer
     {
-        font-size: 1.2rem;
+        font-size: 1.2rem; 
 
         margin-top: 3rem;
     }

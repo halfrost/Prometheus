@@ -363,146 +363,126 @@ th {
 .icon-search{
     @include use-sprite($icon-search,$normal,$retina)
 }
-/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript+bash+c+git+haskell+objectivec+python+ruby+scheme+smalltalk+swift&plugins=line-highlight+line-numbers+autolinker+show-language+highlight-keywords */
+*/
+/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript+actionscript+applescript+aspnet+bash+basic+c+bison+csharp+cpp+coffeescript+ruby+css-extras+diff+docker+erlang+fsharp+fortran+git+go+haskell+http+icon+java+json+latex+lua+makefile+markdown+matlab+nasm+nginx+objectivec+pascal+perl+php+php-extras+properties+python+r+jsx+rust+scala+scheme+smalltalk+sql+swift+vim+wiki */
 /**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
  * @author ocodia
  */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #f8f8f2;
+  background: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
 
- code[class*="language-"],
- pre[class*="language-"] {
- 	color: #f8f8f2;
- 	background: none;
- 	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
- 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
- 	text-align: left;
- 	white-space: pre;
- 	word-spacing: normal;
- 	word-break: normal;
- 	word-wrap: normal;
- 	line-height: 1.5;
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+  border-radius: 0.3em; }
 
- 	-moz-tab-size: 4;
- 	-o-tab-size: 4;
- 	tab-size: 4;
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #272822; }
 
- 	-webkit-hyphens: none;
- 	-moz-hyphens: none;
- 	-ms-hyphens: none;
- 	hyphens: none;
- }
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal; }
 
- /* Code blocks */
- pre[class*="language-"] {
- 	padding: 1em;
- 	margin: .5em 0;
- 	overflow: auto;
- 	border-radius: 0.3em;
- }
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray; }
 
- :not(pre) > code[class*="language-"],
- pre[class*="language-"] {
- 	background: #272822;
- }
+.token.punctuation {
+  color: #f8f8f2; }
 
- /* Inline code */
- :not(pre) > code[class*="language-"] {
- 	padding: .1em;
- 	border-radius: .3em;
- 	white-space: normal;
- }
+.namespace {
+  opacity: .7; }
 
- .token.comment,
- .token.prolog,
- .token.doctype,
- .token.cdata {
- 	color: slategray;
- }
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #f92672; }
 
- .token.punctuation {
- 	color: #f8f8f2;
- }
+.token.boolean,
+.token.number {
+  color: #ae81ff; }
 
- .namespace {
- 	opacity: .7;
- }
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #a6e22e; }
 
- .token.property,
- .token.tag,
- .token.constant,
- .token.symbol,
- .token.deleted {
- 	color: #f92672;
- }
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #f8f8f2; }
 
- .token.boolean,
- .token.number {
- 	color: #ae81ff;
- }
+.token.atrule,
+.token.attr-value,
+.token.function {
+  color: #e6db74; }
 
- .token.selector,
- .token.attr-name,
- .token.string,
- .token.char,
- .token.builtin,
- .token.inserted {
- 	color: #a6e22e;
- }
+.token.keyword {
+  color: #66d9ef; }
 
- .token.operator,
- .token.entity,
- .token.url,
- .language-css .token.string,
- .style .token.string,
- .token.variable {
- 	color: #f8f8f2;
- }
+.token.regex,
+.token.important {
+  color: #fd971f; }
 
- .token.atrule,
- .token.attr-value,
- .token.function {
- 	color: #e6db74;
- }
+.token.important,
+.token.bold {
+  font-weight: bold; }
 
- .token.keyword {
- 	color: #66d9ef;
- }
+.token.italic {
+  font-style: italic; }
 
- .token.regex,
- .token.important {
- 	color: #fd971f;
- }
+.token.entity {
+  cursor: help; }
 
- .token.important,
- .token.bold {
- 	font-weight: bold;
- }
- .token.italic {
- 	font-style: italic;
- }
+div.prism-show-language {
+  position: relative; }
 
- .token.entity {
- 	cursor: help;
- }
-
- div.prism-show-language {
-     position: relative;
- }
-
- div.prism-show-language > div.prism-show-language-label[data-language] {
-   content: attr(data-language);
- 	color: black;
- 	background-color: #CFCFCF;
- 	display: inline-block;
- 	position: absolute;
- 	top: 0;
- 	right: 0;
- 	font-size: 0.9em;
- 	border-radius: 0 0 0 5px;
- 	padding: 0 0.5em;
- 	text-shadow: none;
- }
+div.prism-show-language > div.prism-show-language-label[data-language] {
+  content: attr(data-language);
+  color: black;
+  background-color: #CFCFCF;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.9em;
+  border-radius: 0 0 0 5px;
+  padding: 0 0.5em;
+  text-shadow: none; }
 
 body, html {
   width: 100%;
@@ -956,8 +936,6 @@ a.btn-post-excerpt {
     padding: 0;
     -webkit-transition: padding 0.15s linear;
     transition: padding 0.15s linear; }
-  .single-post-inner h1, .single-post-inner h2, .single-post-inner h3, .single-post-inner h4, .single-post-inner h5, .single-post-inner h6, .single-post-inner pre, .single-post-inner code {
-    color: #595959; }
   .single-post-inner h2, .single-post-inner h3, .single-post-inner h4, .single-post-inner h6 {
     margin-top: .5rem;
     position: relative;
@@ -1721,121 +1699,106 @@ Copyright (c) 2014 Daniel Eden
 .iconfont-jianshu {
   color: #e78170; }
 
+.iconfont-juejin {
+  color: #006cff; }
+
+.iconfont-swift {
+  color: #fd6f32; }
+
+.iconfont-sf {
+  color: #009a61; }
+
 .iconfont-youku {
   color: #06a7e1; }
 
 .iconfont-youtube {
   color: #E52413; }
 
+.iconfont-sketch {
+  color: #fdcd48; }
+
+.iconfont-ele {
+  color: #1993e3; }
+
 /* 自定义IconFont CSS 才用:before的形式 */
-.single-post-inner .iconfont-local:before {
-  content: "\0f00ac"; }
+.archives .item {
+  padding: 20px 0 12px 120px;
+  overflow: hidden;
+  border-bottom: 1px solid #eee; }
 
-.single-post-inner .iconfont-twitter:before {
-  content: "\00e604"; }
+.archives h3 {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 4px 0 0 -120px;
+  float: left; }
 
-.single-post-inner .iconfont-wechat:before {
-  content: "\00e606"; }
+.archives-list {
+  list-style: none;
+  font-size: 14px;
+  line-height: 20px; }
 
-.single-post-inner .iconfont-weibo:before {
-  content: "\00e607"; }
+.archives-list li {
+  padding: 3px 0;
+  overflow: hidden; }
 
-.single-post-inner .iconfont-facebook:before {
-  content: "\00e601"; }
+.archives-list time {
+  margin-right: 5px;
+  color: #999;
+  display: inline-block;
+  width: 35px;
+  font-family: monospace; }
 
-.single-post-inner .iconfont-google:before {
-  content: "\00e602"; }
+.archives .item {
+  padding: 20px 0 12px 120px;
+  overflow: hidden;
+  border-bottom: 1px solid #eee; }
 
-.single-post-inner .iconfont-github:before {
-  content: "\00e60d"; }
+.gh-subscribe {
+  border: #e7eef2 1px solid;
+  padding: 3rem;
+  margin-top: 3rem;
+  text-align: center;
+  background: #f5f8fa;
+  border-radius: 5px; }
 
-.single-post-inner .iconfont-douban:before {
-  content: "\0e600"; }
+.gh-subscribe-title {
+  margin-bottom: 0;
+  font-size: 2.7rem; }
 
-.single-post-inner .iconfont-luolei:before {
-  content: "\0"; }
+.gh-subscribe p {
+  margin-top: 0;
+  font-size: 1.5rem; }
 
-.single-post-inner .iconfont-v2ex:before {
-  content: "\00e605"; }
+.gh-subscribe form {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 0 0; }
 
-.single-post-inner .iconfont-zhihu:before {
-  content: '\00e609'; }
+.gh-subscribe .form-group {
+  flex-grow: 1;
+  max-width: 300px; }
 
-.single-post-inner .iconfont-wikipedia:before {
-  content: '\00e608'; }
+.gh-subscribe .subscribe-email {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  border-radius: 4px 0 0 4px;
+  transition: all ease 0.5s;
+  font-weight: normal; }
 
-.single-post-inner .iconfont-jianshu:before {
-  content: '\00e60b'; }
+.gh-subscribe .subscribe-email:focus {
+  border: #5ba4e5 1px solid;
+  transition: all ease 0.2s; }
 
-.single-post-inner .iconfont-youku:before {
-  content: '\00e60c'; }
+.gh-subscribe button {
+  margin-left: -1px;
+  border-radius: 0 4px 4px 0;
+  font-weight: 600; }
 
-.single-post-inner .iconfont-youtube:before {
-  content: '\00e60a'; }
-
-.single-post-inner .iconfont-luolei:before {
-  content: '\00e60e'; }
-
-.yasuko-only #ds-reset .ds-avatar img {
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  box-shadow: 0;
-  -webkit-transition: 0.3s;
-  -webkit-transition: -webkit-transform 0.4s ease-out;
-  transition: transform 0.4s ease-out; }
-
-.yasuko-only #ds-reset .ds-avatar img:hover {
-  box-shadow: 0 0 10px #fff;
-  -webkit-box-shadow: 0 0 10px #fff;
-  -webkit-transform: rotateZ(360deg);
-  transform: rotateZ(360deg); }
-
-.yasuko-only #ds-thread #ds-reset .ds-textarea-wrapper {
-  border: 1px solid #efefef;
-  background: #fff;
-  border-bottom: 0; }
-
-.yasuko-only #ds-reset .ds-rounded-top {
-  border-radius: 0; }
-
-.yasuko-only #ds-reset .ds-gradient-bg {
-  background: #fff; }
-
-.yasuko-only #ds-thread #ds-reset .ds-post-options {
-  position: relative;
-  margin-right: 100px;
-  height: 30px;
-  border: 1px solid #efefef;
-  border-right: none; }
-
-.yasuko-only #ds-thread #ds-reset .ds-post-button {
-  background: #00BCD4;
-  color: #fff;
-  border: 0 none;
-  border-radius: 0; }
-
-.yasuko-only #ds-thread #ds-reset .ds-post-button:hover {
-  background: #04AAC2;
-  color: #fff; }
-
-.yasuko-only #ds-thread #ds-reset .ds-post-toolbar {
-  box-shadow: 0; }
-
-.yasuko-only #ds-thread #ds-reset li.ds-tab a.ds-current {
-  border: 0;
-  background-color: rgba(0, 0, 0, 0.06); }
-
-.yasuko-only #ds-reset .ds-rounded-top {
-  border-radius: 0; }
-
-.yasuko-only #ds-thread #ds-reset .ds-post-button {
-  text-shadow: none; }
-
-.yasuko-only #ds-wrapper #ds-reset .ds-dialog-inner {
-  background: #fff;
-  box-shadow: 0;
-  text-shadow: 0; }
+.gh-subscribe-rss {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.4em; }
 
 @media only screen and (min-width: 1024px) {
   #main {
@@ -1850,7 +1813,7 @@ Copyright (c) 2014 Daniel Eden
   .home-template .site-footer {
     margin-top: 3rem; }
   .arrow_down {
-    display: block; }
+    display: none; }
   .back-home {
     top: .5rem;
     left: 0; }
