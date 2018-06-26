@@ -36,13 +36,13 @@ function loadJS(url, callback, el) {
                     callback();
                 }
             }
-        }
+        };
     } else {
         script.onload = function() {
             if (callback) {
                 callback();
             }
-        }
+        };
     }
     script.src = url;
     if (el) {
@@ -50,7 +50,7 @@ function loadJS(url, callback, el) {
     } else {
         head.insertBefore(script, head.firstChild);
     }
-};
+}
 
 /**
  * Yasuko 配置文件
@@ -65,12 +65,12 @@ var General = {
     init: function() {
         var win = window;
         var doc = win.document;
-        var UA = navigator.userAgent.toLowerCase()
+        var UA = navigator.userAgent.toLowerCase();
         var isAndroid = win.navigator.appVersion.match(/android/gi);
         var isIPhone = win.navigator.appVersion.match(/iphone/gi);
         if (UA.match(/MicroMessenger/i) == "micromessenger") {
             General.isWechat = true;
-            $('body').addClass('wechat-webview')
+            $('body').addClass('wechat-webview');
         }
         if (!!isAndroid) {
             General.isMobile = true;
@@ -83,7 +83,6 @@ var General = {
         General.webFontLoader();
         General.scrollToPos();
         General.arrowEvent();
-        General.commentLoader();
     },
     updateImageWidth: function() {
         var $postContent = $(".post-content");
@@ -112,7 +111,7 @@ var General = {
     webFontLoader: function() {
         WebFontConfig = {
             loading: function() {
-                console.log('loading font')
+                console.log('loading font');
             },
             custom: {
                 families: ['Exo', 'iconfont'],
@@ -126,11 +125,7 @@ var General = {
                     families: ['Exo', 'iconfont']
                 }
             });
-        })
-
-
-
-
+        });
     },
     arrowEvent: function() {
         $('.arrow_down').click(function() {
@@ -140,7 +135,7 @@ var General = {
                 window.location.hash = '#';
             });
             return false;
-        })
+        });
     },
     //平滑滚动到顶部
     scrollToPos: function(position) {
@@ -163,7 +158,7 @@ var General = {
                 window.location.hash = '#';
             });
             console.log('我跳');
-        })
+        });
     },
     /*给文章中的url添加iconfont方便识别*/
     urlIconlize: function(url) {
@@ -189,7 +184,7 @@ var General = {
             'juejin':'iconfont-juejin icon-juejin',
             'weixin':'iconfont-weixin icon-iconfontwechat',
             'segmentfault':'iconfont-sf icon-iconsf-copy'
-        }
+        };
 
         for (var name in iconMap) {
             if (typeof iconMap[name] !== 'function') {
@@ -233,7 +228,7 @@ var General = {
         var loadQR = {
             alipay: '/assets/images/qr-alipay-255.png',
             wechat: '/assets/images/qr-wechat-255.png'
-        }
+        };
         var loadQRUrl;
         if (!!General.isWechat) {
             $('.wechat-code b').html('长按上方二维码打赏作者');
@@ -241,7 +236,7 @@ var General = {
         }
 
         $('.money-like .reward-button').hover(function() {
-            console.log('悬浮')
+            console.log('悬浮');
             $('img.wechat-img').attr('src', loadQR.wechat);
             $('img.alipay-img').attr('src', loadQR.alipay);
             $('.money-code').fadeIn();
@@ -249,7 +244,7 @@ var General = {
         }, function() {
             $('.money-code').fadeOut();
             $(this).removeClass('active');
-        }, 800)
+        }, 800);
 
         $('.money-like .reward-button').click(function() {
             if ($(this).hasClass('active')) {
@@ -262,13 +257,9 @@ var General = {
                 $('.money-code').fadeIn();
                 $(this).addClass('active');
             }
-        })
-
-
+        });
     }
-}
-
-
+};
 
 var ImageSmartLoader = {
     isWebPSupported: false,
@@ -297,7 +288,7 @@ var ImageSmartLoader = {
             ImageSmartLoader.isWebPSupported = false;
             ImageSmartLoader.webPLoader();
         };
-        img.src = "data:image/webp;base64," + TestImages['demo'];
+        img.src = "data:image/webp;base64," + TestImages.demo;
 
     },
     imgLoader: function() {
@@ -306,7 +297,7 @@ var ImageSmartLoader = {
     webPLoader: function() {
         console.log('加载webP');
         // alert(ImageSmartLoader.isWebPSupported);
-        if (ImageSmartLoader.isWebPSupported == true) {
+        if (ImageSmartLoader.isWebPSupported === true) {
             console.log('宽度是' + General.viewWidth);
             if (General.viewWidth == 768) {
                 $(".lazy").lazyload({
@@ -364,13 +355,8 @@ var ImageSmartLoader = {
                 });
             }
         }
-
     },
-
-
-}
-
-
+};
 
 $(document).ready(function() {
     var $window = $(window);
@@ -475,13 +461,13 @@ $(document).ready(function() {
                     // console.log('CDN地址' +updatedUrl.indexOf('file.is26.com'));
                     if (updatedUrl.indexOf('upaiyun') > -1 || updatedUrl.indexOf('file.is26.com') > -1) {
                         // alert(1)
-                        if (settings.advanced_load == true) {
+                        if (settings.advanced_load === true) {
                             updatedUrl += '!';
                         }
-                        if (settings.is_scale == true) {
+                        if (settings.is_scale === true) {
                             updatedUrl += '/fw/' + settings.scale_width;
                         }
-                        if (settings.webP_load == true) {
+                        if (settings.webP_load === true) {
                             updatedUrl += '/format/webp';
                         }
                     }
@@ -662,8 +648,5 @@ $(document).ready(function() {
     ImageSmartLoader.init();
     if ($('body').hasClass('post-template')) {
         General.addIcons();
-        General.commentLoader();
-
     }
-
-})
+});
