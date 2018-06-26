@@ -1,0 +1,33 @@
+.archives .item {
+    padding: 20px 0 12px 120px;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+}
+.archives h3 {
+	font-size: 15px;
+    font-weight: bold;
+    margin: 4px 0 0 -120px;
+    float: left;
+}
+.archives-list {
+    list-style: none;
+    font-size: 14px;
+    line-height: 20px;
+}
+.archives-list li {
+    padding: 3px 0;
+    overflow: hidden;
+}
+.archives-list time {
+    margin-right: 5px;
+    color: #999;
+    display: inline-block;
+    width: 35px;
+    font-family: monospace;
+}
+
+.archives .item {
+	padding: 20px 0 12px 120px;
+	overflow: hidden;
+	border-bottom: 1px solid #eee;
+}
