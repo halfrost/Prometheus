@@ -151,7 +151,7 @@ h1 {
 .home-header {
     // background: url(https://ob6mci30g.qnssl.com/Blog/ArticleTitleImage/background-cover1.png!/fw/750);
 }
-.home-template, .archive-template {
+.home-template, .paged {
     #main {
         max-width: 76.8rem;
     }
@@ -213,10 +213,10 @@ h1 {
         animation-iteration-count: infinite;
     }
 }
-.home-template #main, .archive-template #main, .tag-template #main {
+.home-template #main, .paged #main, .tag-template #main {
     margin: 2rem auto;
 }
-.archive-template {
+.paged {
     .arrow_down {
         // display: none;
     }
@@ -529,7 +529,7 @@ a.btn-post-excerpt {
         transition: padding 0.15s linear;
     }
     h1, h2, h3, h4, h5, h6, pre, code {
-        color: #595959;
+        // color: #595959;
         // padding: 0 1.5rem;
     }
     h2, h3, h4, h6 {
