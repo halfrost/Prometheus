@@ -1,0 +1,149 @@
+
+$footer-text-color: #a0a0a0;
+$footer-color: #444;
+
+footer.footer {
+
+  div[class*="col"]{padding-left:25px; padding-right:25px;}
+
+  @include heading-type();
+  padding: ($line-height-computed * 2) 0 ($line-height-computed / 2) 0;
+
+  .footer-brand {
+    color: $footer-text-color !important;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 900 !important;
+    text-decoration: none;
+    line-height: 1;
+
+    &:hover {
+      color: $link-primary !important;
+      text-decoration: none !important;
+    }
+  }
+
+  &.footer-widgetless {
+    padding: ($line-height-computed / 2) 0;
+  }
+
+  &.footer-page {
+
+    background-color: $footer-color;
+    color: $footer-text-color;
+
+    a {
+      color: #e4e4e4;
+      font-weight: 600;
+      &:hover {
+        color: $link-primary;
+      }
+    }
+    p {
+      @include heading-type();
+      font-size: 14px;
+      line-height: 1.6 !important;
+      &.copyright {
+        font-size: 13px;
+      }
+    }
+
+  }
+}
+
+.social-buttons {
+  padding: 0;
+  list-style-type: none;
+  margin: 8px 0;
+
+  li {
+    display: inline-block;
+    margin-right: 8px;
+
+    a {
+      color: white;
+
+      &:hover {
+        color: $link-primary;
+      }
+    }
+  }
+}
+
+.form-footer {
+  max-width: 330px;
+}
+
+.form-search {
+  padding-top: $line-height-computed * 0.5;
+}
+
+.popular-destinations {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+
+    a {
+      font-size: 13px;
+      text-align: center;
+      i {
+        display: block;
+        font-size: 50px;
+      }
+      span {
+        display: block;
+      }
+    }
+  }
+}
+
+.tag-cloud {
+
+  @include heading-type();
+  line-height: 1;
+
+  a {
+    padding: 6px 8px 6px 8px;
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    font-size: 13px;
+    font-weight: 600 !important;
+    line-height: 1;
+    letter-spacing: 0.4px;
+    color: #777;
+    background-color: #e0e0e0;
+
+    i {
+    }
+
+    &:hover {
+      background-color: $link-primary;
+      color: white !important;
+    }
+
+    span {
+      display: none;
+
+      @media (min-width: 110px) {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.widget-footer {
+  .tag-cloud {
+    a {
+      color: #888;
+      background-color: #555;
+      &:hover {
+        background-color: $link-primary;
+        color: white !important;
+      }
+    }
+  }
+}
