@@ -21,7 +21,7 @@
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
     {{! 百度统计 }}
-    <script>
+    <script type="text/test">
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
@@ -29,14 +29,20 @@
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
-</script>
+    </script>
 </head>
 <body class="{{body_class}} nav-closed">
 
 {{! Everything else gets inserted here }}
     {{{body}}}
 
-    <footer class="site-footer clearfix" style="background-color: #444">
+    {{> footer}}
+
+    <!-- <script src="{{asset "components/jquery/dist/jquery.min.js"}}"></script>
+    <script src="{{asset "components/ghost-hunter/jquery.ghostHunter.js"}}"></script>
+    <script src="{{asset "components/bootstrap/dist/js/bootstrap.min.js"}}"></script> -->
+
+    <!-- <footer class="site-footer clearfix" style="background-color: #444">
         <section class="copyright " style="color: #ffffff"><a href="{{@blog.url}} " style="color: #ffffff">{{@blog.title}}</a> &copy; 2015 - {{date format="YYYY "}}</section>
         <section class="copyright " style="color: #ffffff"><a href="https://halfrost.com/archives/" style="color: #ffffff">文章归档</a> • <a href="https://halfrost.com/links/" style="color: #ffffff">友情链接</a> • <a href="https://halfrost.com/about/" style="color: #ffffff">关于我</a> • <a href="https://halfrost.com/subscribe/" style="color: #ffffff">订阅邮件</a></section>
         <section>
@@ -47,7 +53,7 @@
 
         {{!七牛云存储的广告图片}}
         {{!<section><a href="https://www.qiniu.com " target="_blank"><img src="https://ob6mci30g.qnssl.com/Blog/ArticleTitleImage/qiniunomalfooter.png" border=0 /></a></section>}}
-    </footer>
+    </footer> -->
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
     <script type="text/javascript" src="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.3.min.js"></script>
