@@ -1,13 +1,15 @@
 @import "normalize";
 // @import "webfont";
 @import "mixins";
-
+@import 'bootstrap';
 // 载入图片精灵
 @import "prism";
 @import "base";
 @import "fonts";
 @import "archives";
 @import "subscribe";
+@import 'footer';
+@import 'widget';
 
 @media print {
     @import "print";

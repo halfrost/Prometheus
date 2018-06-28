@@ -33,6 +33,9 @@ $sprite-retina: '../images/sprite@2x.png';
 @mixin retina-sprite-size($sprite) {
     background-size: nth($sprite, 7)/2;
 }
+@mixin heading-type() {
+  font-family: $font-family-sans-serif, sans-serif;
+}
 
 /*
 参考 _sprite.scss  的代码
