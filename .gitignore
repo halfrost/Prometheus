@@ -4,8 +4,8 @@
 css/*.map
 
 # bundling output
-build/*
-build
+#build/*
+#build
 #dist/*
 #dist
 
