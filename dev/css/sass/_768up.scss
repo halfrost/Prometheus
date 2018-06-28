@@ -67,8 +67,11 @@
         padding:3rem 0;
     }
     .money-code {
-        width: 14rem;
-        height: 13rem;
+        width: 264px;
+        height: 120px;
+        // 上面是加入 bootstrap 之后的改动，下面是原始的值
+        // width: 14rem;
+        // height: 13rem;
         margin-left: -8.2rem;
         top: -19rem;
         span {

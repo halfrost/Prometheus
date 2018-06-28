@@ -139,6 +139,42 @@ h1 {
         display: inline-block;
     }
 }
+.github-repo {
+    display: inline-block;
+    position: relative;
+    padding: 2px 5px 2px 4px;
+    color: #333;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 3px;
+    height: 12px;
+    // margin-left: 1.6rem;
+    background-color: #fafafa;
+    border: 1px solid #d4d4d4;
+    text-indent: 14px;
+    line-height: 12px;
+    &:hover, &:active {
+        background-color: #ddd;
+        color: #fff;
+    }
+}
+.gadget-github {
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjQwcHgiIGhlaWdodD0iNDBweCIgdmlld0JveD0iMTIgMTIgNDAgNDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMTIgMTIgNDAgNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiMzMzMzMzMiIGQ9Ik0zMiAxMy40Yy0xMC41IDAtMTkgOC41LTE5IDE5YzAgOC40IDUuNSAxNS41IDEzIDE4YzEgMC4yIDEuMy0wLjQgMS4zLTAuOWMwLTAuNSAwLTEuNyAwLTMuMiBjLTUuMyAxLjEtNi40LTIuNi02LjQtMi42QzIwIDQxLjYgMTguOCA0MSAxOC44IDQxYy0xLjctMS4yIDAuMS0xLjEgMC4xLTEuMWMxLjkgMC4xIDIuOSAyIDIuOSAyYzEuNyAyLjkgNC41IDIuMSA1LjUgMS42IGMwLjItMS4yIDAuNy0yLjEgMS4yLTIuNmMtNC4yLTAuNS04LjctMi4xLTguNy05LjRjMC0yLjEgMC43LTMuNyAyLTUuMWMtMC4yLTAuNS0wLjgtMi40IDAuMi01YzAgMCAxLjYtMC41IDUuMiAyIGMxLjUtMC40IDMuMS0wLjcgNC44LTAuN2MxLjYgMCAzLjMgMC4yIDQuNyAwLjdjMy42LTIuNCA1LjItMiA1LjItMmMxIDIuNiAwLjQgNC42IDAuMiA1YzEuMiAxLjMgMiAzIDIgNS4xYzAgNy4zLTQuNSA4LjktOC43IDkuNCBjMC43IDAuNiAxLjMgMS43IDEuMyAzLjVjMCAyLjYgMCA0LjYgMCA1LjJjMCAwLjUgMC40IDEuMSAxLjMgMC45YzcuNS0yLjYgMTMtOS43IDEzLTE4LjFDNTEgMjEuOSA0Mi41IDEzLjQgMzIgMTMuNHoiLz48L3N2Zz4=);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.github-repo {
+    display: inline-block;
+}
 .post-template .site-footer {
     margin-top: 5rem;
 }
@@ -365,7 +401,8 @@ a.btn-post-excerpt {
     border: 1px solid #fff;
     font-size: 1.4rem;
     line-height: 2rem;
-    height: 2rem;
+    // 这里是加入 bootstrap 之后的改动，不去掉这里会导致按钮高度不对
+    // height: 2rem;
     margin-top: 3rem;
 }
 .mask-wrapper {
@@ -438,7 +475,8 @@ a.btn-post-excerpt {
         text-align: center;
         color: #fff;
         background: rgba(59, 59, 59, 0.7);
-        height: 2.4rem;
+        // 这里是加入 bootstrap 之后的改动，不去掉这里会导致按钮高度不对
+        // height: 2.4rem;
         line-height: 2.4rem;
         padding: .3rem .8rem;
         &:hover {
@@ -554,14 +592,14 @@ a.btn-post-excerpt {
             margin: .3rem;
         }
     }
-    blockquote {
-        font-style: italic;
-        font-size: 1.6rem;
-        line-height: 2.2rem;
-        color: #333;
-        border-left: 3px solid #efefef;
-        padding-left: 1rem;
-    }
+    // blockquote {
+    //     font-style: italic;
+    //     font-size: 1.6rem;
+    //     line-height: 2.2rem;
+    //     color: #333;
+    //     border-left: 3px solid #efefef;
+    //     padding-left: 1rem;
+    // }
     hr {
         border: 1px solid #efefef;
     }
@@ -640,8 +678,11 @@ a.btn-post-excerpt {
         background: #fff;
         border: 1px solid #e6e6e6;
         position: absolute;
-        width: 22rem;
-        height: 10rem;
+        width: 264px;
+        height: 120px;
+        // 上面是加入 bootstrap 之后的改动，下面是原始的值
+        // width: 22rem;
+        // height: 10rem;
         left: 50%;
         margin-left: -12.2rem;
         top: -16rem;
