@@ -74,7 +74,8 @@ h1 {
     z-index: 0;
 }
 #footer {
-    margin-top: 12rem;
+    // 下面这一行是修改 footer 之前的配置
+    //margin-top: 12rem;
     // padding: 124px 0 72px;
     height: 30rem;
     position: relative;
@@ -409,24 +410,47 @@ a.btn-post-excerpt {
     // padding-left: 1rem;
     padding: 0 1.2rem;
 }
+
+// 这是老主题的文章标题的 css 样式，现在它的样式移动到 header 的 css 里面了
+// .post-title {
+//     color: #fff;
+//     font-size: 3.6rem;
+//     font-family: $googleFontExo, sans-serif;
+//     margin: 1.2rem 0;
+//     @include word-wrap;
+//     overflow: hidden;
+//     a {
+//         font-family: $fontOSX, sans-serif;
+//         line-height: 3.6rem;
+//         // font-weight:normal;
+//         // text-shadow: 1px 1px 1px #333, 0 0 0 #333, 1px 1px 1px #fff;
+//     }
+// }
+
 .post-title {
     color: #fff;
     font-size: 3.6rem;
     font-family: $googleFontExo, sans-serif;
-    margin: 1.2rem 0;
-    @include word-wrap;
+    // 更改 header 主题之前的配置
+    //margin: 1.2rem 0;
+    // 下面这2句话是新增的配置
+    line-height: 1.2;
+    white-space: normal;
+
+    // 更改 header 主题之前的配置
+    // @include word-wrap;
     overflow: hidden;
     a {
         font-family: $fontOSX, sans-serif;
         line-height: 3.6rem;
-        // font-weight:normal;
-        // text-shadow: 1px 1px 1px #333, 0 0 0 #333, 1px 1px 1px #fff;
     }
 }
+
 .post-meta span {
-    display: inline-block;
+    display: inline;
+    //display: inline-block; // 更换 header 主题之前的设置
     color: #fff;
-    font-size: 1.6rem;
+    // font-size: 1.6rem; // 更换 header 主题之前的设置
     font-family: $googleFontExo;
 }
 .post-tags {

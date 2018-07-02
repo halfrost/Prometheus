@@ -30,11 +30,14 @@
 .info-mask {
     height: 6rem;
 }
-.post-title {
-    margin: 0.2rem 0;
-    line-height: 2.2rem;
-    a {}
-}
+
+// 这是老主题的文章标题的 css 样式，现在它的样式移动到 header 的 css 里面了
+// .post-title {
+//     margin: 0.2rem 0;
+//     line-height: 2.2rem;
+//     a {}
+// }
+
 .mask-wrapper {
     margin-top: .5rem;
 }
