@@ -30,12 +30,14 @@
       s.parentNode.insertBefore(hm, s);
     })();
     </script>
+    <script type="text/javascript">
+      var disqus_shortname = 'halfrost'; // replace my_disqus_shortname with your shortname
+    </script>
 </head>
 <body class="{{body_class}} nav-closed">
-
-{{! Everything else gets inserted here }}
+    {{!-- Everything else gets inserted here --}}
     {{{body}}}
-
+    {{!-- The tag below includes the theme footer - partials/footer.hbs --}}
     {{> footer}}
 
     <!-- <script src="{{asset "components/jquery/dist/jquery.min.js"}}"></script>
@@ -60,7 +62,6 @@
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
     <script type="text/javascript" src="{{asset "js/all.min.js"}}"></script>
-
 
     {{! // 这面这一行是分享图标在CDN上的css，加载方式是font-class引用 }}
     <link rel="stylesheet" type="text/css" href="//ob6mci30g.qnssl.com/fontss/iconfont.css">
@@ -97,15 +98,15 @@
         console.log('Service workers are not supported in the current browser.');
     }
     </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-82753806-1"></script>
     <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-82753806-1', 'halfrost.com');
-    ga('require', 'displayfeatures');
-    ga('send', 'pageview');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-82753806-1');
     </script>
+
     <script>
         (function(){
             if (!window.addEventListener) return;
