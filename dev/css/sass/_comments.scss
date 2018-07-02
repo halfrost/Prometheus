@@ -1,0 +1,59 @@
+.comments-area {
+	margin-bottom: 60px;
+}
+
+.comments-title {
+	cursor: pointer;
+	font-size: 16px;
+	letter-spacing: 1px;
+	padding-left: 40px;
+	position: relative;
+	text-transform: uppercase;
+}
+
+.comments-title .icon-plus-custom {
+	background: $link-primary;
+	left: 0;
+	margin-top: -15px;
+	position: absolute;
+	top: 50%;
+}
+
+.icon-plus-custom {
+	color: #111;
+	height: 30px;
+	position: relative;
+	width: 30px;
+}
+
+.icon-plus-custom:before,
+.icon-plus-custom:after {
+	background: currentColor;
+	content: "";
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	-webkit-transition: -webkit-transform .3s;
+	transition: -webkit-transform .3s;
+	transition: transform .3s;
+}
+
+.icon-plus-custom:before {
+	height: 2px;
+	margin-left: -6px;
+	margin-top: -1px;
+	width: 12px;
+}
+
+.icon-plus-custom:after {
+	height: 12px;
+	margin-left: -1px;
+	margin-top: -6px;
+	width: 2px;
+}
+
+.toggled-on > .icon-plus-custom:before,
+.toggled-on > .icon-plus-custom:after {
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}

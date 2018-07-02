@@ -10,6 +10,9 @@
 @import "subscribe";
 @import 'footer';
 @import 'widget';
+@import 'header';
+@import 'comments';
+@import 'sidebar';
 
 @media print {
     @import "print";
