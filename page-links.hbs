@@ -5,7 +5,7 @@
 
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
-    {{#if feature_image}}
+    <!-- {{#if feature_image}}
     <header id="header" class="home-header blog-background banner-mask lazy" data-url="{{feature_image}}">
     {{else}}
     <img src="https://ob6mci30g.qnssl.com/Blog/me.png" class="hide">
@@ -31,7 +31,33 @@
                <span class="post-page-time">{{reading_time}}</span>
             </div>
         </div>
-    </header>
+    </header> -->
+    <button class="go-back" onclick="window.history.back()"><i class="fa fa-chevron-left" style="font-size:30px;color:#fff;"></i></button>
+    
+    <header class="cover post-header">
+				{{#if feature_image}}
+				<div class="cover-bg" style="background-image: url({{feature_image}})"></div>
+				{{/if}}
+				<div class="cover-content">
+					<div class="inner">
+						{{#if tags}}
+						<div class="post-page-tags" style="text-align:center;margin-top:0;margin-bottom:15px;">
+							{{tags separator=""}}
+						</div><!-- .post-tags -->
+						{{/if}}
+						<h1 class="post-title" style="padding-bottom: 30px;margin-bottom: 30px;">{{title}}</h1>
+						<div class="post-meta">
+              <span class="post-meta-wrap">{{#if author.profile_image}}<img class="author-avatar" src="{{author.profile_image}}" />{{/if}} <span class="post-author">{{author}}</span> <time class="published" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time></span> <span class="reading-time">Estimate {{reading_time}}</span>
+
+							<!-- by <span class="post-author">{{authors}}</span> on <time class="published" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time> <span class="reading-time">Estimate {{reading_time}}</span> -->
+						</div><!-- .post-meta -->
+						<!-- <a href="#" class="scroll-down square light"><span class="icon-down-custom" aria-hidden="true"></span><span class="screen-reader-text"></span></a> -->
+            <div id="scroll-hint" class="header-scroll-hint hide-on-menu">
+                <i class="fa fa-chevron-down"></i>
+            </div>
+					</div><!-- .inner -->
+				</div><!-- .cover-content -->
+			</header><!-- .cover -->
 
 <main class="content" id="main" role="main">
 
