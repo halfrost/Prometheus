@@ -214,14 +214,16 @@ h1 {
     top: 0;
     left: 0;
     z-index: -1;
-    background: url('#{$imgPath}/escheresque_ste.png');
-    opacity: .25;
-    background-color: rgba(0, 0, 0, 0.05);
-    transition: background-color 500ms ease-out 2s;
-    -webkit-animation-name: animate-bg;
-    -webkit-animation-duration: 20s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
+    opacity: .18;
+    background-color: #111;
+    // background: url('#{$imgPath}/escheresque_ste.png'); // 去掉首页背景的动图遮罩
+    // opacity: .25;// 去掉首页背景的动图遮罩之前的设置
+    // background-color: rgba(0, 0, 0, 0.05); // 去掉首页背景的动图遮罩之前的设置
+    // transition: background-color 500ms ease-out 2s;// 去掉首页背景的动图遮罩之前的设置
+    // -webkit-animation-name: animate-bg;
+    // -webkit-animation-duration: 20s;
+    // -webkit-animation-timing-function: linear;
+    // -webkit-animation-iteration-count: infinite;
 }
 .arrow_down {
     display: none;
@@ -837,6 +839,25 @@ a.btn-post-excerpt {
         background: rgba(0, 0, 0, .1);
     }
 }
+
+.go-back {
+  width:40.8px;
+  height:40.8px;
+  top:50px;
+  z-index:100;
+  left:20px;
+  position:absolute;
+  background-color: transparent;
+  border: 0;
+  // visibility: hidden;
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
+
 .svg-logo {
     left: 0;
     position: absolute;

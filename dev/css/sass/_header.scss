@@ -477,8 +477,8 @@
 
 .cover-bg,
 .post-bg {
-	-webkit-animation: fadeIn 1s ease-in-out;
-	animation: fadeIn 1s ease-in-out;
+	// -webkit-animation: fadeIn 1s ease-in-out; // 去掉遮罩动画
+	// animation: fadeIn 1s ease-in-out;// 去掉遮罩动画
 	background-position: center;
 	background-size: cover;
 	bottom: 0;
