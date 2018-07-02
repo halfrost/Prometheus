@@ -80,7 +80,7 @@ var General = {
             General.rewardLoader();
         }
 
-        General.webFontLoader();
+        // General.webFontLoader();
         General.scrollToPos();
     },
     updateImageWidth: function() {
