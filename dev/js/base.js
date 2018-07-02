@@ -82,7 +82,6 @@ var General = {
 
         General.webFontLoader();
         General.scrollToPos();
-        General.arrowEvent();
     },
     updateImageWidth: function() {
         var $postContent = $(".post-content");
@@ -114,29 +113,22 @@ var General = {
                 console.log('loading font');
             },
             custom: {
-                families: ['Exo', 'iconfont'],
-                urls: [General.absUrl + '/assets/css/font.min.css']
+                families: ['Exo', 'iconfont', 'fontawesome'],
+                urls: [General.absUrl + '/assets/css/font.min.css',
+                       General.absUrl + '/assets/css/font-awesome.min.css'
+                      ]
             }
         };
         loadJS(General.absUrl + '/assets/js/webfont.js', function() {
             console.log('加载字体JS');
             WebFont.load({
                 custom: {
-                    families: ['Exo', 'iconfont']
+                    families: ['Exo', 'iconfont', 'fontawesome']
                 }
             });
         });
     },
-    arrowEvent: function() {
-        $('.arrow_down').click(function() {
-            $('html,body').animate({
-                scrollTop: $(window).height() - 20
-            }, 600, function() {
-                window.location.hash = '#';
-            });
-            return false;
-        });
-    },
+
     //平滑滚动到顶部
     scrollToPos: function(position) {
         var STR_TO_TOP = '我要飞到最高',
@@ -360,6 +352,178 @@ var ImageSmartLoader = {
 
 $(document).ready(function() {
     var $window = $(window);
+
+    // Scroll to content
+		// $('.scroll-down').on('click', function(e) {
+		// 	var $cover = $(this).closest('.cover');
+		// 	$('html, body').animate({
+		// 		scrollTop: $cover.position().top + $cover.height()
+		// 	}, 800 );
+		// 	e.preventDefault();
+		// });
+
+    // adjustCover();
+    // var lazyResize = debounce(adjustCover, 200, false);
+    // $(window).resize(lazyResize);
+
+    // Scroll to content
+    var scrollHint = document.getElementById('scroll-hint');
+    if (scrollHint !== null) {
+        scrollHint.addEventListener('click', function() {
+          if (!scrollHint.classList.contains('visible'))
+              return;
+            window.scrollBy({
+              top: window.innerHeight,
+              left: 0,
+              behavior: 'smooth'
+          });
+      });
+
+      window.addEventListener('load', function() {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          if (scrollTop > 0) {
+              scrollHint.classList.remove('visible');
+          } else {
+              scrollHint.classList.add('visible');
+          }
+      });
+
+      window.addEventListener('scroll', function() {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          if (scrollTop > 0) {
+              scrollHint.classList.remove('visible');
+          } else {
+              scrollHint.classList.add('visible');
+          }
+      });
+    }
+
+    function adjustCover() {
+		    setElementHeight('.post-header.cover');
+	  }
+
+	  // Set the new height of an element
+	  function setElementHeight(element){
+		    var windowHeight = ( true===isiPod() && true===isSafari() ) ? window.screen.availHeight : $(window).height();
+		      var offsetHeight = $('.site-header').outerHeight();
+		        var newHeight = windowHeight;
+		          if ( $(element).find('.scroll-down').is(':hidden') ) {
+			             $(element).removeAttr('style');
+			                $(element).find('.cover-bg').css('top','');
+		          }
+		          else {
+			             $(element).outerHeight(newHeight);
+			                $(element).find('.cover-bg').css('top',offsetHeight);
+		          }
+	  }
+
+	  // Throttles an action.
+	  // Taken from Underscore.js.
+	  function debounce (func, wait, immediate) {
+		    var timeout, args, context, timestamp, result;
+		      return function() {
+			         context = this;
+			         args = arguments;
+			         timestamp = new Date();
+			         var later = function() {
+				            var last = (new Date()) - timestamp;
+				            if (last < wait) {
+					             timeout = setTimeout(later, wait - last);
+				            } else {
+					              timeout = null;
+					              if (!immediate) {
+						                result = func.apply(context, args);
+					              }
+				            }
+			         };
+			         var callNow = immediate && !timeout;
+			            if (!timeout) {
+				                timeout = setTimeout(later, wait);
+			            }
+			            if (callNow) {
+				                result = func.apply(context, args);
+			            }
+			    return result;
+		      };
+	  }
+
+	  // Check if device is an iPhone or iPod
+	  function isiPod(){
+		    return(/(iPhone|iPod)/g).test(navigator.userAgent);
+	  }
+
+	  // Check if browser is Safari
+	  function isSafari(){
+		    return(-1!==navigator.userAgent.indexOf('Safari')&&-1===navigator.userAgent.indexOf('Chrome'));
+	  }
+
+    // Site search
+		var searchField = $('#search-field').ghostHunter({
+			results : "#search-results",
+			onKeyUp : true,
+			onPageLoad : true,
+			includepages : true,
+			info_template : '<div class="results-info">Posts found: {{amount}}</div>',
+			result_template : '<div class="result-item"><a href="{{link}}"><div class="result-title">{{title}}</div><div class="result-date">{{pubDate}}</div></a></div>'
+		});
+
+		// Hidden sections
+		$('.sidebar-toggle').on('click', function(e){
+			// $('body').toggleClass('sidebar-opened'); 切换类别可以直接用 toggleClass
+      if ( $('body').hasClass('sidebar-opened') ) {
+				$('body').removeClass('sidebar-opened');
+        $('body').css('overflow','scroll'); // 锁定 body，禁止下层滑动
+			} else {
+				$('body').addClass('sidebar-opened');
+        $('body').css('overflow','hidden'); // 锁定 body，禁止下层滑动
+			}
+			e.preventDefault();
+		});
+
+		$('.search-toggle').on('click', function(e){
+			if ( $('body').hasClass('search-opened') ) {
+				$('body').removeClass('search-opened');
+        $('body').css('overflow','scroll'); // 锁定 body，禁止下层滑动
+				searchField.clear();
+			} else {
+				$('body').addClass('search-opened');
+        $('body').css('overflow','hidden'); // 锁定 body，禁止下层滑动
+				setTimeout(function() {
+					$('#search-field').focus();
+				}, 300);
+			}
+			e.preventDefault();
+		});
+		$('.overlay').on('click', function(e){
+			$('body').removeClass('sidebar-opened search-opened');
+			searchField.clear();
+			e.preventDefault();
+		});
+
+    // Show comments
+		if ( typeof disqus_shortname !== 'undefined' ) {
+			var disqus_loaded = false;
+			$('.comments-title').on('click', function() {
+				var _this = $(this);
+				if ( ! disqus_loaded ) {
+					$.ajax({
+						type: "GET",
+						url: "//" + disqus_shortname + ".disqus.com/embed.js",
+						dataType: "script",
+						cache: true
+					});
+					_this.addClass('toggled-on');
+					disqus_loaded = true;
+				} else {
+					$('#disqus_thread').slideToggle();
+					if ( _this.hasClass('toggled-on') ) {
+						_this.removeClass('toggled-on');
+					} else {
+						_this.addClass('toggled-on');
+					}
+				}
+			});
+		}
 
     $.fn.lazyload = function(options) {
         var elements = this;

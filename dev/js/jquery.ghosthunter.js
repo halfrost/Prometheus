@@ -3425,33 +3425,33 @@ lunr.QueryParser.parseBoost = function (parser) {
         var thingsFound = [];
         // The query interface expects single terms, so we split.
         var valueSplit = value.split(/\s+/);
-        function qf(q) {
-          // For an explanation of lunr indexing options, see the lunr.js
-          // documentation at https://lunrjs.com/docs/lunr.Query.html#~Clause
 
-          // look for an exact match and apply a large positive boost
-          q.term(v, {
-            usePipeline: true,
-            boost: 100,
-          });
-          // look for terms that match the beginning of this queryTerm and apply a medium boost
-          q.term(v, {
-            usePipeline: false,
-            boost: 10,
-            wildcard: lunr.Query.wildcard.TRAILING
-          });
-          // look for terms that match with an edit distance of 1 and apply a small boost
-          q.term(v, {
-            usePipeline: false,
-            editDistance: 1,
-            boost: 1
-          });
-        }
         for (var i=0,ilen=valueSplit.length;i<ilen;i++) {
           // Fetch a list of matches for each term.
           var v = valueSplit[i];
           if (!v) continue;
-          thingsFound.push(this.index.query(qf(q)));
+          thingsFound.push(this.index.query(function (q) {
+            // For an explanation of lunr indexing options, see the lunr.js
+            // documentation at https://lunrjs.com/docs/lunr.Query.html#~Clause
+
+            // look for an exact match and apply a large positive boost
+            q.term(v, {
+              usePipeline: true,
+              boost: 100,
+            });
+            // look for terms that match the beginning of this queryTerm and apply a medium boost
+            q.term(v, {
+              usePipeline: false,
+              boost: 10,
+              wildcard: lunr.Query.wildcard.TRAILING
+            });
+            // look for terms that match with an edit distance of 1 and apply a small boost
+            q.term(v, {
+              usePipeline: false,
+              editDistance: 1,
+              boost: 1
+            });
+          }));
         }
         var searchResult;
         if (thingsFound.length > 1) {
@@ -3547,7 +3547,7 @@ lunr.QueryParser.parseBoost = function (parser) {
 
     clear       : function(){
       $(this.results).empty();
-      this.target.val("");
+      // this.target.val("");
     },
 
     format      : function (t, d) {
