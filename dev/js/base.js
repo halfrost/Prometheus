@@ -393,15 +393,29 @@ $(document).ready(function() {
     // Scroll to content
     var scrollHint = document.getElementById('scroll-hint');
     if (scrollHint !== null) {
-        scrollHint.addEventListener('click', function() {
-          if (!scrollHint.classList.contains('visible'))
-              return;
-            window.scrollBy({
-              top: window.innerHeight,
-              left: 0,
-              behavior: 'smooth'
-          });
-      });
+      //   scrollHint.addEventListener('click', function() {
+      //     if (!scrollHint.classList.contains('visible'))
+      //         return;
+      //       window.scrollBy({
+      //         top: window.innerHeight,
+      //         left: 0,
+      //         behavior: 'smooth'
+      //     });
+      // });
+
+      // Scroll to content
+		$('.header-scroll-hint').on('click', function(e) {
+			var $cover = $(this).closest('.cover');
+			$('html, body').animate({
+				scrollTop: $cover.position().top + $cover.height()
+			}, 400 );
+			e.preventDefault();
+		});
+
+      // $('.cover .arrow-down').on('click', function(e) {
+      //   $('html, body').animate({'scrollTop': $('.cover').height()}, 800);
+      //   e.preventDefault();
+      // });
 
       window.addEventListener('load', function() {
           var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
