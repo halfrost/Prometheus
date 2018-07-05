@@ -4,6 +4,7 @@
     {{! Document Settings }}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#FFFFFF"/>
     {{! Page Meta }}
     <title>{{meta_title}}</title>
     <link rel="manifest" href="/manifest.json">
@@ -60,7 +61,10 @@
     </footer> -->
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-    <script type="text/javascript" src="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.3.min.js"></script>
+    <!-- <script type="text/javascript" src="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.3.min.js"></script> -->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
     <script type="text/javascript" src="{{asset "js/all.min.js"}}"></script>
