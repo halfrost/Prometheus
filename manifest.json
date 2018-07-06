@@ -1,5 +1,5 @@
 {
-  "short_name": "Halfrost's Field",
+  "short_name": "冰霜之地",
   "name": "Halfrost's Field | 冰霜之地",
   "icons": [
     {
@@ -7,10 +7,36 @@
       "sizes": "180x180",
       "type": "image/png",
       "density": "3.0"
+    },
+    {
+      "src": "assets/images/apple-touch-icon.png",
+      "sizes": "60x60",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/apple-touch-icon-76x76.png",
+      "sizes": "76x76",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/apple-touch-icon-120x120.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/apple-touch-icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/favicon.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
     }
   ],
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#ffffff"
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF"
 }

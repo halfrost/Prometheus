@@ -12,6 +12,7 @@
     var maxEntries = 50;
     self.importScripts('assets/dist/sw-toolbox.js');
     self.toolbox.options.debug = false;
+
     // Cache own static assets
     self.toolbox.router.get('/assets/(.*)', self.toolbox.cacheFirst, {
         cache: {
@@ -52,7 +53,14 @@
         if (!request.url.match(/(\/ghost\/|\/page\/)/) && request.headers.get('accept').includes('text/html')) {
             return self.toolbox.fastest(request, values, options);
         } else {
+          // DevTools opening will trigger these o-i-c requests, which this SW can't handle.
+          // There's probaly more going on here, but I'd rather just ignore this problem. :)
+          // https://github.com/paulirish/caltrainschedule.io/issues/49
+          if (request.cache === 'only-if-cached' && request.mode !== 'same-origin'){
+            return;
+          } else {
             return self.toolbox.networkOnly(request, values, options);
+          }
         }
         }, {
         cache: {
