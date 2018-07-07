@@ -1,11 +1,11 @@
-<img src="https://ob6mci30g.qnssl.com/Blog/me.png" class="wechat-only">
+<img src="https://ob6mci30g.qnssl.com/Blog/me.png" class="wechat-only" alt="">
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
 
 <article class="post-in-list {{post_class}}">
     <section class="post-excerpt">
-    <a href="{{url}}">
-    <img src="{{img_url feature_image}}" alt="">
+    <a href="{{url}}" aria-label="Article link">
+    <img class="lazy" data-url="{{img_url feature_image}}" alt="">
     </a>
     <div class="info-mask">
 <div class="mask-wrapper">
