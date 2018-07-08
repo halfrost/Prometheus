@@ -37,9 +37,16 @@
     });
     // Cache all static vendor assets, e.g. fonts whose version is bind to the according url
     self.toolbox.router.get('/(.*)', self.toolbox.cacheFirst, {
-        origin: /(fonts\.gstatic\.com|www\.google-analytics\.com)/,
+        origin: /(fonts\.gstatic\.com|www\.google-analytics\.com|www\.googletagmanager\.com|cdnjs\.cloudflare\.com)/,
         cache: {
           name: staticVendorCacheName,
+          maxEntries: maxEntries
+        }
+    });
+    self.toolbox.router.get('/(.*)', self.toolbox.cacheFirst, {
+        origin: /(ob6mci30g\.qnssl\.com)/,
+        cache: {
+          name: staticAssetsCacheName,
           maxEntries: maxEntries
         }
     });
