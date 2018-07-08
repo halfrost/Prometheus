@@ -487,7 +487,8 @@ a.btn-post-excerpt {
 }
 .pagination {
     text-align: center;
-    color: #999;
+    // color: #999;// 为了适配 chrome 可用性测试才去掉这一行
+    color: #757575;
     margin: 0 auto;
     margin-top: 2rem;
     margin-bottom: 3rem;

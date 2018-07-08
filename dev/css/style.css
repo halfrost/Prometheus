@@ -4413,7 +4413,7 @@ a.btn-post-excerpt {
 
 .pagination {
   text-align: center;
-  color: #999;
+  color: #757575;
   margin: 0 auto;
   margin-top: 2rem;
   margin-bottom: 3rem;
@@ -5367,7 +5367,7 @@ footer.footer {
     padding-left: 25px;
     padding-right: 25px; }
   footer.footer .footer-brand {
-    color: #a0a0a0 !important;
+    color: #b1b1b1 !important;
     font-size: 22px;
     text-transform: uppercase;
     font-weight: 900 !important;
@@ -5380,9 +5380,9 @@ footer.footer {
     padding: 15px 0; }
   footer.footer.footer-page {
     background-color: #444;
-    color: #a0a0a0; }
+    color: #b1b1b1; }
     footer.footer.footer-page a {
-      color: #e4e4e4;
+      color: #b1b1b1;
       font-weight: 600; }
       footer.footer.footer-page a:hover {
         color: #55A3FF; }
@@ -5469,7 +5469,7 @@ footer.footer {
   .widget.widget-footer {
     margin-bottom: 30px; }
     .widget.widget-footer h2 {
-      color: #a0a0a0; }
+      color: #b1b1b1; }
     .widget.widget-footer a {
       color: #e4e4e4; }
   .widget.widget-side {

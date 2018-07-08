@@ -7376,7 +7376,7 @@ a.btn-post-excerpt
 
     text-align: center;
 
-    color: #999;
+    color: #757575;
 }
 .pagination a
 {
@@ -8933,7 +8933,7 @@ footer.footer .footer-brand
     text-decoration: none;
     text-transform: uppercase;
 
-    color: #a0a0a0 !important;
+    color: #b1b1b1 !important;
 }
 footer.footer .footer-brand:hover
 {
@@ -8947,14 +8947,14 @@ footer.footer.footer-widgetless
 }
 footer.footer.footer-page
 {
-    color: #a0a0a0; 
+    color: #b1b1b1; 
     background-color: #444;
 }
 footer.footer.footer-page a
 {
     font-weight: 600; 
 
-    color: #e4e4e4;
+    color: #b1b1b1;
 }
 footer.footer.footer-page a:hover
 {
@@ -9107,7 +9107,7 @@ footer.footer.footer-page p.copyright
 }
 .widget.widget-footer h2
 {
-    color: #a0a0a0;
+    color: #b1b1b1;
 }
 .widget.widget-footer a
 {
