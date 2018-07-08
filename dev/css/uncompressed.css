@@ -7273,7 +7273,7 @@ h1
 
 a.btn-post-excerpt
 {
-    font-family: 'Exo';
+    font-family: 'Exo', sans-serif;
     font-size: 1.4rem;
     line-height: 2rem;
 
@@ -7314,7 +7314,7 @@ a.btn-post-excerpt
 
 .post-meta span
 {
-    font-family: 'Exo'; 
+    font-family: 'Exo', sans-serif; 
 
     display: inline;
 

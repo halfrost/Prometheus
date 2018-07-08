@@ -399,7 +399,7 @@ a.btn-post-excerpt {
     float: left;
     text-align: center;
     width: auto;
-    font-family: $googleFontExo;
+    font-family: $googleFontExo, sans-serif;
     padding: .5rem 1rem;
     border: 1px solid #fff;
     font-size: 1.4rem;
@@ -453,7 +453,7 @@ a.btn-post-excerpt {
     //display: inline-block; // 更换 header 主题之前的设置
     color: #fff;
     // font-size: 1.6rem; // 更换 header 主题之前的设置
-    font-family: $googleFontExo;
+    font-family: $googleFontExo, sans-serif;
 }
 .post-tags {
     margin-left: .5rem;

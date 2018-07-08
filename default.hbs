@@ -18,7 +18,6 @@
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=5.0" />
-    <link rel="author" href="https://plus.google.com/105790146178074084423/">
     {{! Styles'n'Scripts }}
     <link rel="stylesheet" type="text/css" href="{{asset "css/all.min.css"}}" />
     {{! Ghost outputs important style and meta data with this tag }}
@@ -63,14 +62,14 @@
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
     <!-- <script type="text/javascript" src="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.3.min.js"></script> -->
 
-    <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
-    <script type="text/javascript" async="async" src="{{asset "js/all.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/all.min.js"}}"></script>
 
     {{! // 这面这一行是分享图标在CDN上的css，加载方式是font-class引用 }}
-    <link rel="stylesheet" type="text/css" href="//ob6mci30g.qnssl.com/fontss/iconfont.css">
+    <!-- <link rel="stylesheet" type="text/css" href="//ob6mci30g.qnssl.com/fontss/iconfont.css"> -->
 
     {{! // 这面这一行是分享图标在CDN上的css，加载方式是symbol引用，这种方式可以支持彩色的iconfont }}
     <script async="async" src="//ob6mci30g.qnssl.com/fontss/iconfont.js"></script>
@@ -85,7 +84,7 @@
     </style>
 
 
-    <script async="async">
+    <script>
     var serviceWorkerUri = '/serviceworker-v1.js';
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register(serviceWorkerUri).then(function() {
@@ -105,7 +104,7 @@
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-82753806-1"></script>
-    <script async="async">
+    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());

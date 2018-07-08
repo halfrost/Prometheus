@@ -1,4 +1,4 @@
-<img src="https://ob6mci30g.qnssl.com/Blog/me.png" class="wechat-only" alt="">
+<img class="wechat-only lazy" data-url="https://ob6mci30g.qnssl.com/Blog/me.png" class="wechat-only" alt="">
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
 
@@ -21,7 +21,9 @@
     </section>
     <div class="post-excerpt-mirror">
     <div class="post-excerpt-mirror-mask">
-    <a href="{{url}}"><img src="{{img_url feature_image}}" alt=""></a>
+    <a href="{{url}}" aria-label="Article link">
+    <img class="lazy" data-url="{{img_url feature_image}}" alt="">
+    </a>
 
     <div class="excert-detail-container">
         <div class="post-meta">

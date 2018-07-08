@@ -109,6 +109,7 @@ var General = {
 
         casperFullImg();
     },
+
     webFontLoader: function() {
         WebFontConfig = {
             loading: function() {
@@ -119,6 +120,7 @@ var General = {
             custom: {
                 families: ['Exo', 'iconfont', 'fontawesome'],
                 urls: [General.absUrl + '/assets/css/font.min.css',
+                       'https://ob6mci30g.qnssl.com/fontss/iconfont.css',
                        General.absUrl + '/assets/css/font-awesome.min.css'
                       ]
             }
@@ -652,6 +654,8 @@ $(document).ready(function() {
                       console.log('1.self.attr = ',$self);
                     }
                     var updatedUrl = $self.attr("data-" + settings.data_attribute);
+                    // var updatedUrl = $self.attr("data-original");
+
                     if (updatedUrl === undefined) {
                       updatedUrl = $self.attr("src");
                     }

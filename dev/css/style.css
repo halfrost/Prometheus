@@ -4355,7 +4355,7 @@ a.btn-post-excerpt {
   float: left;
   text-align: center;
   width: auto;
-  font-family: "Exo";
+  font-family: "Exo", sans-serif;
   padding: .5rem 1rem;
   border: 1px solid #fff;
   font-size: 1.4rem;
@@ -4379,7 +4379,7 @@ a.btn-post-excerpt {
 .post-meta span {
   display: inline;
   color: #fff;
-  font-family: "Exo"; }
+  font-family: "Exo", sans-serif; }
 
 .post-tags {
   margin-left: .5rem; }
