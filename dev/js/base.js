@@ -110,6 +110,7 @@ var General = {
         casperFullImg();
     },
 
+    // General.absUrl + '/assets/css/font.min.css' // 这个是 Exo 字体，考虑不加载它,提高时间
     webFontLoader: function() {
         WebFontConfig = {
             loading: function() {
@@ -118,7 +119,7 @@ var General = {
               }
             },
             custom: {
-                families: ['Exo', 'iconfont', 'fontawesome'],
+                families: ['Open Sans', 'iconfont', 'fontawesome'],
                 urls: [General.absUrl + '/assets/css/font.min.css',
                        'https://ob6mci30g.qnssl.com/fontss/iconfont.css',
                        General.absUrl + '/assets/css/font-awesome.min.css'
@@ -131,7 +132,7 @@ var General = {
             }
             WebFont.load({
                 custom: {
-                    families: ['Exo', 'iconfont', 'fontawesome']
+                    families: ['Open Sans', 'iconfont', 'fontawesome']
                 }
             });
         });
@@ -441,6 +442,38 @@ $(document).ready(function() {
     function adjustCover() {
 		    setElementHeight('.post-header.cover');
 	  }
+
+    //初始化 toc 插件
+    $('#toc').initTOC({
+        selector: "h1, h2, h3, h4, h5, h6",
+        scope: "article",
+        overwrite: false,
+        prefix: "toc"
+    });
+
+    //动态设置样式,例如:滚动到一定程度之后隐藏目录
+    var mar_left = $(".post").width() / 2 + 20;
+    //var top = $("#toc").css("top");  这只能获取类似152px的字符串,下面才能获取值
+    //var top = $("#toc").position().top;
+    // var top = $(window).height();
+    // $("#toc").css("top",top / 2- (top / 4)+"px");
+    // $("#toc ol").html(function(i,origText){
+    //     return origText + "<li><a id='scrollTop' href='#'>返回顶部</a></li>";
+    // });
+    $("#toc").css({"margin-left":mar_left+"px"});
+    // $(window).scroll(function(){
+    //     var window_offset = $(window).scrollTop();
+    //     var main_header_height = $(".main-header").height();
+    //     var content_height = $(".content").height();
+    //     if(window_offset < main_header_height - 100) {
+    //         $("#toc").hide();
+    //         //下面的条件不能用 a>x>c这种形式,只能用&&.身为一个前端小白表示伤不起...
+    //     }else if(window_offset > main_header_height&&main_header_height+content_height - 500 > window_offset) {
+    //         $("#toc").show();
+    //     }else{
+    //         $("#toc").hide();
+    //     }
+    // });
 
 	  // Set the new height of an element
 	  function setElementHeight(element){
