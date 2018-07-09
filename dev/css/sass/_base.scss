@@ -11,7 +11,7 @@ html {
     font-size: 62.5%;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    font-family: $googleFontExo, $fontOSX;
+    font-family: $googleFont, $fontOSX;
 }
 a {
     text-decoration: none;
@@ -90,14 +90,14 @@ h1 {
     // height: 10rem;
     padding: 1.5rem;
     border-top: #EBF2F6 1px solid;
-    font-family: $googleFontExo, sans-serif;
+    font-family: $googleFont, sans-serif;
     font-weight: lighter;
     font-size: 1.2rem;
     line-height: 1.45em;
     color: #666665;
     text-align: center;
     a {
-        font-family: $googleFontExo, sans-serif;
+        font-family: $googleFont, sans-serif;
         color: #666665;
         &:hover {
             color: #50585D;
@@ -350,7 +350,7 @@ h1 {
     @include word-wrap-multi;
     max-height: 3.6rem;
     overflow: hidden;
-    font-family: $googleFontExo, $fontOSX;
+    font-family: $googleFont, $fontOSX;
     // margin-top: .5rem;
 }
 .post-excerpt-mirror-mask {
@@ -399,7 +399,7 @@ a.btn-post-excerpt {
     float: left;
     text-align: center;
     width: auto;
-    font-family: $googleFontExo, sans-serif;
+    font-family: $googleFont, sans-serif;
     padding: .5rem 1rem;
     border: 1px solid #fff;
     font-size: 1.4rem;
@@ -417,7 +417,7 @@ a.btn-post-excerpt {
 // .post-title {
 //     color: #fff;
 //     font-size: 3.6rem;
-//     font-family: $googleFontExo, sans-serif;
+//     font-family: $googleFont, sans-serif;
 //     margin: 1.2rem 0;
 //     @include word-wrap;
 //     overflow: hidden;
@@ -432,7 +432,7 @@ a.btn-post-excerpt {
 .post-title {
     color: #fff;
     font-size: 3.6rem;
-    font-family: $googleFontExo, sans-serif;
+    font-family: $googleFont, sans-serif;
     // 更改 header 主题之前的配置
     //margin: 1.2rem 0;
     // 下面这2句话是新增的配置
@@ -453,7 +453,7 @@ a.btn-post-excerpt {
     //display: inline-block; // 更换 header 主题之前的设置
     color: #fff;
     // font-size: 1.6rem; // 更换 header 主题之前的设置
-    font-family: $googleFontExo, sans-serif;
+    font-family: $googleFont, sans-serif;
 }
 .post-tags {
     margin-left: .5rem;
@@ -496,7 +496,7 @@ a.btn-post-excerpt {
     a {
         font-size: 1.4rem;
         // text-transform: uppercase;
-        font-family: $googleFontExo $fontOSX;
+        font-family: $googleFont $fontOSX;
         border-radius: .3rem;
         display: inline-block;
         text-align: center;
@@ -527,7 +527,7 @@ a.btn-post-excerpt {
     padding: 0rem 2.8% .8rem;
     overflow: hidden;
     border-bottom: 1px dashed #e5e5e5;
-    font-family: $googleFontExo, $fontOSX;
+    font-family: $googleFont, $fontOSX;
     img {
         display: block;
         margin: 0 auto;
@@ -571,7 +571,7 @@ a.btn-post-excerpt {
         padding: 0 .5rem;
         line-height: 2.8rem;
         font-size: 1.6rem;
-        font-family: $googleFontExo, $fontOSX;
+        font-family: $googleFont, $fontOSX;
         vertical-align: top;
         // white-space: nowrap;
         .iconfont {
@@ -585,7 +585,7 @@ a.btn-post-excerpt {
         font-size: 1.6rem;
         line-height: 2.8rem;
         margin-top: 2.2rem;
-        font-family: $googleFontExo ,$fontOSX;
+        font-family: $googleFont ,$fontOSX;
     }
     p.with-img {
         margin: 0;
@@ -820,7 +820,7 @@ a.btn-post-excerpt {
     z-index: 99;
     opacity: .7;
     border-radius: .1rem;
-    font-family: $googleFontExo, $fontOSX;
+    font-family: $googleFont, $fontOSX;
 }
 .back-home {
     background: none repeat scroll 0 0 transparent;
@@ -879,7 +879,7 @@ a.btn-post-excerpt {
     margin-top: 16rem;
     h2, h4 {
         color: #fff;
-        font-family: $googleFontExo, $fontOSX;
+        font-family: $googleFont, $fontOSX;
         font-weight: lighter;
         text-shadow: 0 1px 1px #595959;
         &:hover {
@@ -925,7 +925,7 @@ a.btn-post-excerpt {
 .post-page-time {
     display: inline-block;
     float: left;
-    font-family: $googleFontExo, $fontOSX;
+    font-family: $googleFont, $fontOSX;
     text-align: left;
     height: 2rem;
     line-height: 2rem;
@@ -954,7 +954,7 @@ a.btn-post-excerpt {
     text-align: left;
     font-weight: lighter;
     // font-family: $fontOSX;
-    font-family: $googleFontExo $fontOSX;
+    font-family: $googleFont $fontOSX;
     @include word-wrap-multi;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -1135,7 +1135,7 @@ a.btn-post-excerpt {
     span {
         margin-right: 1rem;
         color: #9EABB3;
-        font-family: $googleFontExo, $fontOSX;
+        font-family: $googleFont, $fontOSX;
         a {
             color: #9EABB3;
         }
