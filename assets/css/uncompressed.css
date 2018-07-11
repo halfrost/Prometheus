@@ -7015,17 +7015,6 @@ h1
     height: 0;
 }
 
-.home-template #main,
-.paged #main
-{
-    max-width: 76.8rem;
-}
-
-.post-template #main
-{
-    max-width: 76.8rem;
-}
-
 .blog-background
 {
     background-repeat: no-repeat;
@@ -7097,7 +7086,6 @@ h1
     z-index: 1;
 
     width: 74%;
-    max-width: 86rem;
     margin: 0rem auto;
 }
 
@@ -8000,7 +7988,7 @@ a.btn-post-excerpt
 
 .share
 {
-    width: 100%;
+    width: 60%;
     margin: 2rem auto; 
 
     text-align: center;
@@ -8462,7 +8450,7 @@ Copyright (c) 2014 Daniel Eden
     display: -ms-flexbox;
     display:         flex;
 
-    max-width: 86rem;
+    width: 60%;
     margin: 5rem auto; 
     margin-top: 5rem;
 
@@ -8836,13 +8824,17 @@ Copyright (c) 2014 Daniel Eden
 
 .gh-subscribe
 {
+    width: 60%;
     margin-top: 3rem;
+    margin-right: auto;
+    margin-bottom: 3rem; 
+    margin-left: auto;
     padding: 3rem;
 
     text-align: center;
 
     border: #e7eef2 1px solid;
-    border-radius: 5px; 
+    border-radius: 5px;
     background: #f5f8fa;
 }
 
@@ -10585,7 +10577,11 @@ footer.footer.footer-page p.copyright
 
 .comments-area
 {
-    margin-bottom: 60px;
+    width: 60%;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 60px; 
+    margin-left: auto;
 }
 
 .comments-title
@@ -11287,17 +11283,11 @@ input[type='submit'],
 {
     font: 400 16px/1.8 'Open Sans','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
 
-    position: absolute;
-    top: 0;
-    left: 50%;
+    visibility: hidden; 
+    float: right;
 
-    display: none;
-    visibility: hidden;
-    overflow-y: auto; 
-
-    width: 90%;
-    max-height: 100%;
-    padding: 0 5px;
+    width: 20%;
+    padding: 0 20px 0 20px;
 }
 
 #toc ol

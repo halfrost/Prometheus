@@ -188,16 +188,16 @@ h1 {
 .home-header {
     // background: url(https://ob6mci30g.qnssl.com/Blog/ArticleTitleImage/background-cover1.png!/fw/750);
 }
-.home-template, .paged {
-    #main {
-        max-width: 76.8rem;
-    }
-}
-.post-template {
-    #main {
-        max-width: 76.8rem;
-    }
-}
+// .home-template, .paged {
+//     #main {
+//         max-width: 76.8rem;
+//     }
+// }
+// .post-template {
+//     #main {
+//         max-width: 76.8rem;
+//     }
+// }
 .home-footer {}
 .blog-background {
     background-repeat: no-repeat;
@@ -265,7 +265,7 @@ h1 {
     position: relative;
     z-index: 1;
     width: 74%;
-    max-width: 86rem;
+    // max-width: 86rem;
     margin: 0rem auto;
     img {
         // display: block;
@@ -970,7 +970,8 @@ a.btn-post-excerpt {
 // }
 .share {
     text-align: center;
-    width: 100%;
+    width: 60%;
+    // width: 100%;
     margin: 2rem auto;
     h4 {
         letter-spacing: .5rem;
@@ -1317,7 +1318,8 @@ Copyright (c) 2014 Daniel Eden
     -ms-flex-align: stretch;
     align-items: stretch;
     margin-top: 5rem;
-    max-width: 86rem;
+    // max-width: 86rem;
+    width: 60%;
     margin: 5rem auto;
 }
 .read-next-story {

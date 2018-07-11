@@ -4187,12 +4187,6 @@ h1 {
   font-size: 0;
   display: block; }
 
-.home-template #main, .paged #main {
-  max-width: 76.8rem; }
-
-.post-template #main {
-  max-width: 76.8rem; }
-
 .blog-background {
   background-repeat: no-repeat;
   background-position: center;
@@ -4241,7 +4235,6 @@ h1 {
   position: relative;
   z-index: 1;
   width: 74%;
-  max-width: 86rem;
   margin: 0rem auto; }
 
 .post-in-list {
@@ -4791,7 +4784,7 @@ a.btn-post-excerpt {
 
 .share {
   text-align: center;
-  width: 100%;
+  width: 60%;
   margin: 2rem auto; }
   .share h4 {
     letter-spacing: .5rem;
@@ -5083,7 +5076,7 @@ Copyright (c) 2014 Daniel Eden
   -ms-flex-align: stretch;
   align-items: stretch;
   margin-top: 5rem;
-  max-width: 86rem;
+  width: 60%;
   margin: 5rem auto; }
 
 .read-next-story {
@@ -5315,10 +5308,14 @@ Copyright (c) 2014 Daniel Eden
 .gh-subscribe {
   border: #e7eef2 1px solid;
   padding: 3rem;
-  margin-top: 3rem;
   text-align: center;
   background: #f5f8fa;
-  border-radius: 5px; }
+  border-radius: 5px;
+  width: 60%;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem; }
 
 .gh-subscribe-title {
   margin-bottom: 0;
@@ -6358,6 +6355,10 @@ footer.footer {
   width: 80px; }
 
 .comments-area {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
   margin-bottom: 60px; }
 
 .comments-title {
@@ -6812,15 +6813,10 @@ input[type="submit"],
 
 #toc {
   font: 400 16px/1.8 "Open Sans","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
-  position: absolute;
-  visibility: hidden;
-  display: none;
-  left: 50%;
-  top: 0px;
-  width: 90%;
-  max-height: 100%;
-  padding: 0 5px;
-  overflow-y: auto; }
+  float: right;
+  width: 20%;
+  padding: 0 20px 0 20px;
+  visibility: hidden; }
 
 #toc ol {
   margin: 0 0 0 1em;
