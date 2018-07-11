@@ -452,8 +452,7 @@ $(document).ready(function() {
     });
 
     //动态设置样式,例如:滚动到一定程度之后隐藏目录
-    var mar_left = $(".post").width() / 2 + 20;
-    var width = $(".content").width / 2 - 20 - mar_left;
+    // var mar_left = $(".post").width() / 2 + 20;
     //var top = $("#toc").css("top");  这只能获取类似152px的字符串,下面才能获取值
     //var top = $("#toc").position().top;
     // var top = $(window).height();
@@ -461,8 +460,8 @@ $(document).ready(function() {
     // $("#toc ol").html(function(i,origText){
     //     return origText + "<li><a id='scrollTop' href='#'>返回顶部</a></li>";
     // });
-    $("#toc").css({"margin-left":mar_left+"px"});
-    $("#toc").css({"width":width+"px"});
+    // $("#toc").css({"margin-left":mar_left+"px"});
+
     // $(window).scroll(function(){
     //     var window_offset = $(window).scrollTop();
     //     var main_header_height = $(".main-header").height();
