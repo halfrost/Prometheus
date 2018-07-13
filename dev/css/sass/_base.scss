@@ -255,11 +255,16 @@ h1 {
 .home-template #main, .paged #main, .tag-template #main {
     margin: 2rem auto;
 }
-.paged {
-    .arrow_down {
-        // display: none;
-    }
+
+.page-template {
+  width: 60%;
+  margin: 0 auto;
 }
+// .paged {
+//     .arrow_down {
+//         display: none;
+//     }
+// }
 .content {}
 #main {
     position: relative;
@@ -278,7 +283,8 @@ h1 {
 .post-in-list {
     // visibility: hidden;
     position: relative;
-    margin-bottom: 2rem;
+    width: 60%;
+    margin: 0 auto 2rem;
     overflow: hidden;
     min-height: 10rem;
     -webkit-transform: translate3d(0, 0, 0);
@@ -520,6 +526,8 @@ a.btn-post-excerpt {
 //
 //
 .post {
+    width: 60%;
+    margin: 0 auto 2rem;
     // background: #fff;
 }
 .single-post-inner {

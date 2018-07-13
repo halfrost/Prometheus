@@ -263,6 +263,7 @@ blockquote {
   font-size: 18px;
   font-weight: bold;
   text-align: left !important;
+  word-wrap: break-word;
 
   &:before {
     position: absolute;

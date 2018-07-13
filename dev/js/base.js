@@ -1,5 +1,3 @@
-var isDebug = false;
-
 $.fn.extend({
 
     isOnScreenVisible: function() {
@@ -114,9 +112,7 @@ var General = {
     webFontLoader: function() {
         WebFontConfig = {
             loading: function() {
-              if (isDebug) {
                 console.log('loading font');
-              }
             },
             custom: {
                 families: ['Open Sans', 'iconfont', 'fontawesome'],
@@ -127,9 +123,7 @@ var General = {
             }
         };
         loadJS(General.absUrl + '/assets/js/webfont.js', function() {
-            if (isDebug) {
               console.log('加载字体JS');
-            }
             WebFont.load({
                 custom: {
                     families: ['Open Sans', 'iconfont', 'fontawesome']
@@ -158,9 +152,7 @@ var General = {
             }, 666, function() {
                 window.location.hash = '#';
             });
-            if (isDebug) {
               console.log('我跳');
-            }
         });
     },
     /*给文章中的url添加iconfont方便识别*/
@@ -209,9 +201,7 @@ var General = {
             tmp.href = _src;
             _selfDomain = tmp.hostname;
             General.urlIconlize(_selfDomain);
-            if (isDebug) {
               console.log(_selfDomain);
-            }
             $(this).prepend('<i class="iconfont ' + General.urlIconlize(_selfDomain) + '"></i>');
             var _selfColor = $(this).find('i').css('color'),
                 _originalColor = $(this).css('color');
@@ -241,9 +231,7 @@ var General = {
         }
 
         $('.money-like .reward-button').hover(function() {
-            if (isDebug) {
               console.log('悬浮');
-            }
             $('img.wechat-img').attr('src', loadQR.wechat);
             $('img.alipay-img').attr('src', loadQR.alipay);
             $('.money-code').fadeIn();
@@ -281,23 +269,17 @@ var ImageSmartLoader = {
         var TestImages = {
             demo: "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAsAAAABBxAREYiI/gcAAABWUDggGAAAADABAJ0BKgEAAQABABwlpAADcAD+/gbQAA=="
         };
-        if (isDebug) {
           console.log('支持Webp哦');
-        }
         var img = new Image();
         img.onload = function() {
             var result = (img.width > 0) && (img.height > 0);
-            if (isDebug) {
               console.log('支持Webp');
-            }
             // alert('支持')
             ImageSmartLoader.isWebPSupported = true;
             ImageSmartLoader.webPLoader();
         };
         img.onerror = function() {
-            if (isDebug) {
               console.log('不支持Webp');
-            }
             ImageSmartLoader.isWebPSupported = false;
             ImageSmartLoader.webPLoader();
         };
@@ -305,19 +287,13 @@ var ImageSmartLoader = {
 
     },
     imgLoader: function() {
-        if (isDebug) {
           console.log('加载默认图片');
-        }
     },
     webPLoader: function() {
-        if (isDebug) {
           console.log('加载webP');
-        }
         // alert(ImageSmartLoader.isWebPSupported);
         if (ImageSmartLoader.isWebPSupported === true) {
-            if (isDebug) {
               console.log('宽度是' + General.viewWidth);
-            }
             if (General.viewWidth == 768) {
                 $(".lazy").lazyload({
                     advanced_load: true,
@@ -684,9 +660,7 @@ $(document).ready(function() {
                         var elements_left = elements.length;
                         settings.appear.call(self, elements_left, settings);
                     }
-                    if (isDebug) {
                       console.log('1.self.attr = ',$self);
-                    }
                     var updatedUrl = $self.attr("data-" + settings.data_attribute);
                     // var updatedUrl = $self.attr("data-original");
 
@@ -698,11 +672,9 @@ $(document).ready(function() {
                       updatedUrl = $self.style.backgroundImage;
                     }
                     if (updatedUrl !== undefined) {
-                      if (isDebug) {
                         console.log('updatedUrl = ',updatedUrl);
                         console.log('图片地址' +updatedUrl.indexOf('ob6mci30g.qnssl.com'));
                         console.log('CDN地址' +updatedUrl.indexOf('file.is26.com'));
-                      }
                       if (updatedUrl.indexOf('ob6mci30g.qnssl.com') > -1) {
                           // alert(1)
                           if (settings.advanced_load === true) {
@@ -717,14 +689,15 @@ $(document).ready(function() {
                           if (settings.webP_load === true && settings.is_scale === true) {
                               updatedUrl += '/format/webp';
                           }
+                          // if (settings.webP_load === true) {
+                          //     updatedUrl += '/0/format/webp';
+                          // }
                       }
                     }
 
-                    if (isDebug) {
                       console.log('中间打印updatedUrl',updatedUrl);
                       console.log('*********中间打印 img.src = ',$self.attr("src"));
                       console.log('*********中间打印 img = ',$("<img />"));
-                    }
 
                     $("<img />").bind("load", function() {
 
@@ -732,14 +705,10 @@ $(document).ready(function() {
 
                             if ($self.is("img")) {
                                 $self.attr("src", updatedUrl);
-                                if (isDebug) {
                                   console.log('*********img.src = ',$self.attr("src"));
-                                }
                             } else {
                                 $self.css("background-image", "url('" + updatedUrl + "')");
-                                if (isDebug) {
                                   console.log('*********background-image = ',$self.css("background-image"));
-                                }
                             }
                             $self[settings.effect](settings.effect_speed);
 

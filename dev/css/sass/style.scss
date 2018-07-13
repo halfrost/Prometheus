@@ -21,6 +21,9 @@
 @media only screen and (min-width: 1024px) {
     @import "1024up";
 } // end of media query
+@media only screen and (max-width: 1023px){
+    @import "769up";
+} // end of media query
 @media only screen and (max-width: 768px) {
     @import "768up";
 } // end of media query

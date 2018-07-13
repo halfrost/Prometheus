@@ -1351,7 +1351,8 @@ blockquote
     padding: 0;
     padding-left: 60px;
 
-    text-align: left !important; 
+    text-align: left !important;
+    word-wrap: break-word; 
 
     color: #585858;
 }
@@ -7080,6 +7081,12 @@ h1
     margin: 2rem auto;
 }
 
+.page-template
+{
+    width: 60%;
+    margin: 0 auto;
+}
+
 #main
 {
     position: relative;
@@ -7095,8 +7102,9 @@ h1
 
     overflow: hidden;
 
+    width: 60%;
     min-height: 10rem;
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem;
 
     -webkit-transform: translate3d(0, 0, 0);
 }
@@ -7394,6 +7402,12 @@ a.btn-post-excerpt
     display: inline-block;
 
     padding: 0 1rem;
+}
+
+.post
+{
+    width: 60%;
+    margin: 0 auto 2rem;
 }
 
 .single-post-inner
@@ -8825,10 +8839,7 @@ Copyright (c) 2014 Daniel Eden
 .gh-subscribe
 {
     width: 60%;
-    margin-top: 3rem;
-    margin-right: auto;
-    margin-bottom: 3rem; 
-    margin-left: auto;
+    margin: 3rem auto 3rem; 
     padding: 3rem;
 
     text-align: center;
@@ -10578,10 +10589,7 @@ footer.footer.footer-page p.copyright
 .comments-area
 {
     width: 60%;
-    margin-top: 0;
-    margin-right: auto;
-    margin-bottom: 60px; 
-    margin-left: auto;
+    margin: 0 auto 60px;
 }
 
 .comments-title
@@ -11283,7 +11291,8 @@ input[type='submit'],
 {
     font: 400 16px/1.8 'Open Sans','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
 
-    visibility: hidden; 
+    display: none; 
+    visibility: hidden;
     float: right;
 
     width: 20%;
@@ -11369,6 +11378,18 @@ input[type='submit'],
 @media only screen and (min-width: 1024px)
 {
     #main
+    {
+        width: 100%;
+    }
+    .post
+    {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 1023px)
+{
+    .post
     {
         width: 100%;
     }
@@ -11485,6 +11506,34 @@ input[type='submit'],
     .wechat-webview .alipay-code
     {
         display: none !important;
+    }
+    .page-template
+    {
+        width: 100%;
+    }
+    .post-in-list
+    {
+        width: 100%;
+    }
+    .post
+    {
+        width: 100%;
+    }
+    .share
+    {
+        width: 100%;
+    }
+    .gh-subscribe
+    {
+        width: 100%;
+    }
+    .comments-area
+    {
+        width: 100%;
+    }
+    .read-next
+    {
+        width: 100%;
     }
 }
 
