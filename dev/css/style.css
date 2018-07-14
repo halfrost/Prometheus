@@ -4232,10 +4232,6 @@ h1 {
 .home-template #main, .paged #main, .tag-template #main {
   margin: 2rem auto; }
 
-.page-template {
-  width: 60%;
-  margin: 0 auto; }
-
 #main {
   position: relative;
   z-index: 1;
@@ -5139,7 +5135,9 @@ Copyright (c) 2014 Daniel Eden
 
 .read-next-story .post {
   background: transparent;
-  padding: 4rem 3rem; }
+  padding: 4rem 3rem;
+  margin: 0 auto;
+  width: 100%; }
 
 .read-next-story h2 {
   margin-top: 1rem;
@@ -6871,14 +6869,28 @@ input[type="submit"],
     visibility: visible;
     display: block; } }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1440px) {
   #main {
     width: 100%; }
   .post {
     width: 60%; } }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1439px) {
+  #main {
+    width: 90%; }
+  .page-template {
+    width: 100%; }
+  .post-in-list {
+    width: 80%; }
   .post {
+    width: 100%; }
+  .share {
+    width: 100%; }
+  .gh-subscribe {
+    width: 100%; }
+  .comments-area {
+    width: 100%; }
+  .read-next {
     width: 100%; } }
 
 @media only screen and (max-width: 768px) {

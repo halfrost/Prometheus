@@ -256,10 +256,10 @@ h1 {
     margin: 2rem auto;
 }
 
-.page-template {
-  width: 60%;
-  margin: 0 auto;
-}
+// .page-template {
+//   width: 60%;
+//   margin: 0 auto;
+// }
 // .paged {
 //     .arrow_down {
 //         display: none;
@@ -1383,6 +1383,8 @@ Copyright (c) 2014 Daniel Eden
 .read-next-story .post {
     background: transparent;
     padding: 4rem 3rem;
+    margin: 0 auto;
+    width: 100%;
 }
 .read-next-story h2 {
     margin-top: 1rem;

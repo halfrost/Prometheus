@@ -689,6 +689,9 @@ $(document).ready(function() {
                           if (settings.webP_load === true && settings.is_scale === true) {
                               updatedUrl += '/format/webp';
                           }
+                          if (updatedUrl.indexOf('https://ob6mci30g.qnssl.com/Blog/ArticleTitleImage/background-cover_.png') > -1 && settings.webP_load === true && settings.is_scale === true) {
+                            updatedUrl = 'https://ob6mci30g.qnssl.com/Blog/ArticleTitleImage/background-cover_.png';
+                          }
                           // if (settings.webP_load === true) {
                           //     updatedUrl += '/0/format/webp';
                           // }

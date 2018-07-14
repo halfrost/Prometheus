@@ -18,11 +18,11 @@
 @media print {
     @import "print";
 } // end of media query
-@media only screen and (min-width: 1024px) {
-    @import "1024up";
+@media only screen and (min-width: 1440px) {
+    @import "1440up";
 } // end of media query
-@media only screen and (max-width: 1023px){
-    @import "769up";
+@media only screen and (max-width: 1439px) {
+    @import "1024up";
 } // end of media query
 @media only screen and (max-width: 768px) {
     @import "768up";
