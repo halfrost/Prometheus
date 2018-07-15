@@ -343,7 +343,7 @@ var ImageSmartLoader = {
             } else {
                 // alert('普通支持')
                 $(".lazy").lazyload({
-                    advanced_load: true,
+                    advanced_load: false,
                     data_attribute: 'url',
                     webP_load: false,
                     is_scale: false
@@ -689,11 +689,12 @@ $(document).ready(function() {
                           if (settings.webP_load === true && settings.is_scale === true) {
                               updatedUrl += '/format/webp';
                           }
-                          if (updatedUrl.indexOf('https://ob6mci30g.qnssl.com/Blog/ArticleTitleImage/background-cover_.png') > -1 && settings.webP_load === true && settings.is_scale === true) {
+                          // support Safari and iOS
+                          if (settings.webP_load === false && updatedUrl.indexOf('https://ob6mci30g.qnssl.com/Blog/ArticleTitleImage/background-cover_.png') > -1 ) {
                             updatedUrl = 'https://ob6mci30g.qnssl.com/Blog/ArticleTitleImage/background-cover_.png';
                           }
-                          // if (settings.webP_load === true) {
-                          //     updatedUrl += '/0/format/webp';
+                          // if (updatedUrl.indexOf('https://ob6mci30g.qnssl.com/Blog/ArticleTitleImage/background-cover_.png') > -1 && settings.webP_load === true) {
+                          //   updatedUrl = 'https://ob6mci30g.qnssl.com/Blog/ArticleTitleImage/background-cover_.png?imageView2/0/format/webp';
                           // }
                       }
                     }
