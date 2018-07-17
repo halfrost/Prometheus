@@ -7197,7 +7197,7 @@ h1
 .post-short-intro
 {
     font-family: 'Open Sans', 'Hiragino Sans GB', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     line-height: 1.8rem;
 
     overflow: hidden;
@@ -7318,7 +7318,7 @@ a.btn-post-excerpt
 
 .post-tags a
 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 1.6rem;
 
     display: inline-block;
@@ -7391,7 +7391,7 @@ a.btn-post-excerpt
 
 .page-number
 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 
     display: inline-block;
 
@@ -8962,7 +8962,7 @@ footer.footer.footer-page a:hover
 footer.footer.footer-page p
 {
     font-family: 'Open Sans', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6 !important;
 }
 footer.footer.footer-page p.copyright

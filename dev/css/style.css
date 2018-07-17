@@ -4304,7 +4304,7 @@ h1 {
 
 .post-short-intro {
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   line-height: 1.8rem;
   white-space: normal;
   overflow: hidden;
@@ -4380,7 +4380,7 @@ a.btn-post-excerpt {
   margin-left: .5rem; }
 
 .post-tags a {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 1.6rem;
   display: inline-block;
   margin-left: .6rem;
@@ -4427,7 +4427,7 @@ a.btn-post-excerpt {
       background: rgba(0, 0, 0, 0.5); }
 
 .page-number {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   display: inline-block;
   padding: 0 1rem; }
 
@@ -5390,7 +5390,7 @@ footer.footer {
         color: #55A3FF; }
     footer.footer.footer-page p {
       font-family: "Open Sans", "-apple-system", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif, sans-serif;
-      font-size: 14px;
+      font-size: 16px;
       line-height: 1.6 !important; }
       footer.footer.footer-page p.copyright {
         font-size: 13px; }
