@@ -117,7 +117,7 @@ var General = {
             custom: {
                 families: ['Open Sans', 'iconfont', 'fontawesome'],
                 urls: [General.absUrl + '/assets/css/font.min.css',
-                       'https://ob6mci30g.qnssl.com/fontss/iconfont.css',
+                       'https://img.halfrost.com/fontss/iconfont.css',
                        General.absUrl + '/assets/css/font-awesome.min.css'
                       ]
             }
@@ -690,11 +690,11 @@ $(document).ready(function() {
                               updatedUrl += '/format/webp';
                           }
                           // support Safari and iOS
-                          if (settings.webP_load === false && updatedUrl.indexOf('https://ob6mci30g.qnssl.com/Blog/ArticleTitleImage/background-cover_.png') > -1 ) {
-                            updatedUrl = 'https://ob6mci30g.qnssl.com/Blog/ArticleTitleImage/background-cover_.png';
+                          if (settings.webP_load === false && updatedUrl.indexOf('https://img.halfrost.com/Blog/ArticleTitleImage/background-cover_.png') > -1 ) {
+                            updatedUrl = 'https://img.halfrost.com/Blog/ArticleTitleImage/background-cover_.png';
                           }
-                          // if (updatedUrl.indexOf('https://ob6mci30g.qnssl.com/Blog/ArticleTitleImage/background-cover_.png') > -1 && settings.webP_load === true) {
-                          //   updatedUrl = 'https://ob6mci30g.qnssl.com/Blog/ArticleTitleImage/background-cover_.png?imageView2/0/format/webp';
+                          // if (updatedUrl.indexOf('https://img.halfrost.com/Blog/ArticleTitleImage/background-cover_.png') > -1 && settings.webP_load === true) {
+                          //   updatedUrl = 'https://img.halfrost.com/Blog/ArticleTitleImage/background-cover_.png?imageView2/0/format/webp';
                           // }
                       }
                     }
