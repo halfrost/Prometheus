@@ -673,9 +673,9 @@ $(document).ready(function() {
                     }
                     if (updatedUrl !== undefined) {
                         console.log('updatedUrl = ',updatedUrl);
-                        console.log('图片地址' +updatedUrl.indexOf('ob6mci30g.qnssl.com'));
+                        console.log('图片地址' +updatedUrl.indexOf('img.halfrost.com'));
                         console.log('CDN地址' +updatedUrl.indexOf('file.is26.com'));
-                      if (updatedUrl.indexOf('ob6mci30g.qnssl.com') > -1) {
+                      if (updatedUrl.indexOf('img.halfrost.com') > -1) {
                           // alert(1)
                           if (settings.advanced_load === true) {
                               updatedUrl += '?imageView2';

@@ -44,7 +44,7 @@
         }
     });
     self.toolbox.router.get('/(.*)', self.toolbox.cacheFirst, {
-        origin: /(ob6mci30g\.qnssl\.com)/,
+        origin: /(img\.halfrost\.com)/,
         cache: {
           name: staticAssetsCacheName,
           maxEntries: maxEntries
