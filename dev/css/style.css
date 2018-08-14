@@ -844,7 +844,6 @@ a.bg-danger:focus {
 
 .page-header {
   padding-bottom: 14px;
-  margin: 60px 0 30px;
   border-bottom: 1px solid #eeeeee; }
 
 ul,
@@ -6358,6 +6357,33 @@ footer.footer {
   margin-left: -40px;
   position: absolute;
   width: 80px; }
+
+.cover-content .inner {
+  padding-bottom: 120px;
+  padding-top: 135px;
+  margin: 0 auto;
+  max-width: 720px;
+  padding: 0 30px; }
+
+.page-header .author-avatar {
+  border: 2px solid #adabac;
+  border-radius: 50%;
+  height: 76px;
+  left: -110px;
+  position: relative;
+  top: 80px;
+  width: 76px; }
+
+@media only screen and (max-width: 1000px) {
+  .page-header .author-avatar {
+    display: none; } }
+
+.page-title {
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+  position: relative; }
 
 .comments-area {
   width: 60%;

@@ -1223,7 +1223,6 @@ a.bg-danger:focus
 
 .page-header
 {
-    margin: 60px 0 30px;
     padding-bottom: 14px;
 
     border-bottom: 1px solid #eee;
@@ -10580,6 +10579,48 @@ footer.footer.footer-page p.copyright
     content: '';
 
     background-color: #cd9023;
+}
+
+.cover-content .inner
+{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 30px; 
+    padding-top: 135px;
+    padding-bottom: 120px;
+}
+
+.page-header .author-avatar
+{
+    position: relative;
+    top: 80px;
+    left: -110px;
+
+    width: 76px; 
+    height: 76px;
+
+    border: 2px solid #adabac;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 1000px)
+{
+    .page-header .author-avatar
+    {
+        display: none;
+    }
+}
+
+.page-title
+{
+    font-size: 36px;
+
+    position: relative; 
+
+    margin-bottom: 0;
+    padding-bottom: 30px;
+
+    color: #fff;
 }
 
 .comments-area
