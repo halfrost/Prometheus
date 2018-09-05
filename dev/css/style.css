@@ -4503,7 +4503,8 @@ a.btn-post-excerpt {
     font-size: 1.6rem;
     line-height: 2.4rem; }
     .single-post-inner li p {
-      margin: .3rem; }
+      margin: .3rem;
+      display: inline; }
   .single-post-inner hr {
     border: 1px solid #efefef; }
   .single-post-inner iframe, .single-post-inner frame, .single-post-inner video {

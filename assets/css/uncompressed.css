@@ -7532,6 +7532,8 @@ a.btn-post-excerpt
 }
 .single-post-inner li p
 {
+    display: inline; 
+
     margin: .3rem;
 }
 .single-post-inner hr
