@@ -152,7 +152,8 @@ mark,
 // Unordered and Ordered lists
 ul,
 ol {
-  margin-top: (($line-height-computed / 2) * -1);
+  // margin-top: (($line-height-computed / 2) * -1);
+  margin-top: ($line-height-computed);
   margin-bottom: ($line-height-computed);
   padding-left: 0;
   margin-left: 0;
