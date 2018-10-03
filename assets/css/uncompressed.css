@@ -8618,6 +8618,69 @@ Copyright (c) 2014 Daniel Eden
     max-width: 100vw;
 }
 
+table
+{
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    margin: 1.75em 0;
+
+    background-color: transparent;
+}
+
+table th,
+table td
+{
+    line-height: 20px;
+
+    padding: 8px;
+
+    text-align: left;
+    vertical-align: top;
+
+    border: 1px solid #e3ecf3; 
+    border-top: #efefef 1px solid;
+}
+
+table th
+{
+    color: #000;
+    background-color: #93d1ff;
+}
+
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td
+{
+    border-top: 0;
+}
+
+table tbody + tbody
+{
+    border-top: #efefef 2px solid;
+}
+
+table table table
+{
+    background-color: #fff;
+}
+
+table tbody > tr:nth-child(odd) > td,
+table tbody > tr:nth-child(odd) > th
+{
+    background-color: #f6f6f6;
+}
+
+table.plain tbody > tr:nth-child(odd) > td,
+table.plain tbody > tr:nth-child(odd) > th
+{
+    background: transparent;
+}
+
 /* 载入iconfont字体 */
 .iconfont
 {
