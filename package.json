@@ -1,6 +1,6 @@
 {
   "name": "yasuko",
-  "version": "1.0.0",
+  "version": "2.1.0",
   "description": "A Ghost theme designed and developed by @foru17",
   "author": {
     "email": "i@luolei.org"
@@ -16,7 +16,7 @@
     "chalk": "^1.1.1",
     "dateformat": "^1.0.12",
     "del": "^2.1.0",
-    "gulp": "^3.8.10",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-compass": "^2.0.3",
     "gulp-concat": "^2.4.3",
@@ -24,7 +24,6 @@
     "gulp-ftp": "^1.1.0",
     "gulp-image-resize": "^0.7.1",
     "gulp-imagemin": "^2.1.0",
-    "jshint": "2.8.0",
     "gulp-jshint": "^2.0.0",
     "gulp-minify-css": "^1.2.1",
     "gulp-plumber": "^1.0.0",
@@ -36,6 +35,7 @@
     "gulp-zip": "^3.0.2",
     "gulp.spritesmith": "^6.0.0",
     "imagemin-pngquant": "^4.0.0",
+    "jshint": "2.8.0",
     "jshint-stylish": "^2.1.0"
   }
 }

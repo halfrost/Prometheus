@@ -117,7 +117,7 @@ var General = {
             custom: {
                 families: ['Open Sans', 'iconfont', 'fontawesome'],
                 urls: [General.absUrl + '/assets/css/font.min.css',
-                       'https://img.halfrost.com/fontss/iconfont.css',
+                       'https://img.halfrost.com/iconfonts/iconfont.css',
                        General.absUrl + '/assets/css/font-awesome.min.css'
                       ]
             }
