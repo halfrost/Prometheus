@@ -6940,7 +6940,7 @@ input[type="submit"],
   color: #3b3b3b;
   font-family: "Open Sans","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif; }
 
-@media only screen and (min-width: 1401px) {
+@media only screen and (min-width: 1410px) {
   #toc {
     visibility: visible;
     display: block; } }
