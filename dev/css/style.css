@@ -4436,7 +4436,7 @@ a.btn-post-excerpt {
 
 .single-post-inner {
   font-size: 1.8rem;
-  padding: 0rem 2.8% .8rem;
+  padding: 0rem 0rem .8rem;
   overflow: hidden;
   border-bottom: 1px dashed #e5e5e5;
   font-family: "Open Sans", "Hiragino Sans GB", "-apple-system", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif; }
@@ -4448,8 +4448,9 @@ a.btn-post-excerpt {
     text-indent: -9999px; }
     .single-post-inner img.full-img {
       max-width: none;
-      width: 106%;
-      margin: 0 -3%; }
+      width: 100%;
+      margin: 0 0;
+      padding: 0.8em 0; }
   .single-post-inner .loading {
     opacity: .3; }
   .single-post-inner .lazy {
@@ -4478,34 +4479,41 @@ a.btn-post-excerpt {
       vertical-align: baseline; }
   .single-post-inner p {
     color: #333;
-    font-size: 1.6rem;
-    line-height: 2.8rem;
-    margin-top: 2.2rem;
+    font-size: 1.7rem;
+    line-height: 1.85em;
+    margin-bottom: 0.6em;
     font-family: "Open Sans", "Hiragino Sans GB", "-apple-system", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif; }
   .single-post-inner p.with-img {
     margin: 0;
     padding: 0;
     -webkit-transition: padding 0.15s linear;
     transition: padding 0.15s linear; }
-  .single-post-inner h2, .single-post-inner h3, .single-post-inner h4, .single-post-inner h6 {
-    margin-top: .5rem;
+  .single-post-inner h2, .single-post-inner h3, .single-post-inner h4, .single-post-inner h5 {
+    margin: 1em 0 0.6em 0;
     position: relative;
     text-indent: 1.2em; }
-    .single-post-inner h2:before, .single-post-inner h3:before, .single-post-inner h4:before, .single-post-inner h6:before {
+    .single-post-inner h2:before, .single-post-inner h3:before, .single-post-inner h4:before, .single-post-inner h5:before {
       display: block;
       position: absolute;
       content: '#';
       left: -1em;
       color: #F72D84; }
   .single-post-inner ul {
-    margin: 1.5rem 0; }
+    margin: 1.5rem 0;
+    padding-left: 3rem;
+    list-style-position: outside; }
+  .single-post-inner ol {
+    margin: 1.5rem 0;
+    padding-left: 3rem;
+    list-style-position: outside; }
   .single-post-inner li {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     line-height: 2.4rem; }
     .single-post-inner li p {
-      margin: .3rem;
       display: inline; }
   .single-post-inner hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
     border: 1px solid #efefef; }
   .single-post-inner iframe, .single-post-inner frame, .single-post-inner video {
     max-width: 100%;
@@ -7046,7 +7054,9 @@ input[type="submit"],
   .comments-area {
     width: 100%; }
   .read-next {
-    width: 100%; } }
+    width: 100%; }
+  .single-post-inner {
+    padding: 0rem 2.8% .8rem; } }
 
 @media only screen and (max-width: 481px) {
   #header {

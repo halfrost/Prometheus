@@ -532,7 +532,8 @@ a.btn-post-excerpt {
 }
 .single-post-inner {
     font-size: 1.8rem;
-    padding: 0rem 2.8% .8rem;
+    // padding: 0rem 2.8% .8rem;
+    padding: 0rem 0rem .8rem;
     overflow: hidden;
     border-bottom: 1px dashed #e5e5e5;
     font-family: $googleFont, $fontOSX;
@@ -544,8 +545,11 @@ a.btn-post-excerpt {
         text-indent: -9999px;
         &.full-img {
             max-width: none;
-            width: 106%;
-            margin: 0 -3%;
+            // width: 106%;
+            // margin: 0 -3%;
+            width: 100%;
+            margin: 0 0;
+            padding: 0.8em 0;
             // -webkit-transition: * 100ms linear .3s;
             // transition: * 100ms linear .3s;
         }
@@ -590,10 +594,11 @@ a.btn-post-excerpt {
     }
     p {
         color: #333;
-        font-size: 1.6rem;
-        line-height: 2.8rem;
-        margin-top: 2.2rem;
-        font-family: $googleFont ,$fontOSX;
+        font-size: 1.7rem;
+        line-height: 1.85em;
+        // margin-top: 2.2rem;
+        margin-bottom: 0.6em;
+        font-family: $googleFont, $fontOSX;
     }
     p.with-img {
         margin: 0;
@@ -605,8 +610,9 @@ a.btn-post-excerpt {
         // color: #595959;
         // padding: 0 1.5rem;
     }
-    h2, h3, h4, h6 {
-        margin-top: .5rem;
+    h2, h3, h4, h5 {
+        margin: 1em 0 0.6em 0;
+        // margin-top: .5rem;
         position: relative;
         text-indent: 1.2em;
         &:before {
@@ -619,12 +625,19 @@ a.btn-post-excerpt {
     }
     ul {
         margin: 1.5rem 0;
+        padding-left: 3rem;
+        list-style-position: outside;
+    }
+    ol {
+        margin: 1.5rem 0;
+        padding-left: 3rem;
+        list-style-position: outside;
     }
     li {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
         line-height: 2.4rem;
         p {
-            margin: .3rem;
+            // margin: .3rem;
             display: inline;
         }
     }
@@ -637,6 +650,8 @@ a.btn-post-excerpt {
     //     padding-left: 1rem;
     // }
     hr {
+        margin-top: 20px;
+        margin-bottom: 20px;
         border: 1px solid #efefef;
     }
     iframe, frame, video {

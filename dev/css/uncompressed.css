@@ -7410,7 +7410,7 @@ a.btn-post-excerpt
 
     overflow: hidden;
 
-    padding: 0rem 2.8% .8rem;
+    padding: 0rem 0rem .8rem;
 
     border-bottom: 1px dashed #e5e5e5;
 }
@@ -7426,9 +7426,10 @@ a.btn-post-excerpt
 }
 .single-post-inner img.full-img
 {
-    width: 106%;
+    width: 100%;
     max-width: none;
-    margin: 0 -3%;
+    margin: 0 0;
+    padding: .8em 0;
 }
 .single-post-inner .loading
 {
@@ -7481,10 +7482,10 @@ a.btn-post-excerpt
 .single-post-inner p
 {
     font-family: 'Open Sans', 'Hiragino Sans GB', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
-    font-size: 1.6rem;
-    line-height: 2.8rem;
+    font-size: 1.7rem;
+    line-height: 1.85em;
 
-    margin-top: 2.2rem;
+    margin-bottom: .6em;
 
     color: #333;
 }
@@ -7499,18 +7500,18 @@ a.btn-post-excerpt
 .single-post-inner h2,
 .single-post-inner h3,
 .single-post-inner h4,
-.single-post-inner h6
+.single-post-inner h5
 {
     position: relative;
 
-    margin-top: .5rem;
+    margin: 1em 0 .6em 0;
 
     text-indent: 1.2em;
 }
 .single-post-inner h2:before,
 .single-post-inner h3:before,
 .single-post-inner h4:before,
-.single-post-inner h6:before
+.single-post-inner h5:before
 {
     position: absolute;
     left: -1em;
@@ -7524,20 +7525,31 @@ a.btn-post-excerpt
 .single-post-inner ul
 {
     margin: 1.5rem 0;
+    padding-left: 3rem;
+
+    list-style-position: outside;
+}
+.single-post-inner ol
+{
+    margin: 1.5rem 0;
+    padding-left: 3rem;
+
+    list-style-position: outside;
 }
 .single-post-inner li
 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     line-height: 2.4rem;
 }
 .single-post-inner li p
 {
-    display: inline; 
-
-    margin: .3rem;
+    display: inline;
 }
 .single-post-inner hr
 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
     border: 1px solid #efefef;
 }
 .single-post-inner iframe,
@@ -11674,6 +11686,10 @@ input[type='submit'],
     .read-next
     {
         width: 100%;
+    }
+    .single-post-inner
+    {
+        padding: 0rem 2.8% .8rem;
     }
 }
 
