@@ -5,13 +5,16 @@ body, html {
     margin: 0;
     padding: 0;
     position: relative;
+    -webkit-font-feature-settings: 'kern' 1;
+    -moz-font-feature-settings: 'kern' 1;
+    -o-font-feature-settings: 'kern' 1;
 }
 html {
     max-height: 100%;
     font-size: 62.5%;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    font-family: $googleFont, $fontOSX;
+    font-family:  "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
 }
 a {
     text-decoration: none;
@@ -90,14 +93,14 @@ h1 {
     // height: 10rem;
     padding: 1.5rem;
     border-top: #EBF2F6 1px solid;
-    font-family: $googleFont, sans-serif;
+    font-family:  "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
     font-weight: lighter;
     font-size: 1.2rem;
     line-height: 1.45em;
     color: #666665;
     text-align: center;
     a {
-        font-family: $googleFont, sans-serif;
+        font-family:  "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
         color: #666665;
         &:hover {
             color: #50585D;
@@ -356,7 +359,7 @@ h1 {
     @include word-wrap-multi;
     max-height: 3.6rem;
     overflow: hidden;
-    font-family: $googleFont, $fontOSX;
+    font-family:  "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
     // margin-top: .5rem;
 }
 .post-excerpt-mirror-mask {
@@ -405,7 +408,7 @@ a.btn-post-excerpt {
     float: left;
     text-align: center;
     width: auto;
-    font-family: $googleFont, sans-serif;
+    font-family:  "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
     padding: .5rem 1rem;
     border: 1px solid #fff;
     font-size: 1.4rem;
@@ -423,12 +426,12 @@ a.btn-post-excerpt {
 // .post-title {
 //     color: #fff;
 //     font-size: 3.6rem;
-//     font-family: $googleFont, sans-serif;
+//     font-family:  sans-serif;
 //     margin: 1.2rem 0;
 //     @include word-wrap;
 //     overflow: hidden;
 //     a {
-//         font-family: $fontOSX, sans-serif;
+//         font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
 //         line-height: 3.6rem;
 //         // font-weight:normal;
 //         // text-shadow: 1px 1px 1px #333, 0 0 0 #333, 1px 1px 1px #fff;
@@ -438,7 +441,7 @@ a.btn-post-excerpt {
 .post-title {
     color: #fff;
     font-size: 3.6rem;
-    font-family: $googleFont, sans-serif;
+    font-family:  "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
     // 更改 header 主题之前的配置
     //margin: 1.2rem 0;
     // 下面这2句话是新增的配置
@@ -449,7 +452,7 @@ a.btn-post-excerpt {
     // @include word-wrap;
     overflow: hidden;
     a {
-        font-family: $fontOSX, sans-serif;
+        font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
         line-height: 3.6rem;
     }
 }
@@ -459,7 +462,7 @@ a.btn-post-excerpt {
     //display: inline-block; // 更换 header 主题之前的设置
     color: #fff;
     // font-size: 1.6rem; // 更换 header 主题之前的设置
-    font-family: $googleFont, sans-serif;
+    font-family:  "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
 }
 .post-tags {
     margin-left: .5rem;
@@ -502,7 +505,7 @@ a.btn-post-excerpt {
     a {
         font-size: 1.4rem;
         // text-transform: uppercase;
-        font-family: $googleFont $fontOSX;
+        font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
         border-radius: .3rem;
         display: inline-block;
         text-align: center;
@@ -536,7 +539,10 @@ a.btn-post-excerpt {
     padding: 0rem 0rem .8rem;
     overflow: hidden;
     border-bottom: 1px dashed #e5e5e5;
-    font-family: $googleFont, $fontOSX;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
+    -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
+    -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
+    -o-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
     img {
         display: block;
         margin: 0 auto;
@@ -583,7 +589,7 @@ a.btn-post-excerpt {
         padding: 0 .5rem;
         line-height: 2.8rem;
         font-size: 1.6rem;
-        font-family: $googleFont, $fontOSX;
+        font-family:  "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
         vertical-align: top;
         // white-space: nowrap;
         .iconfont {
@@ -598,7 +604,8 @@ a.btn-post-excerpt {
         line-height: 1.85em;
         // margin-top: 2.2rem;
         margin-bottom: 0.6em;
-        font-family: $googleFont, $fontOSX;
+        font-family:  "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
+        text-rendering: geometricPrecision;
     }
     p.with-img {
         margin: 0;
@@ -607,6 +614,10 @@ a.btn-post-excerpt {
         transition: padding 0.15s linear;
     }
     h1, h2, h3, h4, h5, h6, pre, code {
+        -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+        -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+        -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+        text-rendering: geometricPrecision;
         // color: #595959;
         // padding: 0 1.5rem;
     }
@@ -844,7 +855,7 @@ a.btn-post-excerpt {
     z-index: 99;
     opacity: .7;
     border-radius: .1rem;
-    font-family: $googleFont, $fontOSX;
+    font-family:  "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
 }
 .back-home {
     background: none repeat scroll 0 0 transparent;
@@ -903,8 +914,9 @@ a.btn-post-excerpt {
     margin-top: 16rem;
     h2, h4 {
         color: #fff;
-        font-family: $googleFont, $fontOSX;
-        font-weight: lighter;
+        font-family:  "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
+        // font-weight: lighter;
+        font-weight: normal;
         text-shadow: 0 1px 1px #595959;
         &:hover {
             color: #efefef;
@@ -949,7 +961,7 @@ a.btn-post-excerpt {
 .post-page-time {
     display: inline-block;
     float: left;
-    font-family: $googleFont, $fontOSX;
+    font-family:  "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
     text-align: left;
     height: 2rem;
     line-height: 2rem;
@@ -961,7 +973,7 @@ a.btn-post-excerpt {
     float: left;
     // padding-bottom: 1rem;
     text-align: left;
-    font-family: $fontOSX;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
     // margin-top: 1rem;
     font-size: 1.4rem;
     height: 2rem;
@@ -977,8 +989,8 @@ a.btn-post-excerpt {
     margin: 0 auto;
     text-align: left;
     font-weight: lighter;
-    // font-family: $fontOSX;
-    font-family: $googleFont $fontOSX;
+    // font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
     @include word-wrap-multi;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -1101,7 +1113,7 @@ a.btn-post-excerpt {
     background: #fff;
     margin-top: 5rem;
     width: 100%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
 }
 .author-image {
     -webkit-box-sizing: border-box;
@@ -1160,7 +1172,7 @@ a.btn-post-excerpt {
     span {
         margin-right: 1rem;
         color: #9EABB3;
-        font-family: $googleFont, $fontOSX;
+        font-family:  "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
         a {
             color: #9EABB3;
         }
@@ -1188,7 +1200,7 @@ a.btn-post-excerpt {
         margin: 0 auto;
         color: #333;
         font-style: italic;
-        font-family: $fontOSX;
+        font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
     }
 }
 .comment-area.toggle-up {

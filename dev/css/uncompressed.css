@@ -7,7 +7,7 @@
  */
 html
 {
-    font-family: sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif;
     /* 1 */
 
         -ms-text-size-adjust: 100%;
@@ -465,7 +465,7 @@ th
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html
 {
-    font-family: sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif;
 
         -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -757,7 +757,7 @@ html
 
 body
 {
-    font-family: 'Open Sans', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
     line-height: 1.9;
 
@@ -897,7 +897,7 @@ h6,
 .h5,
 .h6
 {
-    font-family: 'Open Sans', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 800;
     line-height: 1.3;
 
@@ -5518,7 +5518,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus
 
 .tooltip
 {
-    font-family: 'Open Sans', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
     font-size: 14px;
     font-weight: normal;
     font-style: normal;
@@ -5685,7 +5685,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus
 
 .popover
 {
-    font-family: 'Open Sans', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
     font-weight: normal;
     font-style: normal;
@@ -6742,18 +6742,22 @@ div.prism-show-language > div.prism-show-language-label[data-language]
 body,
 html
 {
-    position: relative; 
+    position: relative;
 
     width: 100%;
     height: 100%;
     min-height: 100%;
     margin: 0;
     padding: 0;
+
+    -webkit-font-feature-settings: 'kern' 1;
+       -moz-font-feature-settings: 'kern' 1;
+         -o-font-feature-settings: 'kern' 1;
 }
 
 html
 {
-    font-family: 'Open Sans', 'Hiragino Sans GB', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif; 
     font-size: 62.5%;
 
     max-height: 100%;
@@ -6875,7 +6879,7 @@ h1
 
 .site-footer
 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif;
     font-size: 1.2rem;
     font-weight: lighter;
     line-height: 1.45em;
@@ -6892,7 +6896,7 @@ h1
 }
 .site-footer a
 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif;
 
     color: #666665;
 }
@@ -7195,7 +7199,7 @@ h1
 
 .post-short-intro
 {
-    font-family: 'Open Sans', 'Hiragino Sans GB', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif; 
     font-size: 1.6rem;
     line-height: 1.8rem;
 
@@ -7262,7 +7266,7 @@ h1
 
 a.btn-post-excerpt
 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif;
     font-size: 1.4rem;
     line-height: 2rem;
 
@@ -7285,7 +7289,7 @@ a.btn-post-excerpt
 
 .post-title
 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif;
     font-size: 3.6rem;
     line-height: 1.2;
 
@@ -7297,13 +7301,13 @@ a.btn-post-excerpt
 }
 .post-title a
 {
-    font-family: 'Hiragino Sans GB', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif, sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif;
     line-height: 3.6rem;
 }
 
 .post-meta span
 {
-    font-family: 'Open Sans', sans-serif; 
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif; 
 
     display: inline;
 
@@ -7369,7 +7373,7 @@ a.btn-post-excerpt
 }
 .pagination a
 {
-    font-family: 'Open Sans' 'Hiragino Sans GB', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif;
     font-size: 1.4rem;
     line-height: 2.4rem;
 
@@ -7405,7 +7409,7 @@ a.btn-post-excerpt
 
 .single-post-inner
 {
-    font-family: 'Open Sans', 'Hiragino Sans GB', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif;
     font-size: 1.8rem;
 
     overflow: hidden;
@@ -7413,6 +7417,10 @@ a.btn-post-excerpt
     padding: 0rem 0rem .8rem;
 
     border-bottom: 1px dashed #e5e5e5;
+
+    -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
+       -moz-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
+         -o-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
 }
 .single-post-inner img
 {
@@ -7461,7 +7469,7 @@ a.btn-post-excerpt
 }
 .single-post-inner a
 {
-    font-family: 'Open Sans', 'Hiragino Sans GB', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif;
     font-size: 1.6rem;
     line-height: 2.8rem;
 
@@ -7481,13 +7489,15 @@ a.btn-post-excerpt
 }
 .single-post-inner p
 {
-    font-family: 'Open Sans', 'Hiragino Sans GB', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif;
     font-size: 1.7rem;
     line-height: 1.85em;
 
     margin-bottom: .6em;
 
     color: #333;
+
+    text-rendering: geometricPrecision;
 }
 .single-post-inner p.with-img
 {
@@ -7496,6 +7506,20 @@ a.btn-post-excerpt
 
     -webkit-transition: padding .15s linear;
             transition: padding .15s linear;
+}
+.single-post-inner h1,
+.single-post-inner h2,
+.single-post-inner h3,
+.single-post-inner h4,
+.single-post-inner h5,
+.single-post-inner h6,
+.single-post-inner pre,
+.single-post-inner code
+{
+    -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+       -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+         -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    text-rendering: geometricPrecision;
 }
 .single-post-inner h2,
 .single-post-inner h3,
@@ -7794,7 +7818,7 @@ a.btn-post-excerpt
 
 .home-logo
 {
-    font-family: 'Open Sans', 'Hiragino Sans GB', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif; 
     font-size: 2.2rem;
     font-weight: bold;
     line-height: 4rem;
@@ -7888,8 +7912,8 @@ a.btn-post-excerpt
 .home-info-container h2,
 .home-info-container h4
 {
-    font-family: 'Open Sans', 'Hiragino Sans GB', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
-    font-weight: lighter;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif;
+    font-weight: normal;
 
     color: #fff;
     text-shadow: 0 1px 1px #595959;
@@ -7952,7 +7976,7 @@ a.btn-post-excerpt
 
 .post-page-time
 {
-    font-family: 'Open Sans', 'Hiragino Sans GB', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif;
     font-size: 1.6rem;
     line-height: 2rem;
 
@@ -7968,7 +7992,7 @@ a.btn-post-excerpt
 
 .post-page-author
 {
-    font-family: 'Hiragino Sans GB', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif;
     font-size: 1.4rem;
     line-height: 2rem;
 
@@ -7985,7 +8009,7 @@ a.btn-post-excerpt
 
 .post-page-title
 {
-    font-family: 'Open Sans' 'Hiragino Sans GB', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif;
     font-size: 4.2rem;
     font-weight: lighter;
     line-height: 4.8rem;
@@ -8141,7 +8165,7 @@ a.btn-post-excerpt
 
 .author
 {
-    font-family: 'Open Sans', sans-serif; 
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif; 
 
     position: relative;
 
@@ -8232,7 +8256,7 @@ a.btn-post-excerpt
 }
 .author-meta span
 {
-    font-family: 'Open Sans', 'Hiragino Sans GB', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif; 
 
     margin-right: 1rem;
 
@@ -8256,7 +8280,7 @@ a.btn-post-excerpt
 }
 .comment-area h4
 {
-    font-family: 'Hiragino Sans GB', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif; 
     font-style: italic;
 
     display: block;
@@ -8993,14 +9017,14 @@ table.plain tbody > tr:nth-child(odd) > th
 
 .gh-subscribe-rss
 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif;
     font-size: 1.2rem;
     line-height: 1.4em;
 }
 
 footer.footer
 {
-    font-family: 'Open Sans', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif, sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif, sans-serif;
 
     padding: 60px 0 15px 0;
 }
@@ -9047,7 +9071,7 @@ footer.footer.footer-page a:hover
 }
 footer.footer.footer-page p
 {
-    font-family: 'Open Sans', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif, sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif, sans-serif;
     font-size: 16px;
     line-height: 1.6 !important;
 }
@@ -9120,7 +9144,7 @@ footer.footer.footer-page p.copyright
 
 .tag-cloud
 {
-    font-family: 'Open Sans', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif, sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif, sans-serif;
     line-height: 1;
 }
 .tag-cloud a
@@ -9169,7 +9193,7 @@ footer.footer.footer-page p.copyright
 
 .widget
 {
-    font-family: 'Open Sans', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif, sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif, sans-serif;
 }
 .widget p
 {
@@ -9218,7 +9242,7 @@ footer.footer.footer-page p.copyright
 }
 .widget.widget-side p
 {
-    font-family: 'Open Sans', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif, sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif, sans-serif;
 }
 .widget.widget-inline
 {
@@ -9288,7 +9312,7 @@ footer.footer.footer-page p.copyright
 }
 .header.header-main .header-category
 {
-    font-family: 'Open Sans', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif, sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif, sans-serif;
     font-size: 13px;
     font-weight: 800;
     line-height: 1.5;
@@ -9794,7 +9818,7 @@ footer.footer.footer-page p.copyright
 
 .site-title
 {
-    font-family: 'Open Sans', 'Hiragino Sans GB', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif;
     font-size: 28px;
     font-weight: bold;
     line-height: 1.2;
@@ -10036,7 +10060,7 @@ footer.footer.footer-page p.copyright
 .post-meta .published,
 .post-meta .reading-time
 {
-    font: normal 12px/1.5 'Open Sans', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font: normal 12px/1.5 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
 
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -11002,7 +11026,7 @@ footer.footer.footer-page p.copyright
 
 input
 {
-    font-family: 'Open Sans', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
     font-size: 12px;
     font-weight: bold;
 
@@ -11152,7 +11176,7 @@ input[type='submit'],
 
 .result-title
 {
-    font: bold 18px/1.5 'Open Sans', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font: bold 18px/1.5 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
 
     margin-bottom: 10px; 
 
@@ -11162,7 +11186,7 @@ input[type='submit'],
 .results-info,
 .result-date
 {
-    font: 12px/1.5 'Open Sans', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font: 12px/1.5 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
 
     letter-spacing: 1px;
     text-transform: uppercase; 
@@ -11200,7 +11224,7 @@ input[type='submit'],
 
 .widget-recent-posts
 {
-    font-family: 'Open Sans', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .widget-recent-posts ul
@@ -11285,7 +11309,7 @@ input[type='submit'],
 
 .widget-tags a
 {
-    font: bold 12px/1.5 'Open Sans', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font: bold 12px/1.5 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
 
     display: inline-block;
 
@@ -11413,7 +11437,7 @@ input[type='submit'],
 
 #toc
 {
-    font: 400 16px/1.8 'Open Sans','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
+    font: 400 16px/1.8 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif;
 
     display: none; 
     visibility: hidden;
@@ -11481,7 +11505,7 @@ input[type='submit'],
 
 #toc h4
 {
-    font-family: 'Open Sans','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif; 
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif; 
     font-size: 18px;
 
     margin: .75em 0;
@@ -11770,7 +11794,7 @@ input[type='submit'],
     }
     .post-excerpt-mirror a
     {
-        font-family: 'Hiragino Sans GB', '-apple-system', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft YaHei', Helvetica, Arial, sans-serif; 
+        font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif; 
         font-size: 2rem;
     }
     .post-excerpt-mirror a.btn-post-excerpt
@@ -11801,7 +11825,7 @@ input[type='submit'],
     .home-info-container h2,
     .home-info-container h4
     {
-        font-weight: lighter;
+        font-weight: normal;
 
         color: #fff;
         text-shadow: 0 1px 1px #595959;

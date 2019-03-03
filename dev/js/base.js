@@ -115,9 +115,8 @@ var General = {
                 console.log('loading font');
             },
             custom: {
-                families: ['Open Sans', 'iconfont', 'fontawesome'],
-                urls: [General.absUrl + '/assets/css/font.min.css',
-                       'https://img.halfrost.com/iconfonts/iconfont.css',
+                families: ['iconfont', 'fontawesome'],
+                urls: ['https://img.halfrost.com/iconfonts/iconfont.css',
                        General.absUrl + '/assets/css/font-awesome.min.css'
                       ]
             }
@@ -126,7 +125,7 @@ var General = {
               console.log('加载字体JS');
             WebFont.load({
                 custom: {
-                    families: ['Open Sans', 'iconfont', 'fontawesome']
+                    families: ['iconfont', 'fontawesome']
                 }
             });
         });

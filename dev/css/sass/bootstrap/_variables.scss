@@ -44,9 +44,10 @@ $link-hover-decoration: none !default;
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
-
-$font-family-sans-serif:  "Open Sans", "-apple-system", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif !default;
-$font-family-serif:       "Open Sans", "-apple-system", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif !default;
+// $font-family-sans-serif:  "Open Sans", "-apple-system", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif !default;
+// $font-family-serif:       "Open Sans", "-apple-system", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif:       "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Inconsolata, Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-serif !default;
