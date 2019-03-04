@@ -4440,7 +4440,7 @@ a.btn-post-excerpt {
 .single-post-inner {
   font-size: 1.8rem;
   padding: 0rem 0rem .8rem;
-  overflow: hidden;
+  overflow: visible;
   border-bottom: 1px dashed #e5e5e5;
   font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei","Helvetica Neue", Arial, sans-serif;
   -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
@@ -4502,13 +4502,12 @@ a.btn-post-excerpt {
     text-rendering: geometricPrecision; }
   .single-post-inner h2, .single-post-inner h3, .single-post-inner h4, .single-post-inner h5 {
     margin: 1em 0 0.6em 0;
-    position: relative;
-    text-indent: 1.2em; }
+    position: relative; }
     .single-post-inner h2:before, .single-post-inner h3:before, .single-post-inner h4:before, .single-post-inner h5:before {
       display: block;
       position: absolute;
       content: '#';
-      left: -1em;
+      left: -1.5em;
       color: #F72D84; }
   .single-post-inner ul {
     margin: 1.5rem 0;

@@ -7412,7 +7412,7 @@ a.btn-post-excerpt
     font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei','Helvetica Neue', Arial, sans-serif;
     font-size: 1.8rem;
 
-    overflow: hidden;
+    overflow: visible;
 
     padding: 0rem 0rem .8rem;
 
@@ -7526,11 +7526,9 @@ a.btn-post-excerpt
 .single-post-inner h4,
 .single-post-inner h5
 {
-    position: relative;
+    position: relative; 
 
     margin: 1em 0 .6em 0;
-
-    text-indent: 1.2em;
 }
 .single-post-inner h2:before,
 .single-post-inner h3:before,
@@ -7538,7 +7536,7 @@ a.btn-post-excerpt
 .single-post-inner h5:before
 {
     position: absolute;
-    left: -1em;
+    left: -1.5em;
 
     display: block;
 
