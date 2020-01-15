@@ -135,7 +135,7 @@ var General = {
     scrollToPos: function(position) {
         var STR_TO_TOP = '我要飞到最高',
             coverHeight = position || $(window).height(); //获得图片高度
-        var button = $('<a href="#" id="to-top" title="' + STR_TO_TOP + '"> <div class="to-top-wrap"></div></a>').appendTo('body');
+        var button = $('<a aria-label="top" href="#" id="to-top" title="' + STR_TO_TOP + '"> <div class="to-top-wrap"></div></a>').appendTo('body');
         $(window).scroll(function() {
             if ($(window).scrollTop() > $(window).height()) {
                 button.fadeIn(500);
