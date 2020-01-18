@@ -49,3 +49,17 @@
         }
     }
 }
+
+#return-top {
+	background: --light-color;
+	border-radius: 100%;
+	width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    color: --text-color;
+	box-shadow: 0 0 20px 5px rgba(62, 60, 85, 0.06);
+    padding: 12px 4px;
+    text-align: center;
+}

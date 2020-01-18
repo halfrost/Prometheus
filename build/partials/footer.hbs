@@ -10,6 +10,11 @@
                 {{/if}}
                 {{/if}}
                 {{> social-links}}
+                <div class="day-night-switch">
+			        <input type="checkbox" name="theme-toggle" id="switch_theme" class="theme-toggle">
+                    <label for="switch_theme" class="theme-toggle-label fade-in">{{t "Toggle Theme"}}</label>
+		        </div>
+                <a href="#" id="return-top">{{> icons/arrow-up}}</a>
                 <div class="copyright">
                     &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a> - {{{t "Published with {ghostLink}" ghostLink="<a href=\"https://ghost.org/\">Ghost</a>"}}}
                 </div>

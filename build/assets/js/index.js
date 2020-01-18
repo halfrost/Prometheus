@@ -230,6 +230,22 @@
             });
         },
 
+        scrollTop: function() {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() >= 50) {
+                    $('#return-top').fadeIn(200);
+                } else {
+                    $('#return-top').fadeOut(200);
+                }
+            });
+        
+            $('#return-top').on('click', function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+        },
+
         init: function () {
             themeApp.themeSwitch();
             themeApp.watermarkLetter();
@@ -242,6 +258,7 @@
             themeApp.loadMore();
             themeApp.commentLazyLoad();
             themeApp.notification();
+            themeApp.scrollTop();
         }
     }
     /*===========================

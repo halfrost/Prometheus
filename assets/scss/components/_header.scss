@@ -190,6 +190,13 @@
         }
     }
 }
+
+.day-night-switch {
+    left: 15px;
+    position: fixed;
+    bottom: 15px;
+}
+
 .theme-toggle[type=checkbox]{
 	height: 0;
     width: 0;
