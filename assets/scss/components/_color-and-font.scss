@@ -1,0 +1,41 @@
+/*=====================================================
+    Fonts
+=====================================================*/
+$accent-color: #FDA403; /* theme highlight/primary color */
+$success: #0ca910;
+$error: #f0134d;
+
+$theme-light: (
+    bg-color: #FFFFFF,
+    text-title: #161616,
+    text-body: #313131,
+    text-light: #929399,
+);
+
+$theme-dark: (
+    bg-color: #252733,
+    text-title: #FFFFFF,
+    text-body: #D5D5D5,
+    text-light: #929399,
+);
+
+/*=====================================================
+    Fonts
+=====================================================*/
+$font-body: 'Noto Sans', sans-serif;
+$font-title: 'Playfair Display', serif;
+
+/*=====================================================
+    Please don't edit below code if you are not sure
+=====================================================*/
+:root { 
+    @each $name, $value in $theme-dark {
+        --#{$name}: #{$value};
+    }
+}
+
+[data-theme="light"] {
+    @each $name, $value in $theme-light {
+        --#{$name}: #{$value};
+    }
+}

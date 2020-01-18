@@ -1,51 +1,43 @@
 {{!< default}}
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
-
-{{! The big featured header }}
-
-{{! Everything inside the #author tags pulls data from the author }}
-<main class="site-main">
-	<div class="site-content">
-
-		{{!-- Everything inside the #author tags pulls data from the author --}}
-		{{#author}}
-		<header class="cover page-header">
-			{{#if cover_image}}
-			<div class="cover-bg" style="background-image: url({{cover_image}})"></div>
-			{{/if}}
-			<div class="cover-content">
-				<div class="inner" style="text-align:left;">
-					<div class="author-info">
-						{{#if profile_image}}
-						<img src="{{profile_image}}" alt="{{name}}" class="author-avatar" />
-						{{/if}}
-						<div class="post-count">{{plural ../pagination.total empty='No posts' singular='% Post' plural='% Posts'}} by Author</div>
-						<h1 class="page-title">{{name}}</h1>
-						{{#if bio}}
-						<p class="page-description">{{bio}}</p>
-						{{/if}}
-						<div class="author-links">
-							{{#if location}}
-							<span class="author-location"><span class="fa fa-map-pin" aria-hidden="true"></span> {{location}}</span>
-							{{/if}}
-							{{#if website}}
-							<span class="author-website"><span class="fa fa-chain" aria-hidden="true"></span> <a href="{{website}}" target="_blank" rel="noopener"> {{website}}</a></span>
-							{{/if}}
-							{{#if facebook}}
-							<span class="author-facebook"><span class="fa fa-facebook" aria-hidden="true"></span> <a href="{{facebook_url}}" target="_blank" rel="noopener"> Facebook</a></span>
-							{{/if}}
-							{{#if twitter}}
-							<span class="author-twitter" target="_blank"><span class="fa fa-twitter" aria-hidden="true"></span><a href="{{twitter_url}}" target="_blank" rel="noopener"> Twitter</a></span>
-							{{/if}}
-						</div>
-					</div><!-- .author-info -->
-				</div><!-- .inner -->
-			</div><!-- .cover-content -->
-		</header><!-- .cover -->
-		{{/author}}
-
-		{{!-- The tag below includes the post loop - partials/loop.hbs --}}
-		{{> "loop"}}
-
-	</div><!-- .site-content -->
-</main><!-- .site-main -->
+<div class="site-content-wrap fade-in-up">
+    {{#author}}
+    <div class="container-fluid">
+        <div class="cover-wrap {{#if cover_image}} has-image" style="background-image:url({{cover_image}});{{/if}}">
+            <div class="cover-inner text-center">
+                {{#if profile_image}}
+                    <div class="avarat-wrap">
+                    <img src="{{img_url profile_image size="s"}}" alt="{{name}}" class="avatar clearfix" role="presentation">
+                    </div>
+                {{else}}
+                    <div class="avatar no-image ml-auto mr-auto">{{> icons/user}}</div>
+                {{/if}}
+                
+                <h1 class="name d-inline-flex">{{name}}</h1>
+                <div class="post-count">{{t "Total"}} {{plural ../pagination.total empty=(t "0 Post") singular=(t "1 Post") plural=(t "% Posts")}}</div>
+                {{#if bio}}
+                <div class="bio">{{bio}}</div>
+                {{/if}}
+                <ul class="meta-info">
+                    {{#if location}}
+                    <li class="location" aria-label="Location">{{> icons/location}}{{location}}</li>
+                    {{/if}}
+                    {{#if twitter}}
+                    <li><a href="{{twitter_url}}" target="_blank" aria-label="Twitter" rel="noopener">{{> icons/twitter}}</a></li>
+                    {{/if}}
+                    {{#if facebook}}
+                    <li><a href="{{facebook_url}}" target="_blank" aria-label="Facebook" rel="noopener">{{> icons/facebook}}</a></li>
+                    {{/if}}
+                    {{#if website}}
+                    <li><a href="{{website}}" target="_blank" aria-label="Website" rel="noopener">{{> icons/link}}</a></li>
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+    </div>
+    {{/author}}
+    <div class="post-list">
+        {{> loop}}
+    </div>
+    {{pagination}}
+</div>

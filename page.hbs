@@ -1,31 +1,25 @@
 {{!< default}}
-
-{{! This is a page template. A page outputs content just like any other post, and has all the same
-    attributes by default, but you can also customise it to behave differently if you prefer. }}
-
-{{! Everything inside the #post tags pulls data from the page }}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 {{#post}}
-
-<header class="main-header post-head {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}">
-    <nav class="main-nav {{#if feature_image}}overlay{{/if}} clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>{{/if}}
-        {{#if @blog.navigation}}
-            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
-        {{/if}}
-    </nav>
-</header>
-
-<main class="content" role="main">
-    <article class="{{post_class}}">
-
-        <header class="post-header">
-            <h1 class="post-title">{{title}}</h1>
-        </header>
-
-        <section class="post-content">
-            {{content}}
-        </section>
-
-    </article>
-</main>
+<div class="site-content-wrap">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="post-wrap">
+                    <article class="post-single {{post_class}}">
+                        <div class="post-header d-flex {{#if feature_image}}has-image"
+                            style="background-image: url({{feature_image}});{{/if}}">
+                            <div class="header-content-wrap text-center">
+                                <h1 class="post-title text-center">{{title}}</h1>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            {{content}}
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {{/post}}

@@ -1,4 +1,37 @@
-<header class="site-header">
-		<a class="search-toggle" href="#"><span class="screen-reader-text"></span><span class="icon-search" aria-hidden="true"></span></a>
-		<a class="sidebar-toggle" href="#"><span class="screen-reader-text"></span><span class="icon-nav-custom" aria-hidden="true"></span></a>
-</header><!-- .site-header -->
+<div id="header" class="header-wrap{{#is "home"}} header-wrap-home{{#if @site.cover_image}} has-image" style="background-image: url({{img_url @site.cover_image}});{{/if}} {{/is}}">
+    <header class="site-header d-flex">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <div class="logo">
+                {{#if @site.logo}}
+                    <a href="{{@site.url}}" class="logo-image" id="logo"><img src="{{@site.logo}}" alt="{{@site.title}}"></a>
+                    <a href="{{@site.url}}" class="logo-image" id="logo-alternete"><img src="{{asset "images/logo-alternate.svg"}}" alt="{{@site.title}}"></a>
+                {{else}}
+                    <a href="{{@site.url}}" class="logo-text">{{@site.title}}</a>
+                {{/if}}
+            </div>
+            <nav class="nav-wrap d-none d-lg-block">
+                <ul class="nav-list">
+                    {{navigation}}
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <input type="checkbox" name="theme-toggle" id="switch_theme" class="theme-toggle">
+                <label for="switch_theme" class="theme-toggle-label fade-in">{{t "Toggle Theme"}}</label>
+                <a  href="#" class="search-icon js-search-button" aria-label="Search" tabindex="0">{{> icons/search}}</a>
+                <div class="menu-icon d-lg-none js-menu-open">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <nav class="mobile-menu nav-wrap d-lg-none" id="mobile-menu">
+                <ul class="nav-list">{{navigation}}</ul>
+            </nav>
+            <div class="backdrop d-lg-none js-backdrop" id="backdrop">
+            </div>
+        </div>
+    </header>
+    {{#is "home"}}
+    {{> hero-section}}
+    {{/is}}
+</div>

@@ -1,0 +1,12 @@
+<footer class="site-footer text-center">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                {{> social-links}}
+                <div class="copyright">
+                    &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a> - {{{t "Published with {ghostLink}" ghostLink="<a href=\"https://ghost.org/\">Ghost</a>"}}}
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

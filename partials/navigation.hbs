@@ -1,18 +1,12 @@
-<div class="nav">
-    <h3 class="nav-title">Menu</h3>
-    <a href="#" class="nav-close">
-        <span class="hidden">Close</span>
-    </a>
-    <ul>
-        {{#foreach navigation}}
-            <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
-        {{/foreach}}
-    </ul>
-    <a class="subscribe-button icon-feed" href="{{@site.url}}/rss/">Subscribe</a>
-    {{#if @labs.subscribers}}
-        <a class="subscribe-button" href="{{@site.url}}/subscribe/">Subscribe</a>
-    {{else}}
-        <a class="subscribe-button icon-feed" href="{{@site.url}}/rss/">Subscribe</a>
-    {{/if}}
-</div>
-<span class="nav-cover"></span>
+{{#foreach navigation}}
+<li class="{{slug}} nav-item{{#if current}} nav-item-current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
+{{/foreach}}
+{{#if @labs.members}}
+{{#if @member}}
+<li class="nav-item {{link_class for="/account/" activeClass="nav-item-current"}}">{{#link href="/account/"}}{{t "Account"}}{{/link}}</li>
+<li class="nav-item">{{#link href="#signout" data-members-signout=""}}{{t "Sign out"}}{{/link}}</li>
+{{else}}
+<li class="nav-item {{link_class for="/signin/" activeClass="nav-item-current"}}">{{#link href="/signin/"}}{{t "Sign in"}}{{/link}}</li>
+<li class="nav-item {{link_class for="/signup/" activeClass="nav-item-current"}}">{{#link href="/signup/"}}{{t "Sign up"}}{{/link}}</li>
+{{/if}}
+{{/if}}

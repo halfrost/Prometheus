@@ -1,0 +1,51 @@
+.site-footer {
+    padding: 64px 0px 40px;
+}
+.subscribe {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+    .title {
+        margin-bottom: 40px;
+    }
+    .description {
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+    }
+}
+.social-links {
+    margin-bottom: 32px;
+    .follow-text {
+        margin-right: 4px;
+    }
+    ul {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            margin: 0px 4px;
+            a {
+                color: var(--text-body);
+                svg {
+                    width: 16px;
+                    height: 16px;
+                }
+                &:hover {
+                    color: $accent-color;
+                }
+            }
+        }
+    }
+}
+.copyright {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    a {
+        color: var(--text-body);
+        &:hover {
+            color: $accent-color;
+        }
+    }
+}

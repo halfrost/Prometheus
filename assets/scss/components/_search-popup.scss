@@ -1,0 +1,91 @@
+.search-popup {
+	position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background-color: var(--bg-color);
+    background-position: center center;
+    background-size: cover;
+	opacity: 0;
+	visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0);
+    z-index: -2;
+    overflow-y: auto;
+	&.visible {
+        opacity: 1;
+        transform: scale(1);
+        visibility: visible;
+        z-index: 1100;
+	}
+	.close-button {
+		position: absolute;
+		right: 16px;
+		top: 16px;
+		cursor: pointer;
+		z-index: 999;
+        transition: all 0.2s ease-in-out;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        color: var(--text-title);
+		svg {
+			width: 20px;
+            height: 40px;
+        }
+        &:hover {
+            color: $accent-color;
+        }
+	}
+	.popup-inner {
+		max-width: 800px;
+        margin-top: 56px;
+        border-radius: 8px;
+        padding: 24px;
+		form {
+            position: relative;
+            margin-bottom: 0px;
+			input {
+                border: none;
+                border-bottom: 2px solid var(--text-light);
+                font-size: 1.5rem;
+                padding-left: 0;
+				&:focus {
+					border-bottom: 2px solid $accent-color;
+				}
+			}
+		}
+	}
+	#search-results {
+		.result-item {
+            &:first-child {
+                margin-top: 40px;
+            }
+			a {
+				transition: all 0.15s;
+				padding: 14px 0px;
+                display: block;
+                .title {
+                    font-family: $font-title;
+					font-size: 1.5rem;
+                    color: var(--text-title);
+					margin-bottom: 4px;
+					transition: color 0.3s ease;
+                }
+                .date {
+                    color: var(--text-light);
+                    font-size: 0.875rem;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                }
+                &:hover {
+                    .title {
+                        color: $accent-color;
+                    }
+                }
+			}
+		}
+	}
+}

@@ -1,0 +1,32 @@
+.error-wrap {
+    margin: 0 auto;
+    padding: 80px 30px;
+    max-width: 760px;
+    .error-code {
+        font-family: $font-body;
+        font-size: 5rem;
+        line-height: 1;
+        font-weight: 700;
+        padding: 0px 24px 0px;
+        border-radius: 8px;
+        display: inline-flex;
+    }
+    .error-message {
+        margin-bottom: 16px;
+        font-family: $font-title;
+    }
+    .message-manual {
+        font-size: 1.125rem;
+        margin-bottom: 32px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .error-wrap {
+        .error-code {
+            font-size: 7.5rem;
+        }
+        .error-message {
+            font-size: 2rem;
+        }
+    }
+}
