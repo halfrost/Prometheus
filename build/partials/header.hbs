@@ -4,7 +4,7 @@
             <div class="logo">
                 {{#if @site.logo}}
                     <a href="{{@site.url}}" class="logo-image" id="logo"><img src="{{@site.logo}}" alt="{{@site.title}}"></a>
-                    {{!-- <a href="{{@site.url}}" class="logo-image" id="logo-alternete"><img src="{{asset "images/logo-alternate.svg"}}" alt="{{@site.title}}"></a> --}}
+                    <a href="{{@site.url}}" class="logo-image" id="logo-alternete"><img src="{{asset "images/logo-alternate.svg"}}" alt="{{@site.title}}"></a>
                 {{else}}
                     <a href="{{@site.url}}" class="logo-text">{{@site.title}}</a>
                 {{/if}}
