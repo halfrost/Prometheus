@@ -1,0 +1,43 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+<div class="site-content-wrap fade-in-up">
+    {{#author}}
+    <div class="container-fluid">
+        <div class="cover-wrap {{#if cover_image}} has-image" style="background-image:url({{cover_image}});{{/if}}">
+            <div class="cover-inner text-center">
+                {{#if profile_image}}
+                    <div class="avarat-wrap">
+                    <img src="{{img_url profile_image size="s"}}" alt="{{name}}" class="avatar clearfix" role="presentation">
+                    </div>
+                {{else}}
+                    <div class="avatar no-image ml-auto mr-auto">{{> icons/user}}</div>
+                {{/if}}
+                
+                <h1 class="name d-inline-flex">{{name}}</h1>
+                <div class="post-count">{{t "Total"}} {{plural ../pagination.total empty=(t "0 Post") singular=(t "1 Post") plural=(t "% Posts")}}</div>
+                {{#if bio}}
+                <div class="bio">{{bio}}</div>
+                {{/if}}
+                <ul class="meta-info">
+                    {{#if location}}
+                    <li class="location" aria-label="Location">{{> icons/location}}{{location}}</li>
+                    {{/if}}
+                    {{#if twitter}}
+                    <li><a href="{{twitter_url}}" target="_blank" aria-label="Twitter" rel="noopener">{{> icons/twitter}}</a></li>
+                    {{/if}}
+                    {{#if facebook}}
+                    <li><a href="{{facebook_url}}" target="_blank" aria-label="Facebook" rel="noopener">{{> icons/facebook}}</a></li>
+                    {{/if}}
+                    {{#if website}}
+                    <li><a href="{{website}}" target="_blank" aria-label="Website" rel="noopener">{{> icons/link}}</a></li>
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+    </div>
+    {{/author}}
+    <div class="post-list">
+        {{> loop}}
+    </div>
+    {{pagination}}
+</div>

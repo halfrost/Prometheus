@@ -1,0 +1,46 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+<div class="site-content-wrap">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="post-wrap">
+                    <article class="post-single page">
+                        <div class="post-header d-flex">
+                            <div class="header-content-wrap text-center">
+                                <h1 class="post-title text-center">{{t "Welcome back!"}}</h1>
+                            </div>
+                        </div>
+                        <div class="members-page-content">
+                            <div class="members-page-subtitle text-center">
+                                {{t "Sign into your account again for full access"}}
+                            </div>
+                            <div class="members-form-wrap">
+                                <form class="members-form" data-members-form="signin">
+                                    <div class="input-group">
+                                        <label for="email" class="sr-only">{{t "Email"}}</label>
+                                        <input data-members-email type="email" class="form-control" placeholder="{{t "Your email address"}}" required/>
+                                        <div class="input-group-append">
+                                            <button class="submit-btn btn btn-primary" type="submit"><span class="loading-spinner"></span>{{t "Send login link"}}</button>
+                                        </div>
+                                    </div>
+                                    <div class="messages-wrap text-center">
+                                        <div class="message-success">
+                                            <strong>{{t "Great!"}}</strong> {{t "Check your inbox and click the link to complete sign in."}}
+                                        </div>
+                                        <div class="message-error">
+                                            <strong>{{t "Error!"}}</strong> {{t "Please enter a valid email address!"}}
+                                        </div>
+                                    </div>
+                                </form>
+                                 <div class="member-alternate-link">
+                                     {{t "Don't have an account yet?"}} <a href="/signup/">{{t "Sign up"}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

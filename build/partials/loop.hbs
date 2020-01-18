@@ -1,0 +1,41 @@
+{{#foreach posts visibility="all"}}
+<article class="{{post_class}} fade-in-up">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                {{#if feature_image}}
+                <div class="post-thumbnail-wrap">
+                    <a href="{{url}}" aria-label="{{title}}" tabindex="-1">
+                        <img class="post-thumbnail" 
+                        srcset="{{img_url feature_image size="s"}} 300w,
+                                {{img_url feature_image size="m"}} 600w,
+                                {{img_url feature_image size="l"}} 1000w,
+                                {{img_url feature_image size="xl"}} 2000w"
+                        sizes="(max-width: 347px) 300px,(max-width: 647px) 600px, (max-width: 1400px) 600px, 1000px"
+                        src="{{img_url feature_image size="s"}}" alt="{{title}}">
+                    </a>
+                </div>
+                {{/if}}
+            </div>
+            
+            <div class="col-md-6">
+                <div class="post-container">
+                        <time class="date" datetime="{{date format="YYYY-MM-DD hh:mm"}}">{{date format="DD MMMM, YYYY"}}</time>
+                    <span class="watermark" aria-hidden="true"></span>
+                    <div class="primary-tag">
+                        {{#primary_tag}}
+                            <a href="{{url}}">{{name}}</a>
+                        {{/primary_tag}}
+                        {{#if featured}}
+                            <span class="featured-label">{{t "featured"}}</span>
+                        {{/if}}
+                    </div>
+                    <h2 class="post-title h1"><a href="{{url}}">{{title}}</a></h2>
+                    <div class="separetor"></div>
+                    <div class="reading-time">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+{{/foreach}}

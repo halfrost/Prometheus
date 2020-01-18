@@ -1,0 +1,59 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+{{#post}}
+<div class="site-content-wrap">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="post-wrap">
+                    <article class="post-single {{post_class}}">
+                        <div class="post-header d-flex {{#if feature_image}}has-image"
+                            style="background-image: url({{feature_image}});{{/if}}">
+                            <div class="header-content-wrap">
+                                {{#primary_tag}}
+                                <div class="primary-tag text-center"><a href="{{url}}">{{name}}</a></div>
+                                {{/primary_tag}}
+                                <h1 class="post-title text-center">{{title}}</h1>
+                                <div class="post-meta mx-auto d-flex justify-content-between">
+                                    <div class="reading-time">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</div>
+                                    <time class="date" datetime="{{date format="YYYY-MM-DD hh:mm"}}">{{date format="DD MMMM, YYYY"}}</time>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            {{#if access}}
+                            {{content}}
+                            {{else}}
+                            <div class="excerpt">
+                                {{excerpt}}
+                            </div>
+                            <div class="no-access-message">
+                                {{t "You don't have access to this post on"}} <strong>{{@site.title}}</strong> {{t "at the moment, but if you upgrade your account you'll be able to see the whole thing, as well as all the other posts in the archive! Subscribing only takes a few seconds and will give you immediate access."}}
+                            </div>
+                            <div class="post-upgrade-cta-box text-center">
+                                {{#if @member}}
+                                <h2 class=" cta-title">{{t "This post is for paying subscribers only"}}</h2>
+                                {{else}}
+                                <h2 class=" cta-title">{{t "This post is for subscribers only"}}</h2>
+                                {{/if}}
+                                <a class="btn btn-secondary btn-cta" href="{{@site.url}}/signup/">{{t "Subscribe now"}}</a>
+                                <p class="sign-in-cta"><small>{{t "Already have an account?"}} <a href="{{@site.url}}/signin/">{{t "Sign in"}}</a></small></p>
+                            </div>
+                            {{/if}}
+                        </div>
+                        <div class="post-footer">
+                            {{#if tags}}
+                            <div class="tags"><span class="prefix">{{t "Published in:"}}</span>{{tags separator=""}}</div>
+                            {{/if}}
+                            {{> about-author}}
+                            {{> share}}
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{> prev-next}}
+{{> disqus-comment}}
+{{/post}}
