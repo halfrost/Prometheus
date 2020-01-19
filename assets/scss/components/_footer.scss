@@ -81,7 +81,7 @@
     font-weight: lighter;
     line-height: 1.45em;
     position: relative;
-    margin: 8rem 0 0 0;
+    margin: 20rem 0 0 0;
     padding: 2.5rem;
     text-align: center; 
     color: #b1b1b1;
@@ -182,3 +182,117 @@
 {
     display: inline-block;
 }
+
+.footer_bg {
+    position: absolute;
+    top: -264px;
+    background: url("/assets/images/footer_bg.png") repeat-x scroll center 0;
+    width: 100%;
+    height: 264px;
+    left: 0;
+}
+
+.footer_bg .footer_bg_one {
+    background: url("/assets/images/1.gif") no-repeat center center;
+    width: 60px;
+    height: 96px;
+    background-size:100%;
+    position: absolute;
+    bottom: 40px;
+    left: 30%;
+    -webkit-animation: myfirst 20s linear infinite;
+    animation: myfirst 20s linear infinite;
+}
+
+.footer_bg .footer_bg_three {
+    background: url("/assets/images/3.gif") no-repeat center center;
+    width: 60px;
+    height: 96px;
+    background-size:100%;
+    bottom: 30px;
+    right: 38%;
+    transform: rotateY(180deg);
+    position: absolute;
+    -webkit-animation: mySecond 25s linear infinite;
+    animation: mySecond 25s linear infinite;
+}
+
+.footer_bg .footer_bg_two {
+    background: url("/assets/images/2.gif") no-repeat center center;
+    width: 60px;
+    height: 96px;
+    background-size:100%;
+    bottom: 20px;
+    left: 38%;
+    position: absolute;
+    -webkit-animation: myfirst 30s linear infinite;
+    animation: myfirst 30s linear infinite;
+}
+
+.footer_bg .footer_bg_four {
+    background: url("/assets/images/4.gif") no-repeat center center;
+    width: 60px;
+    height: 96px;
+    background-size:100%;
+    bottom: 10px;
+    right: 38%;
+    transform: rotateY(180deg);
+    position: absolute;
+    -webkit-animation: mySecond 35s linear infinite;
+    animation: mySecond 35s linear infinite;
+}
+
+
+@-moz-keyframes myfirst {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes myfirst {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes myfirst {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@-moz-keyframes mySecond {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: 0%;
+    }
+  }
+  
+  @-webkit-keyframes mySecond {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: 0%;
+    }
+  }
+  
+  @keyframes mySecond {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: 0%;
+    }
+  }
