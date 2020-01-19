@@ -1,7 +1,7 @@
 <footer class="site-footer text-center">
-    <div class="container-fluid">
+    <div class="container-fluid" style="width: 80%">
         <div class="row">
-            <div class="col">
+            {{!-- <div class="col">
                 {{#if @labs.members}}
                 {{^if @member}}
                 {{#is "index, post, page, tag, author"}}
@@ -10,14 +10,26 @@
                 {{/if}}
                 {{/if}}
                 {{> social-links}}
-                <div class="day-night-switch">
-			        <input type="checkbox" name="theme-toggle" id="switch_theme" class="theme-toggle">
-                    <label for="switch_theme" class="theme-toggle-label fade-in">{{t "Toggle Theme"}}</label>
-		        </div>
-                <a href="#" id="return-top">{{> icons/arrow-up}}</a>
                 <div class="copyright">
                     &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a> - {{{t "Published with {ghostLink}" ghostLink="<a href=\"https://ghost.org/\">Ghost</a>"}}}
                 </div>
+            </div> --}}
+            {{> widgets/footer-tags}}
+            {{> widgets/footer-about}}
+            {{> widgets/footer-newsletter}}
+            <div class="day-night-switch">
+			        <input type="checkbox" name="theme-toggle" id="switch_theme" class="theme-toggle">
+                    <label for="switch_theme" class="theme-toggle-label fade-in">{{t "Toggle Theme"}}</label>
+		    </div>
+            <a href="#" id="return-top" class="animated bounce slow infinite">{{> icons/arrow-up}}</a>
+        </div>
+        <div class="row copyright">
+            <div class="col-sm-12">
+                <p class="copyright" style="color:#b1b1b1;float: left">
+                    <a href="https://halfrost.com" target="_blank" rel="noopener">Halfrost's Field | 冰霜之地  </a>
+                    Copyright &copy; 2016 - 2021
+                    <a href="http://beian.miit.gov.cn/" style="color: #ffffff">  鄂ICP备16014744号</a>
+                </p>
             </div>
         </div>
     </div>

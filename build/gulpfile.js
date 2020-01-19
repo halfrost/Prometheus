@@ -20,7 +20,8 @@ gulp.task('css', function() {
     .pipe(postcss([autoprefixer(), cssvariables({preserve: true})]));
     var cssStream = gulp.src([
         './assets/css/bootstrap.min.css',
-        './assets/css/hl-styles/atom-one-dark.min.css'
+        './assets/css/hl-styles/atom-one-dark.min.css',
+        './assets/css/animate.min.css'
     ], { allowEmpty: true })
     .pipe(concat('css-files.css'));
     return merge(cssStream, sassStream)
