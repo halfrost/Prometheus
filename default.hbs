@@ -3,8 +3,17 @@
 	<head>
 		{{! Document Settings }}
 		<meta charset="UTF-8">
+    	<meta name="theme-color" content="#FFFFFF"/>
+    	<title>{{meta_title}}</title>
+    	<link rel="manifest" href="/manifest.json">
+    	<link rel="shortcut icon" href="{{asset "images/favicon.png"}}">
+    	<link href="{{asset "images/apple-touch-icon.png"}}" rel="apple-touch-icon" />
+    	<link href="{{asset "images/apple-touch-icon-76x76.png"}}" rel="apple-touch-icon" sizes="76x76" />
+    	<link href="{{asset "images/apple-touch-icon-120x120.png"}}" rel="apple-touch-icon" sizes="120x120" />
+    	<link href="{{asset "images/apple-touch-icon-152x152.png"}}" rel="apple-touch-icon" sizes="152x152" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="HandheldFriendly" content="True" />
 		{{! Page Meta }}
 		<title>{{meta_title}}</title>
 		{{! Styles'n'Scripts }}
@@ -24,6 +33,18 @@
             }
 		</script>
 		{{ghost_head}}
+		<script type="text/test">
+    		var _hmt = _hmt || [];
+    		(function() {
+      			var hm = document.createElement("script");
+      			hm.src = "https://hm.baidu.com/hm.js?f9251b52c072239759f41e9f8e0ba0a4";
+      			var s = document.getElementsByTagName("script")[0];
+      			s.parentNode.insertBefore(hm, s);
+    		})();
+    	</script>
+    	<script type="text/javascript">
+      		var disqus_shortname = 'halfrost';
+    	</script>
 	</head>
 	<body class="{{body_class}}">
 		{{! insert header partial}}
@@ -50,5 +71,28 @@
         </script>
 		<script src="{{asset "js/app.bundle.min.js"}}"></script>
         {{ghost_foot}}
+		<script>
+    		var serviceWorkerUri = '/serviceworker-v1.js';
+      		if ('serviceWorker' in navigator) {
+        		navigator.serviceWorker.register(serviceWorkerUri).then(function() {
+          			if (navigator.serviceWorker.controller) {
+            			console.log('Assets cached by the controlling service worker.');
+          			} else {
+            			console.log('Please reload this page to allow the service worker to handle network operations.');
+          			}
+        		}).catch(function(error) {
+          			console.log('ERROR: ' + error);
+       			 });
+    		} else {
+        		console.log('Service workers are not supported in the current browser.');
+    		}
+    	</script>
+    	<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-82753806-1"></script>
+    	<script>
+      		window.dataLayer = window.dataLayer || [];
+      		function gtag(){dataLayer.push(arguments);}
+      		gtag('js', new Date());
+      		gtag('config', 'UA-82753806-1');
+    	</script>
 	</body>
 </html>
