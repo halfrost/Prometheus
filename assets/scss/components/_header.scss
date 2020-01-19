@@ -285,3 +285,26 @@
         }
     }
 }
+
+a.slider-down, a.slider-down:visited {
+	display:block;
+	height: 40px;
+	width: 45px;
+	margin: 0 auto;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border: 1px solid #FFF;
+	border-top-left-radius: 18px;
+	border-top-right-radius: 18px;
+	text-align: center;
+	border-bottom: 0;
+	line-height: 42px;
+	color: #FFF;
+}
+
+a.slider-down i {
+	position:relative;
+	margin-right:-1px;
+}
