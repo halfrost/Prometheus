@@ -188,6 +188,7 @@
     width: 100%;
     height: 264px;
     left: 0;
+    overflow-x: hidden;
 }
 
 .footer_bg .footer_bg_one {
@@ -246,7 +247,7 @@
     left: -25%;
   }
   100% {
-    left: 100%;
+    left: 110%;
   }
 }
 
@@ -255,7 +256,7 @@
     left: -25%;
   }
   100% {
-    left: 100%;
+    left: 110%;
   }
 }
 
@@ -264,33 +265,33 @@
     left: -25%;
   }
   100% {
-    left: 100%;
+    left: 110%;
   }
 }
 
 @-moz-keyframes mySecond {
     0% {
-      left: 90%;
+      left: 110%;
     }
     100% {
-      left: 0%;
+      left: -20%;
     }
   }
   
   @-webkit-keyframes mySecond {
     0% {
-      left: 90%;
+      left: 110%;
     }
     100% {
-      left: 0%;
+      left: -20%;
     }
   }
   
   @keyframes mySecond {
     0% {
-      left: 90%;
+      left: 110%;
     }
     100% {
-      left: 0%;
+      left: -20%;
     }
   }
