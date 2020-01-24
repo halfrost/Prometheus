@@ -51,15 +51,15 @@
 }
 
 #return-top {
-	background: --light-color;
-	border-radius: 100%;
-	width: 50px;
+	  background: --light-color;
+	  border-radius: 100%;
+	  width: 50px;
     height: 50px;
     position: fixed;
     right: 15px;
     bottom: 15px;
     color: var(--text-body);
-	box-shadow: 0 0 20px 5px rgba(62, 60, 85, 0.16);
+	  box-shadow: 0 0 20px 5px rgba(62, 60, 85, 0.16);
     padding: 12px 4px;
     text-align: center;
     display: none;
@@ -69,9 +69,7 @@
 {
     position: relative;
     z-index: 1; 
-
     display: table;
-
     width: 100%;
     height: 30rem;
 }
@@ -245,7 +243,7 @@
 
 @-moz-keyframes myfirst {
   0% {
-    left: -10%;
+    left: -25%;
   }
   100% {
     left: 100%;
@@ -254,7 +252,7 @@
 
 @-webkit-keyframes myfirst {
   0% {
-    left: -10%;
+    left: -25%;
   }
   100% {
     left: 100%;
@@ -263,7 +261,7 @@
 
 @keyframes myfirst {
   0% {
-    left: -10%;
+    left: -25%;
   }
   100% {
     left: 100%;
@@ -272,7 +270,7 @@
 
 @-moz-keyframes mySecond {
     0% {
-      left: 100%;
+      left: 90%;
     }
     100% {
       left: 0%;
@@ -281,7 +279,7 @@
   
   @-webkit-keyframes mySecond {
     0% {
-      left: 100%;
+      left: 90%;
     }
     100% {
       left: 0%;
@@ -290,7 +288,7 @@
   
   @keyframes mySecond {
     0% {
-      left: 100%;
+      left: 90%;
     }
     100% {
       left: 0%;

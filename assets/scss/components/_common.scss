@@ -283,3 +283,86 @@ hr {
 .fade-in-up {
     animation: fadeInUp 0.5s cubic-bezier(0.24, 0.46, 0.32, 0.87) both;
 }
+
+
+#toc
+{
+    display: none; 
+    visibility: hidden;
+    float: right;
+    width: 20%;
+    padding: 0 20px 0 0;
+    position: absolute;
+    right: 20px;
+}
+
+#toc ol
+{
+    margin: 0 0 0 1em;
+    padding: 0; 
+
+    list-style: none;
+}
+
+#toc li
+{
+    position: relative; 
+
+    padding: 0;
+}
+
+#toc li:before
+{
+    position: absolute;
+    top: .5em; 
+    left: -1em;
+
+    border: 5px dashed transparent;
+    border-left: 5px solid #57a3e8;
+}
+
+#toc li:before
+{
+    overflow: hidden; 
+
+    width: 0;
+    height: 0;
+
+    content: '';
+}
+
+#toc a
+{
+    display: block;
+    overflow: hidden;
+
+    max-height: 2em;
+
+    cursor: pointer;
+    transition: color .3s; 
+    white-space: nowrap;
+    text-decoration: none;
+    text-overflow: ellipsis;
+
+    color: #6aa7c0;
+}
+
+#toc a:hover
+{
+    color: #f3a01e;
+}
+
+#toc h4
+{
+    font-size: 18px;
+    margin: .75em 0;
+    padding-bottom: .25em;
+    color: #3b3b3b;
+}
+
+@media only screen and (min-width: 1570px) {
+    #toc {
+      visibility: visible;
+      display: block; 
+    } 
+}

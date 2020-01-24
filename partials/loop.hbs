@@ -6,13 +6,13 @@
                 {{#if feature_image}}
                 <div class="post-thumbnail-wrap">
                     <a href="{{url}}" aria-label="{{title}}" tabindex="-1">
-                        <img class="post-thumbnail" 
+                        <img class="post-thumbnail lazy" 
                         srcset="{{img_url feature_image size="s"}} 300w,
                                 {{img_url feature_image size="m"}} 600w,
                                 {{img_url feature_image size="l"}} 1000w,
                                 {{img_url feature_image size="xl"}} 2000w"
                         sizes="(max-width: 347px) 300px,(max-width: 647px) 600px, (max-width: 1400px) 600px, 1000px"
-                        src="{{img_url feature_image size="s"}}" alt="{{title}}">
+                        data-url="{{img_url feature_image size="s"}}" alt="{{title}}">
                     </a>
                 </div>
                 {{/if}}

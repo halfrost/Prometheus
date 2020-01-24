@@ -11,7 +11,13 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var del = require('del');
 var zip = require('gulp-zip');
+var beautify = require('gulp-jsbeautifier');
 var browserSync = require('browser-sync').create();
+
+gulp.task('beautify', () =>
+  gulp.src(['./*.css', './*.html', './*.js'])
+    .pipe(beautify())
+);
 
 gulp.task('css', function() {
     var sassStream = gulp.src('./assets/scss/screen.scss')
@@ -20,8 +26,7 @@ gulp.task('css', function() {
     .pipe(postcss([autoprefixer(), cssvariables({preserve: true})]));
     var cssStream = gulp.src([
         './assets/css/bootstrap.min.css',
-        './assets/css/hl-styles/atom-one-dark.min.css',
-        './assets/css/animate.min.css'
+        './assets/css/hl-styles/atom-one-dark.min.css'
     ], { allowEmpty: true })
     .pipe(concat('css-files.css'));
     return merge(cssStream, sassStream)
@@ -48,12 +53,15 @@ gulp.task('concat-js', function() {
     return gulp.src([
         './assets/js/vendor/jquery-3.4.1.min.js',
         './assets/js/vendor/jquery.fitvids.js',
-        './assets/js/vendor/highlight.pack.js',
+        // './assets/js/vendor/highlight.pack.js',
         './assets/js/vendor/fuse.min.js',
         './assets/js/vendor/medium-zoom.min.js',
         './assets/js/vendor/clipboard.min.js',
         './assets/js/vendor/jquery.disqusloader.js',
-        './assets/js/index.js'
+        './assets/js/vendor/jquery.toc.js',
+        './assets/js/vendor/lazy.js',
+        './assets/js/vendor/prism.js',
+        './assets/js/index.js',
     ], { allowEmpty: true })
     .pipe(concat('app.bundle.min.js'))
     // .pipe(uglify())

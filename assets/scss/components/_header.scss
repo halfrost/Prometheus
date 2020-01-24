@@ -22,7 +22,7 @@
             position: absolute;
             left: 0;
             top: 0;
-            background-color: rgba( #000, 0.8);
+            //background-color: rgba( #000, 0.8); 去掉封面图片的遮罩
         }
         .site-header {
             position: relative;
@@ -286,25 +286,56 @@
     }
 }
 
-a.slider-down, a.slider-down:visited {
+.slider-down, .slider-down:visited {
 	display:block;
 	height: 40px;
 	width: 45px;
 	margin: 0 auto;
-	position: absolute;
-	bottom: 0;
+	position: relative;
+	bottom: 50px;
 	left: 0;
 	right: 0;
-	border: 1px solid #FFF;
-	border-top-left-radius: 18px;
-	border-top-right-radius: 18px;
+	// border: 1px solid #FFF;
+	// border-top-left-radius: 18px;
+	// border-top-right-radius: 18px;
 	text-align: center;
 	border-bottom: 0;
 	line-height: 42px;
-	color: #FFF;
+    color: var(--text-body);
+    -webkit-animation: bounce 4s 2s infinite;
+    animation: bounce 4s 2s infinite;
 }
 
-a.slider-down i {
+.slider-down i {
 	position:relative;
 	margin-right:-1px;
+}
+
+@-webkit-keyframes bounce {
+    0%, 10%, 25%, 40%, 50% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    20% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+    30% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+    60% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
 }
