@@ -172,24 +172,27 @@
         }
     }
 }
-[data-theme="light"] {
-    .header-wrap-home {
-        background-color: rgba( #000, 0.05);
-        &.has-image {
-            &:before {
-                background-color: rgba( #fff, 0.8);
-            }
-        }
-    }
-    .site-header {
-        #logo {
-            display: none;
-        }
-        #logo-alternete {
-            display: block;
-        }
-    }
-}
+
+// [data-theme="light"] {
+//     // 白色主题白色遮罩，黑色主题黑色遮罩
+//     .header-wrap-home {
+//         background-color: rgba( #000, 0.05);
+//         &.has-image {
+//             &:before {
+//                 background-color: rgba( #fff, 0.8);
+//             }
+//         }
+//     }
+//     // 切换博客 logo 主题
+//     .site-header {
+//         #logo {
+//             display: none;
+//         }
+//         #logo-alternete {
+//             display: block;
+//         }
+//     }
+// }
 
 .day-night-switch {
     left: 15px;
@@ -300,8 +303,10 @@
 	// border-top-right-radius: 18px;
 	text-align: center;
 	border-bottom: 0;
-	line-height: 42px;
-    color: var(--text-body);
+    line-height: 42px;
+    // 随主题变化而变化
+    // color: var(--text-body);
+    color: #ffffff;
     -webkit-animation: bounce 4s 2s infinite;
     animation: bounce 4s 2s infinite;
 }
