@@ -10,12 +10,12 @@
                     <a href="{{@site.url}}" class="logo-text">{{@site.title}}</a>
                 {{/if}}
             </div>
-            <nav class="nav-wrap d-none d-lg-block" style="--text-title: #ffffff">
+            <nav class="nav-wrap d-none d-lg-block" {{#is "home"}} style="--text-title: #ffffff" {{/is}}>
                 <ul class="nav-list">
                     {{navigation}}
                 </ul>
             </nav>
-            <div class="nav-right">
+            <div class="nav-right" {{#is "home"}} style="--text-title: #ffffff" {{/is}}>
                 <a  href="#" class="search-icon js-search-button" aria-label="Search" tabindex="0">{{> icons/search}}</a>
                 <div class="menu-icon d-lg-none js-menu-open">
                     <span class="line"></span>
