@@ -196,7 +196,7 @@
                         }, {
                             name: 'plaintext'
                         }]
-                    }
+                    };
                     fuse = new Fuse(list, options);
                     $('#search-input').on("keyup", function () {
                         keyWord = this.value;
@@ -208,7 +208,7 @@
                                 day: 'numeric',
                                 month: 'long',
                                 year: 'numeric'
-                            })
+                            });
                             output += '<div id="' + val.id + '" class="result-item">';
                             output += '<a href="' + val.url + '"><div class="title">' + val.title + '</div>';
                             output += '<div class="date">' + pubDate + '</div></a>';
@@ -227,7 +227,7 @@
                 btn.addClass('tooltip-visible');
                 btn.on('mouseleave', function() {
                     $(this).removeClass('tooltip-visible');
-                })
+                });
             });
         },
 
@@ -325,8 +325,7 @@
                         var clean_uri = uri.substring(0, uri.indexOf("?"));
                         window.history.replaceState({}, document.title, clean_uri);
                     }
-                })
-        
+                });
             });
         },
 
@@ -411,7 +410,7 @@
             themeApp.scrollDown();
             themeApp.initTOC();
         }
-    }
+    };
     /*===========================
     2. Initialization
     ===========================*/

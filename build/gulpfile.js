@@ -9,6 +9,11 @@ var wait = require('gulp-wait');
 var merge = require('merge2');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var jshint = require('gulp-jshint');
+// 错误处理
+var plumber = require("gulp-plumber");
+var stylish = require("jshint-stylish");
+
 var del = require('del');
 var zip = require('gulp-zip');
 var beautify = require('gulp-jsbeautifier');
@@ -19,8 +24,16 @@ gulp.task('beautify', () =>
     .pipe(beautify())
 );
 
+// JS检查
+gulp.task('lint', function() {
+    return gulp.src('./assets/js/index.js')
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'));
+});
+
 gulp.task('css', function() {
     var sassStream = gulp.src('./assets/scss/screen.scss')
+    .pipe(plumber())
     .pipe(wait(100))
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(postcss([autoprefixer(), cssvariables({preserve: true})]));
@@ -40,6 +53,7 @@ gulp.task('css', function() {
 });
 gulp.task('ampcss', function() {
     return gulp.src(['./assets/scss/ampstyle-light.scss', './assets/scss/ampstyle-dark.scss'])
+    .pipe(plumber())
     .pipe(wait(100))
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(postcss([autoprefixer(), cssvariables()]))
@@ -63,8 +77,13 @@ gulp.task('concat-js', function() {
         './assets/js/vendor/prism.js',
         './assets/js/index.js',
     ], { allowEmpty: true })
+    .pipe(plumber())
     .pipe(concat('app.bundle.min.js'))
-    .pipe(uglify()) // 压缩成一行
+    .pipe(uglify({
+        compress: {
+            drop_console: true
+        }
+    })) // 压缩成一行
     .pipe(gulp.dest('./assets/js'));
 });
 gulp.task('watch', gulp.series('css', 'ampcss', 'concat-js', function () {
@@ -81,7 +100,7 @@ gulp.task('clean', function() {
     return del(['./build', './dist']);
 });
 
-gulp.task('build', gulp.series('clean', 'css', 'concat-js', function () {
+gulp.task('build', gulp.series('clean','lint', 'css', 'concat-js', function () {
     var targetDir = 'build/';
 
     return gulp.src([
