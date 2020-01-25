@@ -531,15 +531,15 @@
                             console.log('图片地址' +updatedUrl.indexOf('img.halfrost.com'));
                             console.log('***配置是 = ',settings);
                             console.log('***$self是 = ',$self);
-                            var height = $self["0"].height;
-                            console.log('height 是 = ',height);
+                            var width = Math.ceil($('.post-thumbnail').width());
+                            console.log('width 是 = ',width);
                           if (updatedUrl.indexOf('img.halfrost.com') > -1) {
                               // alert(1)
                               if (settings.advanced_load === true) {
                                   updatedUrl += '?imageView2';
                               }
                               if (settings.is_scale === true) {
-                                  updatedUrl += '/0/h/' + height;
+                                  updatedUrl += '/0/w/' + width;
                               }
                               if (settings.webP_load === true && settings.is_scale === false) {
                                   updatedUrl += '/0/format/webp';
@@ -548,12 +548,12 @@
                                   updatedUrl += '/format/webp';
                               }
                               // support Safari and iOS
-                              if (settings.webP_load === false && updatedUrl.indexOf('https://img.halfrost.com/Blog/ArticleTitleImage/background-cover_.png') > -1 ) {
-                                updatedUrl = 'https://img.halfrost.com/Blog/ArticleTitleImage/background-cover_.png';
+                              if (settings.webP_load === false && updatedUrl.indexOf('https://img.halfrost.com/Blog/ArticleTitleImage/quantum_4.png') > -1 ) {
+                                updatedUrl = 'https://img.halfrost.com/Blog/ArticleTitleImage/quantum_4.png';
                               }
-                              // if (updatedUrl.indexOf('https://img.halfrost.com/Blog/ArticleTitleImage/background-cover_.png') > -1 && settings.webP_load === true) {
-                              //   updatedUrl = 'https://img.halfrost.com/Blog/ArticleTitleImage/background-cover_.png?imageView2/0/format/webp';
-                              // }
+                              if (updatedUrl.indexOf('https://img.halfrost.com/Blog/ArticleTitleImage/quantum_4.png') > -1 && settings.webP_load === true) {
+                                updatedUrl = 'https://img.halfrost.com/Blog/ArticleTitleImage/quantum_4.png?imageView2/0/format/webp';
+                              }
                           }
                         }
     
