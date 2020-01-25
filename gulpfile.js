@@ -64,7 +64,7 @@ gulp.task('concat-js', function() {
         './assets/js/index.js',
     ], { allowEmpty: true })
     .pipe(concat('app.bundle.min.js'))
-    // .pipe(uglify())
+    .pipe(uglify()) // 压缩成一行
     .pipe(gulp.dest('./assets/js'));
 });
 gulp.task('watch', gulp.series('css', 'ampcss', 'concat-js', function () {
