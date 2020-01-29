@@ -52,7 +52,7 @@
                         data_attribute: 'url',
                         webP_load: true,
                         is_scale: true
-                    });
+                    },true);
                     return false;
                 }
                 if (ImageSmartLoader.viewWidth < 768) {
@@ -61,7 +61,7 @@
                         data_attribute: 'url',
                         webP_load: true,
                         is_scale: true
-                    });
+                    },true);
                 } else {
                     // alert('普通支持')
                     $(".lazy").lazyload({
@@ -69,9 +69,8 @@
                         data_attribute: 'url',
                         webP_load: true,
                         is_scale: true
-                    });
+                    },true);
                 }
-    
             } else {
                 if (ImageSmartLoader.viewWidth == 768) {
                     $(".lazy").lazyload({
@@ -79,7 +78,7 @@
                         data_attribute: 'url',
                         webP_load: false,
                         is_scale: true
-                    });
+                    },true);
                     return false;
                 }
                 if (ImageSmartLoader.viewWidth < 768) {
@@ -88,7 +87,7 @@
                         data_attribute: 'url',
                         webP_load: false,
                         is_scale: true
-                    });
+                    },true);
                 } else {
                     // alert('普通支持')
                     $(".lazy").lazyload({
@@ -96,7 +95,7 @@
                         data_attribute: 'url',
                         webP_load: false,
                         is_scale: true
-                    });
+                    },true);
                 }
             }
         },
@@ -264,6 +263,12 @@
                         loadMoreButton.removeClass('loading');
                         $('.post-list').append(posts);
                         $(window).scroll();
+                        $(".lazy").lazyload({
+                            advanced_load: true,
+                            data_attribute: 'url',
+                            webP_load: true,
+                            is_scale: true
+                        },false);
                         nextPage++;
                         themeApp.watermarkLetter();
                         if (nextPage > totalPages) {
@@ -420,7 +425,7 @@
 
         // 懒加载
         var $window = $(window);
-        $.fn.lazyload = function(options) {
+        $.fn.lazyload = function(options,needOneAppear) {
             var elements = this;
             var $container;
             var settings = {
@@ -438,13 +443,13 @@
                 webP_load: false,
                 is_scale: false
             };
-    
+
             function update() {
                 var counter = 0;
-    
+
                 elements.each(function() {
                     var $this = $(this);
-    
+
                     if (settings.skip_invisible && !$this.is(":visible")) {
                         return;
                     }
@@ -462,9 +467,9 @@
                         }
                     }
                 });
-    
+
             }
-    
+
             if (options) {
                 /* Maintain BC for a couple of versions. */
                 if (undefined !== options.failurelimit) {
@@ -475,14 +480,14 @@
                     options.effect_speed = options.effectspeed;
                     delete options.effectspeed;
                 }
-    
+
                 $.extend(settings, options);
             }
-    
+
             /* Cache container as jQuery as object. */
             $container = (settings.container === undefined ||
                 settings.container === window) ? $window : $(settings.container);
-    
+
             /* Fire one scroll event per scroll. Not one scroll event per image. */
             if (0 === settings.event.indexOf("scroll")) {
                 $container.bind(settings.event, function() {
@@ -491,13 +496,14 @@
                     return update();
                 });
             }
-    
+
+            console.log("needOneAppear = ",needOneAppear);
             this.each(function() {
                 var self = this;
                 var $self = $(self);
-    
+
                 self.loaded = false;
-    
+
                 /* If no src attribute given use data:uri. */
                 if ($self.attr("src") === undefined || $self.attr("src") === false) {
                     if ($self.is("img")) {
@@ -505,26 +511,36 @@
                         $self.addClass("loading");
                     }
                 }
-    
-                /* When appear is triggered load original image. */
-                $self.one("appear", function() {
+                
+                console.log("这里的对象是 = ",$self);
+                if (needOneAppear === true) {
+                    /* When appear is triggered load original image. */
+                    $self.one("appear", function() {
+                        needAppear();
+                    });
+                } else {
+                    needAppear();
+                }
+
+                function needAppear() {
+                    console.log('进入 needAppear = ',$self);
                     if (!this.loaded) {
                         if (settings.appear) {
                             var elements_left = elements.length;
                             settings.appear.call(self, elements_left, settings);
                         }
-                          console.log('1.self.attr = ',$self);
+                        console.log('1.self.attr = ',$self);
                         var updatedUrl = $self.attr("data-" + settings.data_attribute);
                         // var updatedUrl = $self.attr("data-original");
-    
+
                         if (updatedUrl === undefined) {
                             console.log('进来了 = ',$self.attr("src"));
                             console.log('进来了 = ',$self["0"].width);
-                          updatedUrl = $self.attr("src");
+                            updatedUrl = $self.attr("src");
                         }
                         if (updatedUrl === undefined) {
-                          console.log('测试 = ',$self.style);
-                          updatedUrl = $self.style.backgroundImage;
+                            console.log('测试 = ',$self.style);
+                            updatedUrl = $self.style.backgroundImage;
                         }
                         if (updatedUrl !== undefined) {
                             console.log('updatedUrl = ',updatedUrl);
@@ -533,69 +549,68 @@
                             console.log('***$self是 = ',$self);
                             var width = Math.ceil($('.post-thumbnail').width());
                             console.log('width 是 = ',width);
-                          if (updatedUrl.indexOf('img.halfrost.com') > -1) {
-                              // alert(1)
-                              if (settings.advanced_load === true) {
-                                  updatedUrl += '?imageView2';
-                              }
-                              if (settings.is_scale === true) {
-                                  updatedUrl += '/0/w/' + width;
-                              }
-                              if (settings.webP_load === true && settings.is_scale === false) {
-                                  updatedUrl += '/0/format/webp';
-                              }
-                              if (settings.webP_load === true && settings.is_scale === true) {
-                                  updatedUrl += '/format/webp';
-                              }
-                              // support Safari and iOS
-                              if (settings.webP_load === false && updatedUrl.indexOf('https://img.halfrost.com/Blog/ArticleTitleImage/quantum_4.png') > -1 ) {
+                            if (updatedUrl.indexOf('img.halfrost.com') > -1) {
+                                // alert(1)
+                                if (settings.advanced_load === true) {
+                                    updatedUrl += '?imageView2';
+                                }
+                                if (settings.is_scale === true) {
+                                    updatedUrl += '/0/w/' + width;
+                                }
+                                if (settings.webP_load === true && settings.is_scale === false) {
+                                    updatedUrl += '/0/format/webp';
+                                }
+                                if (settings.webP_load === true && settings.is_scale === true) {
+                                    updatedUrl += '/format/webp';
+                                }
+                                // support Safari and iOS
+                                if (settings.webP_load === false && updatedUrl.indexOf('https://img.halfrost.com/Blog/ArticleTitleImage/quantum_4.png') > -1 ) {
                                 updatedUrl = 'https://img.halfrost.com/Blog/ArticleTitleImage/quantum_4.png';
-                              }
-                              if (updatedUrl.indexOf('https://img.halfrost.com/Blog/ArticleTitleImage/quantum_4.png') > -1 && settings.webP_load === true) {
+                                }
+                                if (updatedUrl.indexOf('https://img.halfrost.com/Blog/ArticleTitleImage/quantum_4.png') > -1 && settings.webP_load === true) {
                                 updatedUrl = 'https://img.halfrost.com/Blog/ArticleTitleImage/quantum_4.png?imageView2/0/format/webp';
-                              }
-                          }
+                                }
+                            }
                         }
-    
-                          console.log('中间打印updatedUrl',updatedUrl);
-                          console.log('*********中间打印 img.src = ',$self.attr("src"));
-                          console.log('*********中间打印 img = ',$("<img />"));
-                          console.log('$$$配置是 = ',settings);
 
-                        $("<img />").bind("load", function() {
-    
+                            console.log('中间打印updatedUrl',updatedUrl);
+                            console.log('*********中间打印 img.src = ',$self.attr("src"));
+                            console.log('*********中间打印 img = ',$("<img />"));
+                            console.log('$$$配置是 = ',settings);
+
+                        $("<img />").bind("load", function(){
                                 $self.hide();
-    
                                 if ($self.is("img")) {
+                                    console.log('$self = ',$self,$self.attr("src"));
                                     $self.attr("src", updatedUrl);
-                                      console.log('*********img.src = ',$self.attr("src"));
+                                    console.log('*********img.src = ',$self.attr("src"));
                                 } else {
                                     $self.css("background-image", "url('" + updatedUrl + "')");
-                                      console.log('*********background-image = ',$self.css("background-image"));
+                                    console.log('*********background-image = ',$self.css("background-image"));
                                 }
                                 $self[settings.effect](settings.effect_speed);
-    
+
                                 self.loaded = true;
-    
+
                                 /* Remove image from array so it is not looped next time. */
                                 var temp = $.grep(elements, function(element) {
                                     return !element.loaded;
                                 });
                                 elements = $(temp);
-    
+
                                 if (settings.load) {
                                     var elements_left = elements.length;
                                     settings.load.call(self, elements_left, settings);
                                 }
                                 $self.removeClass("loading");
-                            })
-                            .attr("src", updatedUrl);
+                        }).attr("src", updatedUrl);
                     }
-                });
-    
+                }
+
                 /* When wanted event is triggered load original image */
                 /* by triggering appear.                              */
                 if (0 !== settings.event.indexOf("scroll")) {
+                    console.log("触发 scroll");
                     $self.bind(settings.event, function() {
                         if (!self.loaded) {
                             $self.trigger("appear");
@@ -603,12 +618,13 @@
                     });
                 }
             });
-    
+
             /* Check if something appears when window is resized. */
             $window.bind("resize", function() {
                 update();
             });
-    
+
+            console.log("运行到这里了么？");
             /* With IOS5 force loading images when navigating with back button. */
             /* Non optimal workaround. */
             if ((/(?:iphone|ipod|ipad).*os 5/gi).test(navigator.appVersion)) {
@@ -620,18 +636,18 @@
                     }
                 });
             }
-    
+
             /* Force initial check if images should appear. */
             $(document).ready(function() {
+                console.log("document ready 了么？");
                 update();
             });
-    
+
             return this;
         };
 
         /* Convenience methods in jQuery namespace.           */
         /* Use as  $.belowthefold(element, {threshold : 100, container : window}) */
-
         $.belowthefold = function(element, settings) {
             var fold;
             if (settings.container === undefined || settings.container === window) {
