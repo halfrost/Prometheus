@@ -91,7 +91,7 @@
                 } else {
                     // alert('普通支持')
                     $(".lazy").lazyload({
-                        advanced_load: false,
+                        advanced_load: true,
                         data_attribute: 'url',
                         webP_load: false,
                         is_scale: true
@@ -263,12 +263,21 @@
                         loadMoreButton.removeClass('loading');
                         $('.post-list').append(posts);
                         $(window).scroll();
-                        $(".lazy").lazyload({
-                            advanced_load: true,
-                            data_attribute: 'url',
-                            webP_load: true,
-                            is_scale: true
-                        },false);
+                        if (ImageSmartLoader.isWebPSupported === true) {
+                            $(".lazy").lazyload({
+                                advanced_load: true,
+                                data_attribute: 'url',
+                                webP_load: true,
+                                is_scale: true
+                            },false);
+                        } else {
+                            $(".lazy").lazyload({
+                                advanced_load: true,
+                                data_attribute: 'url',
+                                webP_load: false,
+                                is_scale: true
+                            },false);
+                        }
                         nextPage++;
                         themeApp.watermarkLetter();
                         if (nextPage > totalPages) {
