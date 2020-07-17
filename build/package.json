@@ -3,7 +3,7 @@
     "description": "Minimal personal blog theme",
     "demo": "http://advant.gbjsolution.com",
     "homepage": "https://halfrost.com",
-    "version": "2.0.0",
+    "version": "3.0.17",
     "engines": {
         "ghost": ">=3.0.0",
         "ghost-api": "v3"
