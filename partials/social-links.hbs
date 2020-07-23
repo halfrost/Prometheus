@@ -1,0 +1,15 @@
+<div class="social-links">
+    <span class="follow-text">{{t "Follow me on"}} - </span>
+    <ul>
+        {{#if @site.twitter}}
+        <li><a href="{{@site.twitter}}" title="Twitter" rel="noopener">{{> icons/twitter}}</a></li>
+        {{/if}}
+        {{#if @site.facebook}}
+        <li><a href="{{@site.facebook}}" title="Facebook">{{> icons/facebook}}</a></li>
+        {{/if}}
+        <li><a href="#" title="Dribbble" rel="noopener">{{> icons/dribbble}}</a></li>
+        <li><a href="#" title="Instagram" rel="noopener">{{> icons/instagram}}</a></li>
+        <li><a href="#" title="medium" rel="noopener">{{> icons/medium}}</a></li>
+        <li><a href="#" title="github" rel="noopener">{{> icons/github}}</a></li>
+    </ul>
+</div>

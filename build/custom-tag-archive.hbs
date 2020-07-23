@@ -1,0 +1,40 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+<div class="inner-wrap-container">
+    <div class="site-content-wrap">
+        <div class="container-fluid">
+            {{#post}}
+            <div class="row">
+                <div class="col">
+                    <div class="post-wrap">
+                        <article class="post-single {{post_class}}">
+                            <div class="post-header d-flex {{#if feature_image}}has-image"
+                                style="background-image: url({{feature_image}});{{/if}}">
+                                <div class="header-content-wrap text-center">
+                                    <h1 class="post-title text-center">{{title}}</h1>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            {{/post}}
+            <div class="row">
+                {{#get "tags" limit="all" include="count.posts" order="count.posts desc"}}
+                {{#foreach tags}}
+                <div class="col-md-4 col-sm-6 card-wrap fade-in-up">
+                    <a href="{{url}}">
+                    <div class="card-single tag-card text-center d-flex h-100 align-items-center{{#if feature_image}} has-image" style="background-image:url({{feature_image}});{{/if}}">
+                        <div class="inner-content mx-auto">
+                            <h2 class="tag-name h3">{{name}}</h2>
+                            <div class="post-count">{{plural count.posts empty=(t "0 Post") singular=(t "1 Post") plural=(t "% Posts")}}</div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                {{/foreach}}
+                {{/get}}
+            </div>
+        </div>
+    </div>
+</div>

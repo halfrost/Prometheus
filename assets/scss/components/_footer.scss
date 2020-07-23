@@ -1,0 +1,318 @@
+.site-footer {
+    padding: 64px 0px 40px;
+}
+.footer__inner {
+    display: -webkit-box; 
+    display: -webkit-flex; 
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.subscribe {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+    .title {
+        margin-bottom: 40px;
+    }
+    .description {
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+    }
+}
+.social-links {
+    margin-bottom: 32px;
+    .follow-text {
+        margin-right: 4px;
+    }
+    ul {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            margin: 0px 4px;
+            a {
+                color: var(--text-body);
+                svg {
+                    width: 16px;
+                    height: 16px;
+                }
+                &:hover {
+                    // color: $accent-color;
+                    color: #55a3ff
+                }
+            }
+        }
+    }
+}
+.copyright {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    a {
+        color: var(--text-body);
+        &:hover {
+            color: $accent-color;
+        }
+    }
+}
+
+.statistics {
+  color: #b1b1b1;
+  float: left;
+}
+
+#return-top {
+	  background: --light-color;
+	  border-radius: 100%;
+	  width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    color: var(--text-body);
+	  box-shadow: 0 0 20px 5px rgba(62, 60, 85, 0.16);
+    padding: 12px 4px;
+    text-align: center;
+    display: none;
+}
+
+#footer
+{
+    position: relative;
+    z-index: 1; 
+    display: table;
+    width: 100%;
+    height: 30rem;
+}
+
+.site-footer
+{
+    font-weight: lighter;
+    line-height: 1.45em;
+    position: relative;
+    margin: 20rem 0 0 0;
+    padding: 2.5rem;
+    text-align: center; 
+    color: #b1b1b1;
+    background-color: #444;
+    // border-top: #ebf2f6 1px solid;
+}
+.site-footer a
+{
+    color: #b1b1b1;
+}
+.site-footer a:hover
+{
+    color: #55a3ff;
+}
+.site-footer .github-repo
+{
+    line-height: 12px; 
+    position: relative;
+    display: inline-block;
+    height: 12px;
+    padding: 2px 5px 2px 4px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    text-indent: 14px;
+    color: #333;
+    border: 1px solid #d4d4d4;
+    border-radius: 3px;
+    background-color: #fafafa;
+    text-shadow: 0 1px 0 #fff;
+}
+.site-footer .github-repo:hover,
+.site-footer .github-repo:active
+{
+    color: #fff; 
+    background-color: #ddd;
+}
+.site-footer .gadget-github
+{
+    position: absolute;
+    top: 2px;
+    left: 4px;
+
+    display: block;
+
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjQwcHgiIGhlaWdodD0iNDBweCIgdmlld0JveD0iMTIgMTIgNDAgNDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMTIgMTIgNDAgNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiMzMzMzMzMiIGQ9Ik0zMiAxMy40Yy0xMC41IDAtMTkgOC41LTE5IDE5YzAgOC40IDUuNSAxNS41IDEzIDE4YzEgMC4yIDEuMy0wLjQgMS4zLTAuOWMwLTAuNSAwLTEuNyAwLTMuMiBjLTUuMyAxLjEtNi40LTIuNi02LjQtMi42QzIwIDQxLjYgMTguOCA0MSAxOC44IDQxYy0xLjctMS4yIDAuMS0xLjEgMC4xLTEuMWMxLjkgMC4xIDIuOSAyIDIuOSAyYzEuNyAyLjkgNC41IDIuMSA1LjUgMS42IGMwLjItMS4yIDAuNy0yLjEgMS4yLTIuNmMtNC4yLTAuNS04LjctMi4xLTguNy05LjRjMC0yLjEgMC43LTMuNyAyLTUuMWMtMC4yLTAuNS0wLjgtMi40IDAuMi01YzAgMCAxLjYtMC41IDUuMiAyIGMxLjUtMC40IDMuMS0wLjcgNC44LTAuN2MxLjYgMCAzLjMgMC4yIDQuNyAwLjdjMy42LTIuNCA1LjItMiA1LjItMmMxIDIuNiAwLjQgNC42IDAuMiA1YzEuMiAxLjMgMiAzIDIgNS4xYzAgNy4zLTQuNSA4LjktOC43IDkuNCBjMC43IDAuNiAxLjMgMS43IDEuMyAzLjVjMCAyLjYgMCA0LjYgMCA1LjJjMCAwLjUgMC40IDEuMSAxLjMgMC45YzcuNS0yLjYgMTMtOS43IDEzLTE4LjFDNTEgMjEuOSA0Mi41IDEzLjQgMzIgMTMuNHoiLz48L3N2Zz4=);
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+}
+.site-footer .github-repo
+{
+    display: inline-block;
+}
+
+.github-repo
+{
+    line-height: 12px; 
+    position: relative;
+    display: inline-block;
+    height: 12px;
+    padding: 2px 5px 2px 4px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    text-indent: 14px;
+    color: #333;
+    border: 1px solid #d4d4d4;
+    border-radius: 3px;
+    background-color: #fafafa;
+    text-shadow: 0 1px 0 #fff;
+}
+.github-repo:hover,
+.github-repo:active
+{
+    color: #fff; 
+    background-color: #ddd;
+}
+
+.gadget-github
+{
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjQwcHgiIGhlaWdodD0iNDBweCIgdmlld0JveD0iMTIgMTIgNDAgNDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMTIgMTIgNDAgNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiMzMzMzMzMiIGQ9Ik0zMiAxMy40Yy0xMC41IDAtMTkgOC41LTE5IDE5YzAgOC40IDUuNSAxNS41IDEzIDE4YzEgMC4yIDEuMy0wLjQgMS4zLTAuOWMwLTAuNSAwLTEuNyAwLTMuMiBjLTUuMyAxLjEtNi40LTIuNi02LjQtMi42QzIwIDQxLjYgMTguOCA0MSAxOC44IDQxYy0xLjctMS4yIDAuMS0xLjEgMC4xLTEuMWMxLjkgMC4xIDIuOSAyIDIuOSAyYzEuNyAyLjkgNC41IDIuMSA1LjUgMS42IGMwLjItMS4yIDAuNy0yLjEgMS4yLTIuNmMtNC4yLTAuNS04LjctMi4xLTguNy05LjRjMC0yLjEgMC43LTMuNyAyLTUuMWMtMC4yLTAuNS0wLjgtMi40IDAuMi01YzAgMCAxLjYtMC41IDUuMiAyIGMxLjUtMC40IDMuMS0wLjcgNC44LTAuN2MxLjYgMCAzLjMgMC4yIDQuNyAwLjdjMy42LTIuNCA1LjItMiA1LjItMmMxIDIuNiAwLjQgNC42IDAuMiA1YzEuMiAxLjMgMiAzIDIgNS4xYzAgNy4zLTQuNSA4LjktOC43IDkuNCBjMC43IDAuNiAxLjMgMS43IDEuMyAzLjVjMCAyLjYgMCA0LjYgMCA1LjJjMCAwLjUgMC40IDEuMSAxLjMgMC45YzcuNS0yLjYgMTMtOS43IDEzLTE4LjFDNTEgMjEuOSA0Mi41IDEzLjQgMzIgMTMuNHoiLz48L3N2Zz4=);
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+}
+
+.github-repo
+{
+    display: inline-block;
+}
+
+.footer_bg {
+    position: absolute;
+    top: -264px;
+    background: url("/assets/images/footer_bg.png") repeat-x scroll center 0;
+    width: 100%;
+    height: 264px;
+    left: 0;
+    overflow-x: hidden;
+}
+
+.footer_bg .footer_bg_one {
+    background: url("/assets/images/1.gif") no-repeat center center;
+    width: 60px;
+    height: 96px;
+    background-size:100%;
+    position: absolute;
+    bottom: 40px;
+    left: 30%;
+    -webkit-animation: myfirst 20s linear infinite;
+    animation: myfirst 20s linear infinite;
+}
+
+.footer_bg .footer_bg_three {
+    background: url("/assets/images/3.gif") no-repeat center center;
+    width: 60px;
+    height: 96px;
+    background-size:100%;
+    bottom: 30px;
+    right: 38%;
+    transform: rotateY(180deg);
+    position: absolute;
+    -webkit-animation: mySecond 25s linear infinite;
+    animation: mySecond 25s linear infinite;
+}
+
+.footer_bg .footer_bg_two {
+    background: url("/assets/images/2.gif") no-repeat center center;
+    width: 60px;
+    height: 96px;
+    background-size:100%;
+    bottom: 20px;
+    left: 38%;
+    position: absolute;
+    -webkit-animation: myfirst 30s linear infinite;
+    animation: myfirst 30s linear infinite;
+}
+
+.footer_bg .footer_bg_four {
+    background: url("/assets/images/4.gif") no-repeat center center;
+    width: 60px;
+    height: 96px;
+    background-size:100%;
+    bottom: 10px;
+    right: 38%;
+    transform: rotateY(180deg);
+    position: absolute;
+    -webkit-animation: mySecond 35s linear infinite;
+    animation: mySecond 35s linear infinite;
+}
+
+
+@-moz-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+@-webkit-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+@keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+@-moz-keyframes mySecond {
+    0% {
+      left: 110%;
+    }
+    100% {
+      left: -20%;
+    }
+  }
+  
+  @-webkit-keyframes mySecond {
+    0% {
+      left: 110%;
+    }
+    100% {
+      left: -20%;
+    }
+  }
+  
+  @keyframes mySecond {
+    0% {
+      left: 110%;
+    }
+    100% {
+      left: -20%;
+    }
+  }

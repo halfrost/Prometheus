@@ -1,0 +1,14 @@
+routes:
+  /signup/: signup
+  /signin/: signin
+  /account/: account
+  /signup/free/: signup-free
+
+collections:
+  /:
+    permalink: /{slug}/
+    template: index
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/

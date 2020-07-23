@@ -1,0 +1,23 @@
+<div class="comment-wrap">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div id="disqus_thread" class="comment-container m-auto">
+                <div id="disqusloader">
+                    <script>
+                        var disqus_shortname = 'halfrost'; // required: replace example with your forum shortname
+                        // Do not edit below options
+                        var disqus_options = {
+                            scriptUrl: "https://" + disqus_shortname + ".disqus.com/embed.js",
+                            disqusConfig: function() {
+                                this.page.url = '{{url absolute="true"}}';
+                                this.page.identifier = 'ghost-{{comment_id}}';
+                            }
+                        }
+                    </script>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

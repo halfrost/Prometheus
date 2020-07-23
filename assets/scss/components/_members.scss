@@ -1,0 +1,204 @@
+.members-page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.members-page-subtitle {
+    font-size: 1.5rem;
+	margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.members-form-wrap {
+    max-width: 600px;
+    margin: 32px auto;
+}
+.loading-spinner {
+    width: 14px;
+    height: 14px;
+    border: 2px solid;
+    border-bottom-color: transparent;
+    display: inline-block;
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+    margin-right: 8px;
+    margin-bottom: -2px;
+}
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+.members-form, .subscribe-form {
+	.loading-spinner {
+		display: none;
+	}
+	&.loading {
+		.loading-spinner {
+			display: inline-block;
+		}
+	}
+}
+.messages-wrap {
+    margin-top: 24px;
+}
+.message-success, .message-error {
+	display: none;
+	color: #fff;
+	padding: 4px 16px;
+	border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 0.875rem;
+}
+.message-success {
+	background-color: $success;
+}
+.message-error {
+	background-color: $error;
+}
+.loading {
+	.message-loading {
+		display: inline-block;
+	}
+}
+.success {
+	.message-success {
+		display: inline-block;
+	}
+}
+.error {
+	.message-error {
+		display: inline-block;
+	}
+}
+.pricing-table-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-left: -15px;
+    margin-right: -15px;
+    margin-top: 56px;
+}
+.pricing-table {
+	display: flex;
+	flex: 1 0 300px;
+	flex-direction: column;
+	border-radius: 2px;
+	overflow: hidden;
+	margin: 0px 15px 30px 15px;
+	transition: transform 0.2s;
+    max-width: 350px;
+    // background: rgba(0, 0, 0, 0.1);
+}
+.pricing-table .pricing-table-title {
+    margin-top: 0px;
+}
+.pricing-table .table-header {
+	background-color: $accent-color;
+	color: #ffffff;
+	padding: 30px;
+	border-radius: 2px 2px 0px 0px;
+}
+.pricing-table .pricing-table-title {
+	color: #ffffff;
+	text-transform: uppercase;
+	margin-bottom: 16px;
+	// font-size: 1.5rem;
+}
+.pricing-table .price .currency {
+    font-size: 3rem;
+}
+.pricing-table .price .value {
+    font-size: 3rem;
+}
+.pricing-table .price .duration {
+    font-size: 1.125rem;
+    text-transform: uppercase;
+}
+.pricing-table .table-details {
+	padding: 30px 30px 30px 30px;
+	margin-bottom: 0;
+	list-style-type: none;
+	flex-grow: 1;
+	font-size: 16px;
+	border-left: 2px solid $accent-color;
+	border-right: 2px solid $accent-color;
+}
+.pricing-table .table-details li {
+	margin-bottom: 12px;
+	position: relative;
+    padding-left: 20px;
+    // font-family: $serif;
+}
+.pricing-table .table-details li svg {
+	display: inline-block;
+	color: var(--text-body);
+	margin-right: 8px;
+	position: absolute;
+	left: 0;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+}
+.pricing-table .table-footer {
+	padding: 0px 30px 30px 30px;
+	border-width: 0px 2px 2px 2px;
+	border-color: $accent-color;
+	border-style: solid;
+	border-radius: 0px 0px 2px 2px;
+}
+.member-alternate-link {
+    font-size: 0.875rem;
+}
+.notification {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 999;
+	background-color: $success;
+	color: #fff;
+	font-size: 1rem;
+	padding: 24px 56px;
+	visibility: hidden;
+	transform: translateY(-150%);
+	transition: all .25s ease-in-out .3s;
+	a {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	.close-icon {
+		position: absolute;
+		top: 16px;
+		right: 32px;
+		color: #fff;
+		font-size: 1.5rem;
+	}
+}
+.subscribe-success .notification-subscribe {
+    visibility: visible;
+    transform: translateY(0);
+}
+.signup-success .notification-signup {
+    visibility: visible;
+    transform: translateY(0);
+}
+.signin-success .notification-signin {
+    visibility: visible;
+    transform: translateY(0);
+}
+.checkout-success .notification-checkout {
+    visibility: visible;
+    transform: translateY(0);
+}
+.notification.closed {
+    visibility: hidden;
+    transform: translateY(-150%);
+    transition: all 0.25s ease-in-out 0s;
+}
