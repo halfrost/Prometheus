@@ -1,6 +1,21 @@
 .site-footer {
     padding: 64px 0px 40px;
 }
+.footer__inner {
+    display: -webkit-box; 
+    display: -webkit-flex; 
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
 .subscribe {
     max-width: 600px;
     margin-left: auto;
@@ -33,7 +48,8 @@
                     height: 16px;
                 }
                 &:hover {
-                    color: $accent-color;
+                    // color: $accent-color;
+                    color: #55a3ff
                 }
             }
         }
@@ -48,6 +64,11 @@
             color: $accent-color;
         }
     }
+}
+
+.statistics {
+  color: #b1b1b1;
+  float: left;
 }
 
 #return-top {
