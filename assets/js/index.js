@@ -161,6 +161,7 @@
             var list = [];
             $('.js-search-button').on('click', function (e) {
                 e.preventDefault();
+                $('body').addClass('modal-open');
                 if (list.length == 0 && typeof searchApi !== undefined) {
                     $.get(searchApi)
                         .done(function (data) {
@@ -175,6 +176,7 @@
             });
             $('.close-button').on('click', function (e) {
                 e.preventDefault();
+                $('body').removeClass('modal-open');
                 $('.search-popup').removeClass('visible');
                 $('#search-input').val("");
                 $("#search-results").empty();
