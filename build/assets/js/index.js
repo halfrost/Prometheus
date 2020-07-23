@@ -556,7 +556,7 @@
                             console.log('图片地址' +updatedUrl.indexOf('img.halfrost.com'));
                             console.log('***配置是 = ',settings);
                             console.log('***$self是 = ',$self);
-                            var width = Math.ceil($('.post-thumbnail').width());
+                            var width = Math.ceil($('.post-thumbnail-wrap').width());
                             console.log('width 是 = ',width);
                             if (updatedUrl.indexOf('img.halfrost.com') > -1) {
                                 // alert(1)
