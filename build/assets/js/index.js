@@ -123,7 +123,9 @@
             if (watermark.length > 0) {
                 for (i = 0; i < posts.length; i++) {
                     var title = posts[i].getElementsByClassName('post-title')[0];
-                    posts[i].getElementsByClassName('watermark')[0].innerHTML = title.firstChild.innerHTML[0];
+                    if (title !== undefined) {
+                        posts[i].getElementsByClassName('watermark')[0].innerHTML = title.firstChild.innerHTML[0];
+                    }
                 }
             }
         },
@@ -169,6 +171,7 @@
                             search();
                         })
                         .fail(function (err) {
+                            $('.l-search__content').css("display","");
                         });
                 }
                 $('.js-search-popup').addClass('visible');
@@ -180,8 +183,10 @@
                 $('.search-popup').removeClass('visible');
                 $('#search-input').val("");
                 $("#search-results").empty();
+                $('.l-search__content').css("display","");
             });
             function search() {
+                console.log("**********list = ",list);
                 if (list.length > 0) {
                     var options = {
                         shouldSort: true,
@@ -199,23 +204,32 @@
                         }]
                     };
                     fuse = new Fuse(list, options);
+                    console.log("**********开始搜索了么？");
                     $('#search-input').on("keyup", function () {
                         keyWord = this.value;
+                        console.log("1 **********result 有结果了么？ =", result);
                         var result = fuse.search(keyWord);
                         var output = '';
                         var language = $('html').attr('lang');
-                        $.each(result, function (key, val) {
-                            var pubDate = new Date(val.published_at).toLocaleDateString(language, {
-                                day: 'numeric',
-                                month: 'long',
-                                year: 'numeric'
+                        console.log("2 **********result 有结果了么？ =", result);
+                        if (result.length == 0) {
+
+                        } else {
+                            console.log("**********result =", result);
+                            $.each(result, function (key, val) {
+                                var pubDate = new Date(val.published_at).toLocaleDateString(language, {
+                                    day: 'numeric',
+                                    month: 'long',
+                                    year: 'numeric'
+                                });
+                                output += '<div id="' + val.id + '" class="result-item">';
+                                output += '<a href="' + val.url + '"><div class="title">' + val.title + '</div>';
+                                output += '<div class="date">' + pubDate + '</div></a>';
+                                output += '</div>';
                             });
-                            output += '<div id="' + val.id + '" class="result-item">';
-                            output += '<a href="' + val.url + '"><div class="title">' + val.title + '</div>';
-                            output += '<div class="date">' + pubDate + '</div></a>';
-                            output += '</div>';
-                        });
-                        $("#search-results").html(output);
+                            $("#search-results").html(output);
+                            $('.l-search__content').css("display","none");
+                        }
                     });
                 }
             }
@@ -260,8 +274,10 @@
                             loadMoreButton.addClass('loading');
                         }
                     }).done(function (data) {
+                        console.log('data = ',data);
                         loadMoreButton.blur();
                         var posts = $(data).find('.post');
+                        console.log('posts = ',posts);
                         loadMoreButton.removeClass('loading');
                         $('.post-list').append(posts);
                         $(window).scroll();
