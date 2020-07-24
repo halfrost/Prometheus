@@ -65,7 +65,7 @@ gulp.task('ampcss', function() {
 });
 gulp.task('concat-js', function() {
     return gulp.src([
-        './assets/js/vendor/jquery-3.4.1.min.js',
+        './assets/js/vendor/jquery-3.5.1.min.js',
         './assets/js/vendor/jquery.fitvids.js',
         // './assets/js/vendor/highlight.pack.js',
         './assets/js/vendor/fuse.min.js',

@@ -264,6 +264,14 @@
     animation: mySecond 35s linear infinite;
 }
 
+.widget-header-title {
+  font-size: 1.5rem;
+  font-family: $font-title;
+  color: var(--text-title);
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
 
 @-moz-keyframes myfirst {
   0% {
