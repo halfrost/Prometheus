@@ -159,11 +159,13 @@
             });
         },
 
-        SearchProcess: function () {
+        searchProcess: function () {
             var list = [];
+            var top = window.scrollY;
             $('.js-search-button').on('click', function (e) {
                 e.preventDefault();
-                $('body').addClass('modal-open');
+                top = window.scrollY;
+                stopBodyScroll(true,top);
                 if (list.length == 0 && typeof searchApi !== undefined) {
                     $.get(searchApi)
                         .done(function (data) {
@@ -179,12 +181,24 @@
             });
             $('.close-button').on('click', function (e) {
                 e.preventDefault();
-                $('body').removeClass('modal-open');
+                stopBodyScroll(false,top);
                 $('.search-popup').removeClass('visible');
                 $('#search-input').val("");
                 $("#search-results").empty();
                 $('.l-search__content').css("display","");
             });
+
+            function stopBodyScroll (isFixed,top) {
+                if (isFixed) {
+                    $('body').css("position","fixed");
+                    $('body').css("top", -top+'px');
+                } else {
+                    $('body').css("position","");
+                    $('body').css("top","");
+                    window.scrollTo(0, top); // 回到原先的top
+                }
+            }
+
             function search() {
                 console.log("**********list = ",list);
                 if (list.length > 0) {
@@ -395,23 +409,17 @@
                     e.preventDefault();
                 });
     
-                window.addEventListener('load', function() {
-                    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                    if (scrollTop > 0) {
-                        $('.slider-down').fadeOut(200);
-                    } else {
-                        $('.slider-down').fadeIn(200);
-                    }
-                });
-    
-                window.addEventListener('scroll', function() {
-                    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                    if (scrollTop > 0) {
-                        $('.slider-down').fadeOut(200);
-                    } else {
-                        $('.slider-down').fadeIn(200);
-                    }
-                });
+                window.addEventListener('load', sliderDownVisible);
+                window.addEventListener('scroll', sliderDownVisible);
+            }
+            
+            function sliderDownVisible() {
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop <= 0 && $(window).width() >= 992) {
+                    $('.slider-down').css("visibility","visible");
+                } else {
+                    $('.slider-down').css("visibility","hidden");
+                }
             }
         },
 
@@ -432,7 +440,7 @@
             themeApp.responsiveIframe();
             themeApp.highlighter();
             themeApp.mobileMenu();
-            themeApp.SearchProcess();
+            themeApp.searchProcess();
             themeApp.copyLink();
             themeApp.gallery();
             themeApp.loadMore();
