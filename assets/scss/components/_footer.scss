@@ -42,7 +42,6 @@
             display: inline-block;
             margin: 0px 4px;
             a {
-                color: var(--text-body);
                 svg {
                     width: 16px;
                     height: 16px;
@@ -210,6 +209,7 @@
     height: 264px;
     left: 0;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .footer_bg .footer_bg_one {
@@ -220,6 +220,7 @@
     position: absolute;
     bottom: 40px;
     left: 30%;
+    transform: scale(2.5);
     -webkit-animation: myfirst 20s linear infinite;
     animation: myfirst 20s linear infinite;
 }
@@ -231,7 +232,8 @@
     background-size:100%;
     bottom: 30px;
     right: 38%;
-    transform: rotateY(180deg);
+    // transform: rotateY(180deg);
+    transform: scale(4.2);
     position: absolute;
     -webkit-animation: mySecond 25s linear infinite;
     animation: mySecond 25s linear infinite;
