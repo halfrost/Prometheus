@@ -192,9 +192,11 @@
                 if (isFixed) {
                     $('body').css("position","fixed");
                     $('body').css("top", -top+'px');
+                    $('body').css("width", "100%");
                 } else {
                     $('body').css("position","");
                     $('body').css("top","");
+                    $('body').css("width", "");
                     window.scrollTo(0, top); // 回到原先的top
                 }
             }
