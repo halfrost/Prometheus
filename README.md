@@ -1,92 +1,174 @@
-# Yasuko
+# Prometheus
 
-![](https://luoleiorg.b0.upaiyun.com/blog/2015/12/yasuko2.jpg)
+<p align='center'>
+<img src='./logo.png'>
+</p>
 
-为了国内备案，博客停止解析将近半个月，今天[罗磊的独立博客](https://luolei.org)重新上线，迁移到国内阿里云，进行了不少重构和优化，现在进入博客，速度体验上应该可以有一个飞跃性的提升。
+<p align="center">
+<img src="https://img.shields.io/badge/build-passing-brightgreen.svg">
+<img src="https://img.shields.io/badge/Language-%20JavaScript | CSS%20-f9e229.svg">
+<img src="https://img.shields.io/badge/Framework-Ghost | node.js%20-0eb984.svg">
+<img src="https://img.shields.io/badge/node->v8.9.0-b561fe.svg">
+<img src="https://img.shields.io/badge/npm->v5.5.1-000000.svg">
+<img src="https://img.shields.io/badge/Ghost--CLI->1.13.0-orange.svg">
+<img src="https://img.shields.io/badge/Ghost--Version->3.0.0-80d4f9.svg">
+<img src="https://img.shields.io/github/downloads/halfrost/Prometheus/total?color=brightgreen">
+<a href="https://github.com/halfrost/Prometheus/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+<img src="https://img.shields.io/badge/platform-%20iOS | Android | Mac | Web%20-ff69b4.svg">
+<a href="http://weibo.com/halfrost"><img src="https://img.shields.io/badge/weibo-@halfrost-f974ce.svg?colorA=f4292e"></a>
+<a href="https://twitter.com/halffrost"><img src="https://img.shields.io/badge/twitter-@halfrost-F8E81C.svg?colorA=009df2"></a>
+<a href="https://halfrost.com"><img src="https://img.shields.io/badge/Blog-halfrost-50E3C2.svg?style=flat&colorA=0083ea"></a>
+<img src="https://img.shields.io/badge/made%20with-%3C3-red.svg">
+<a href="https://github.com/halfrost/Prometheus/pulls"><img src="https://img.shields.io/badge/PR-Welcome-brightgreen.svg"></a>
+<img src="https://visitor-badge.laobi.icu/badge?page_id=halfrost.Prometheus">
+</p>
 
-新的博客主题名叫「Yasuko 康子]，依旧开源在[Github/Yasuko](https://github.com/foru17/Yasuko)上，只需稍作配置，就能用到你自己的[Ghost](http://ghost.org/)博客上。
+Prometheus Ghost theme is clean and very modern. The design is highly focused on typography. But there is also the perfect combination of image and white space in this design. This theme is perfect for a personal and professional blog. Also, the theme will fit in with perfectly with any fashion blog, food blog, movie blog, music blog or any other you can imagine. You could use this theme for an online magazine or journal also.
 
-##首先讲一个故事
+Installing and customizing this theme is very easy. All required information is provided in the documentation.
 
-这篇博文开头，我先不讲Ghost这个主题有什么新功能，我要讲一个叫[难波康子（Namba Yasuko)](https://ja.wikipedia.org/wiki/%E9%9B%A3%E6%B3%A2%E5%BA%B7%E5%AD%90)的日本女人的故事。
+## First tell a story
 
-1949年，战后三年，难波康子出生在日本东京大田区，1967年，十八岁的难波康子高中毕业，进入早稻田大学，并且加入了学校的登山俱乐部，随后开始了自己的登山生涯。毕业之后，难波康子进入了物流巨鳄UPS，收入颇丰，但是她坚持登山的爱好并且持续付诸行动。
+<p align='center'>
+<img src='https://img.halfrost.com/Prometheus_theme/Prometheus_0.png'>
+</p>
 
-1982年，她攀登上了非洲最高峰乞力马扎罗，两年之后，成功登顶南美最高峰阿空加瓜山，1985年六月，登顶北美最高峰麦金利峰，七年之后92年八月登顶欧洲最高峰厄尔布鲁士峰，接下来的93和94两年，先后登顶南极洲最高峰文森山和大洋洲最高峰查亚峰。也是在登山俱乐部，结实了自己的爱人健一难波。
 
-难波康子先后攀登上上世界七大洲的六座顶峰。1996年，两只商业登山队向珠峰发起冲刺，难波康子也在其中，5月10日冲顶，由于种种因缘，商业行为在高原缺氧地带的不理性选择，多个队伍同时登顶导致的登山通道拥挤，两队的大部分队员不幸遭遇暴风雪，被困在距离4号营地300多米的南坳，下午六点钟暴风雪最大的时候，难波康子氧气耗尽，经过最后的挣扎，依旧不幸遇难，在四号营地外，失温而亡。
+In Greek mythology, Prometheus (/prəˈmiːθiəs/; Ancient Greek: Προμηθεύς, [promɛːtʰéu̯s], possibly meaning "forethought") is a Titan, culture hero, and trickster figure who is credited with the creation of humanity from clay, and who defies the gods by stealing fire and giving it to humanity as civilization. Prometheus is known for his intelligence and as a champion of humankind and also seen as the author of the human arts and sciences generally. He is sometimes presented as the father of Deucalion, the hero of the flood story.
 
-难波康子是第二位登上世界七大高峰的日本女性，出身名门，企业高层，算得上是日本男权社会中的一个标杆性人物，她的死，在日本社会造成了很大的影响。
+The punishment of Prometheus as a consequence of the theft of fire is a popular subject of both ancient and modern culture. Zeus, king of the Olympian gods, sentenced the Titan to eternal torment for his transgression. The immortal was bound to a rock, where each day an eagle, the emblem of Zeus, was sent to eat Prometheus' liver, which would then grow back overnight to be eaten again the next day (in ancient Greece, the liver was often thought to be the seat of human emotions). Prometheus was eventually freed by the hero Heracles.
 
-![](https://luoleiorg.b0.upaiyun.com/blog/2015/12/everest96.jpg)
+In another myth, Prometheus establishes the form of animal sacrifice practiced in ancient Greek religion.
 
-今年上映的电影[《绝命海拔》](http://movie.douban.com/subject/22265299/)之中，讲述的就是96年这次珠峰事故的故事，推荐大家有机会可以去看看。上图的前排右一就是难波康子。
+Evidence of a cult to Prometheus himself is not widespread. He was a focus of religious activity mainly at Athens, where he was linked to Athena and Hephaestus, other Greek deities of creative skills and technology.
 
-##关于为什么要叫这个名字
+In the Western classical tradition, Prometheus became a figure who represented human striving, particularly the quest for scientific knowledge, and the risk of overreaching or unintended consequences. In particular, he was regarded in the Romantic era as embodying the lone genius whose efforts to improve human existence could also result in tragedy: Mary Shelley, for instance, gave The Modern Prometheus as the subtitle to her novel Frankenstein (1818).
 
-其实我并没有看过《绝命海拔》这部电影，之所以取这个名字，就跟我的上一个Ghost主题[Nevecoo](https://luolei.org/theme-nevecoo/)一样，取名的时候并没有想什么特殊的含义，就是随意而为。
-在谷歌中随意输入几个字符，点击搜索，就这么看到了Yasuko的故事。
 
-看着她的照片，看着照片中的雪山，想起自己几年之前一直想去登山的梦想，那就叫Yasuko这个名字吧，缅怀先烈之余，也算是勿忘初心。
+## Why is this name?
 
-## Theme Yasuko
+<p align='center'>
+<img src='https://img.halfrost.com/Prometheus_theme/logo_.png'>
+</p>
 
-回到这次的改版，说先说一下这次改版的几个变化，对于其中涉及的几个技术和优化点，也稍作说明。
+Because of Prometheus above experience, Prometheus is also the symbol of forethought, diligent and courageous. I hope who use this ghost theme would bring his website wisdom.
 
-#### 1.备案&&迁移到国内阿里云
+## Theme General features
 
-过去我的博客一直托管在[Linode](https://www.linode.com/?r=bc281a496205a4bb946c7e7d0a9a44116bebdf32)的日本东京机房，本来速度和稳定性都不错，Ping值好的时候可以到50-70ms，可是随着这两年某W的升级和国际线路的日益糟糕，大陆到日本的国际线路稳定性越来越不可靠，时常会遇到DNS无法解析，SSH无法连接的情况，虽说我的大部分静态资源都是托管在国内CDN，可是主站速度尤其是初次访问速度还是无法保证。
+<p align='center'>
+<img src='https://img.halfrost.com/Prometheus_theme/main_screenshot.png'>
+</p>
 
-这次依旧是通过阿里云的备案流程，增加了一个备案主体，将luolei.org这个域名在国内备案，12月10日阿里云提交备案申请，28日批准备案，流程还是比较顺利的，详细的过程可以看下图。
+- **Ready for latest version of Ghost 3.0 and above**.
+- **Fully support new membership and subscription feature**.
+- **User select-able light and dark mode**.
+- **Fully support Progressive Web Apps**.
+- **Clean and clutter free modern design**.
+- **Minimal, highly content focused, reader friendly and eye soothing**.
+- **100% responsive, looks nice in any size of device**.
+- **supports image logo**.
+- Previous and next post link in single post view.
+- Fully supports ghost Koenig Editor.
+- Supports inbuilt navigation system.
+- Blog Cover and blog description.
+- Tag image and tag description.
+- Author cover image, avatar, bio and social links.
+- Multi author support.
+- search functionality.
+- Responsive youtube, vimeo, soundcloud, mixcloud.
+- Beautiful Code Highlight.
+- Static pages.
+- Custom author archive page template.
+- Custom tag archive page template.
+- Custom subscribe page.
+- Custom error page.
+- Custom AMP template
+- Cross-Browser Compatibility.
+- Comment with disqus.
+- Post sharing.
+- Ghost subscription.
+- Contact form using formspree
+- Google font.
+- SVG icons.
+- Well commented and well structured coding.
+- Development files included. Easy to customize.
+- Developer friendly. Built with gulp and SASS.
 
-![](https://luoleiorg.b0.upaiyun.com/blog/2015/12/aliyun2.jpg)
+## Supports inbuilt Ghost features
 
-#### 1.1 海外访客进行反向代理加速
+<p align='center'>
+<img src='https://img.halfrost.com/Prometheus_theme/search_screenshot.png'>
+</p>
 
-由于无法保证阿里云在海外的访问速度，我让DNSpod对大陆用户和海外用户分别解析到阿里云和美国DO的机房IP，利用美国DigitalOcean旧金山机房的服务器进行了一次反向代理。
+- Translation ready English and Polish included.
+- Members & subscriptions.
+- Publication title and description.
+- Publication logo and cover.
+- Post, page, tag and author page.
+- Author cover, avatar, bio, location, website and social accounts.
+- Tag cover and description.
+- Primary tag in post-cards.
+- Multiple authors.
+- Koenig editor.
+- Markdown card.
+- Bookmark card.
+- Gallery card.
+- Image card with normal, wide and full width.
+- Secondary navigation.
+- Featured post and page.
+- Reading time.
+- Next and previous post navigation.
+- Social accounts.
+- Content API v3.
 
-由于我的博客进行了https加密，反向代理同样需要`ssl`证书。
 
-```language-nginx
-#https相关配置
-server {
-        listen       443;
-        server_name  luolei.org;
-        ssl                  on;
-        ssl_certificate      /somepath/ssl/ssl.crt;
-        ssl_certificate_key  /somepath/ssl/server.key;
-        proxy_pass http://115.28.56.68:xxxx;  #这里是关键，需要填写国内的IP地址
-        proxy_set_header        Host            $host;
-        proxy_set_header        X-Real-IP       $remote_addr;
-        proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header        X-Forwarded-Proto $scheme;
-        proxy_redirect     off;
-    }
-```
+## Members & subscriptions
 
-![](https://luoleiorg.b0.upaiyun.com/blog/2015/12/ping.png)
+<p align='center'>
+<img src='https://img.halfrost.com/Prometheus_theme/subscription_screenshot.png'>
+</p>
 
-测速下，国内外的延迟优化还是很明显的，当然，实际上到网站还需要加上DO机房到阿里云的延迟，只需要两个机房的线路能保持稳定，也是可以接受的。
 
-#### 2.图片全面优化
+- Custom membership page.
+- Custom account page for member.
+- Custom account page for paid-member.
+- Custom sign-in page.
+- Custom sign-up page.
+- Custom newsletter page.
+- Custom Call-to-Action in post for member.
+- Custom Call-to-Action in post for paid-member.
+- Pricing tables: Free, Monthly, Yearly.
+- Pricing tables in custom account and membership page.
+- 6 colors for Call-to-Action.
+- Sign-in, sign-up, subscribe and checkout notifications.
+- Account details.
+- Cancel & continue subscription button.
+- Members and Paid-members labels in post-cards.
+- Option to edit billing info.
+- Custom currency USD, AUD, CAD, EUR, GBP, INR.
 
-我的大部分图片都是放在又拍云的CDN上，又拍云已经赞助我的博客几年了，在这里再说一下感谢。图片向来是网络请求的大头，这一次，在图片加载上面做了几个处理。
 
-A.主要图片均lazyload:g
+## Comprehensive picture optimization
 
-延迟加载，只有滑动到可视区域才加载，Ghost改动Markdown渲染引擎不够方便，但是编辑的时候可以直接写html，需要直接把的代码写在编辑器里。
+Most of my pictures are on the CDN of Qiuniu, which has sponsored my blog for several years. I would like to thank you again. Images have always been the main part of network requests. This time, several processings have been done on image loading.
+
+### 1. The main pictures are `lazyload:g`
+
+Delayed loading, loading only when sliding to the visible area, Ghost is not convenient to change the Markdown rendering engine, but you can write html directly when editing, and you need to write the code directly in the editor.
+
+
 
 ```language-html
-<!-- 通过设置alt值为cover或者full-img来控制文章起始缩略图和是否撑满屏幕 -->
+<!-- Set the alt value to cover or full-img to control the initial thumbnail of the article and whether it fills the screen -->
 <img data-url="https://luoleiorg.b0.upaiyun.com/blog/2015/12/book.jpg" class="lazy cover" alt="cover">
 ```
 
-B.WebP图片和分辨率适配
+### 2. WebP picture and resolution adaptation
 
-根据设备浏览器是否支持WebP，是否是手机，利用又拍云的图形处理接口，分别加载不同格式，不同分辨率的图片，大大优化了图片的大小。
+According to whether the device browser supports WebP and whether it is a mobile phone, using the graphics processing interface of the cloud to load pictures in different formats and resolutions, the size of the pictures is greatly optimized.
 
 ``` language-javascript
-/*通过js判断浏览器是否支持webP格式的图片*/
+/*Use js to determine whether the browser supports webP format images*/
 webPCheck: function(feature, callback) {
         var TestImages = {
             demo: "UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAsAAAABBxAREYiI/gcAAABWUDggGAAAADABAJ0BKgEAAQABABwlpAADcAD+/gbQAA=="
@@ -106,7 +188,7 @@ webPCheck: function(feature, callback) {
 },
 
 
-/*通过传参调用不同的lazyload*/
+/*Call different by passing parameters lazyload*/
 $(".lazy").lazyload({
     advanced_load: true,
     data_attribute: 'url',
@@ -115,7 +197,7 @@ $(".lazy").lazyload({
     scale_width: 750
 });
 
-/*重新拼装lazyload的url，配合又拍云接口调用不同图片*/
+/*Reassemble the lazyload url, and call different pictures with the cloud interface*/
 if (settings.advanced_load == true) {
     updatedUrl += '!';
 }
@@ -128,27 +210,19 @@ if (settings.webP_load == true) {
 
 ```
 
-C.进一步优化Iconfont
+### 3. Advanced optimization Iconfont - TODO #9
 
-![](https://luoleiorg.b0.upaiyun.com/blog/2015/12/iconfont.png)
 
-这一次重新用[Sketch](https://www.sketchapp.com)整理了常见的社交网站icon，加入了国内常见的V2EX、知乎、简书等网站的icon，调用起来更加方便。通过阿里云[iconfont.cn](http://iconfont.cn)生成，字体font部署在阿里云CDN上。文章中也依旧增加了自动给引用的URL标识logo的功能。
+This time I re-use [Sketch](https://www.sketchapp.com) to sort out the icons of common social networking sites, and add the icons of common domestic websites such as V2EX, Zhihu, Jianshu, etc., making it more convenient to call. Generated by Alibaba Cloud [iconfont.cn](http://iconfont.cn), and the font font is deployed on Alibaba Cloud CDN. The article still adds the function of automatically marking the logo of the quoted URL.
 
-![](https://luoleiorg.b0.upaiyun.com/blog/2015/12/icon1.jpg)
-
-豆瓣，维基百科在iPhone上的显示效果，十分清晰。
-
-![](https://luoleiorg.b0.upaiyun.com/blog/2015/12/icon2.jpg)
-
-Github、知乎在iPhone上的效果。
 
 ``` language-javascript
-    /*给文章中的url添加iconfont方便识别*/
+    /*Add iconfont to the url in the article for easy identification*/
     urlIconlize: function(url) {
         var domain,
             _output;
         var iconFontTag = 'iconfont';
-        var iconMap = { /*索引 可在这里添加匹配规则*/
+        var iconMap = { /*Index which can add matching rules here*/
             'twitter': iconFontTag + '-twitter',
             'qzone': iconFontTag + '-qzone',
             'weibo': iconFontTag + '-weibo',
@@ -180,7 +254,7 @@ Github、知乎在iPhone上的效果。
         return _output;
     },
     addIcons: function() {
-        /*给博客文章地址url添加ico识别*/
+        /*Add ico recognition to the blog post address url*/
         $('.single-post-inner  a:not(:has(img))').each(function(i) {
             var _src = $(this).attr('href');
             var tmp = document.createElement('a');
@@ -192,73 +266,150 @@ Github、知乎在iPhone上的效果。
         });
     },
 ```
-考虑元旦的时候把这个功能抽出来做一个组件，方便任意网站调用。需要维护对应的域名表。
 
+## Theme Customization
 
-D.多说评论、webfont懒加载
+This theme is built using Gulp to compile javascript and CSS. CSS is written in SCSS. So if you want to modify the theme color, styles or appearance or anything you want to customize, before doing that you need to setup development environment setup.
 
-``` language-javascript
-/*异步加载js*/
-function loadJS(url, callback, el) {
-    var isIE = !!window.ActiveXObject,
-        isIE6 = isIE && !window.XMLHttpRequest,
-        script = document.createElement("script"),
-        head = isIE6 ? document.documentElement : document.getElementsByTagName("head")[0];
-    script.type = "text/javascript";
-    script.async = true;
-    if (script.readyState) {
-        script.onreadystatechange = function() {
-            if (script.readyState == "loaded" || script.readyState == "complete") {
-                script.onreadystatechange = null;
-                if (callback) {
-                    callback();
-                }
-            }
-        }
-    } else {
-        script.onload = function() {
-            if (callback) {
-                callback();
-            }
-        }
+Please follow all the steps below one by one to do it.
+
+You need to have installed **node js** and **gulp** installed in your local machine.
+
+- If you don't have nodejs installed in your machine then visit nodejs.org and download and install latest LTS version of node js.
+- After installing node js open a command prompt or terminal. Then type `node -v`. If it shows a version number then node js is installed correctly. Also enter this command `npm -v` to see npm ( comes with node js) is installed properly.
+- After installing node js you need to install Gulp CLI globally in your machine. So in your terminal or command prompt enter this command. `npm install gulp-cli -g`. It may take some time, it will install Gulp CLI globally in your machine. Now you have done the environment setup.
+- At this point go to the development theme folder. In downloaded zip there is a folder named "development". Within that folder you will see a folder named as the theme name. Enter in that folder and run command prompt / terminal here. Or you can navigate to this folder within already running terminal.
+- Now enter command `npm install`. It may take some time. It will install all the development dependency within the project. It may show some warning, don't worry those are OK.
+- At this time you are ready to modify theme, Run one more command `gulp` in the terminal. It will initially compile all files and star to watch file changes. Keep the terminal open and start customizing the theme.
+
+## How to Change Color or CSS
+
+In the theme folder you will find "assets > scss" folder which contains all the theme styles written in SCSS.
+
+To change any style / css you need to modify here. In SCSS folder you will find a folder named "components" which contains a bunch of .scss files which are part of the whole theme's style. and all those files are imported in a specific order in "screen.scss" file located in "scss" folder root outside of "components" folder. please dont edit that file.
+
+To change the Theme color please follow the steps below.
+
+- Open the `_color-and-font.scss` file in your code editor.
+- Now you have to change the color hexcode (#xxxxxx) in this file and save the file.
+- If you have followed the above section of instruction ( Detail customization prerequisite), and already running terminal with the gulp command then the file changes will be detected and if there is no error in your file then it will be automatically compiled.
+
+The `_color-and-font.scss` file looks like below.
+
+```
+/*=====================================================
+    Fonts
+=====================================================*/
+$accent-color: #FDA403; /* theme highlight/primary color */
+
+$theme-light: (
+    bg-color: #FFFFFF,
+    text-title: #161616,
+    text-body: #313131,
+    text-light: #929399,
+);
+
+$theme-dark: (
+    bg-color: #252733,
+    text-title: #FFFFFF,
+    text-body: #D5D5D5,
+    text-light: #929399,
+);
+
+/*=====================================================
+    Fonts
+=====================================================*/
+$font-body: 'Noto Sans', sans-serif;
+$font-title: 'Playfair Display', serif;
+
+/*=====================================================
+    Please don't edit below code if you are not sure
+=====================================================*/
+:root { 
+    @each $name, $value in $theme-dark {
+        --#{$name}: #{$value};
     }
-    script.src = url;
-    if (el) {
-        document.getElementById(el).appendChild(script);
-    } else {
-        head.insertBefore(script, head.firstChild);
+}
+
+[data-theme="light"] {
+    @each $name, $value in $theme-light {
+        --#{$name}: #{$value};
     }
-};
+}
 ```
 
-过去webfont、多说等`.js`和`.css`资源都是页面加载的时候就直接加载，占用了一定的带宽和连接，考虑到实际情况，对于评论的`.js`均采用异步加载的方式，webfont加载使用的是[webfontloader](https://github.com/typekit/webfontloader)的异步方案，一定程度下优化。
+After modifying the theme css when you are done and want to install the final theme in your live site, do the following.
 
-E.其他优化
+- Go to running terminal ( terminal is navigated to development theme folder and running `gulp` command to watch the file changes )
+- Press **Ctrl + C** or **Cmd + C** in your keyboard to end the running task.
+- After ending running task enter this command, `gulp build`. This command will build the production ready ( live site ready ) theme package within a folder named "build".
+- After doing the `gulp build` if you need you can configure the theme options ( such as disqus shortname, social links etc ) then use this command `gulp zip`. It will make a folder named "dist" and make a zip of the contents of "build" folder within "dist" folder.
+- Now you can upload this newly created zip in your ghost admin panel.
 
-除了性能上的优化，这次[Yasuko](https://github.com/foru17/Yasuko)主题在UI、体验上均做了较大的改善，着重优化了移动端上的阅读体验和细节，围绕内容而设计。
+## Light and dark mode
 
-![](https://luoleiorg.b0.upaiyun.com/blog/2015/12/show1.jpg)
+This theme comes with an uncommon and unique feature, which is toggleable light and dark mode. This option let your user choose whether they prefer dark color or light color. There preference will be saved in their browser locally. Wnenever they visit your site in future, they will see their preffered mode.
 
-首页和文章列表页面更加紧凑，关键字和入口更加清晰，采取镜像显示模式，显示缩略图和文章摘要。
+By default the theme is in dark mode, which means when user visit the site for first time, they will see the dark mode.
 
-![](https://luoleiorg.b0.upaiyun.com/blog/2015/12/show2.jpg)
+If you want to make the default mode to light then follow the steps below
 
-文章页增强阅读体验，对于字体、行高、间距等均做过调试，让不同系统、不同分辨率和不同浏览器下均能获得良好的感受。
+Open `default.hbs` file from your theme folder.
+Add `data-theme="light"` in the html tag at line number 2. So that the line will become like below.
 
-通过Ghost自己的接口，增加前后文导航。另外自己写了一个QR二维码的接口，自动生成当前文章的二维码，方便读者能够快速扫码在手机上打开。
+```
+<html lang="{{@site.lang}}" data-theme="light">
+```
 
-当然，最重要的是，增加了「打赏」功能。
+## Theme Translation
 
-点击打赏按钮，会自动弹出支付宝打赏或者微信打赏（需要自定义图片）。
+Ghost introduced Theme translation and blog localization feature in version 1.20.0. We implemented translation support to this theme. Please follow the steps below to translate this theme in your language. Please follow the steps below to correctly translate the theme in your language.
 
-> 在这里我也想做一个实验，如果你觉得我过去的文章和作品对你有一定帮助，就随意打赏我点钱，也让我看看我的这篇文章都在什么时候被大家看到，几毛几块都可以。
+- Within theme folder, there is a folder named "locales". In that folder by default you will find a file named "en.json". This is the default file for english language and you have to use this file to create your own language file.
+- make a copy of en.json and give a name following this format [language_code].json ( example: for french **fr.json** for German i.e. Deutsch **de.json** for Russian **ru.json** etc. )
+If you are not sure about what is you language code then you can visit [this wiki page](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) and see. Use the two letter (ISO 639-1) code.
+Now open the newly created <your_language>.json file in text editor. You will see "KEY": "VALUE" format in each line.
+In english language KEY and VALUE are same. Now you read the left part of the : ie. KEY part and change the tight part ie. VALUE part to your own language.
+After finishing the translation Save the file and upload the theme to your site.
+Go to your admin area, Visit "Genera" setting page and change the "publication Language" option. By default there is "en" for english. Add your own language code there in place of "en" and save the settings.
+Visit your site, If everything goes right, you will see all the theme related text in your site is in your translated language.
 
-点下面的「赏」，根据自己的情况扫描二维码，支付宝或者微信打赏均可。
+## Test result
 
-后续[Yasuko](https://github.com/foru17/yasuko)主题会持续更新和优化，也欢迎各位的Star。
+### 1. Valid HTML5 coding.
 
+### 2. 100% compatible with latest ghost – Ghost GScan score 100 / 100
+
+<p align='center'>
+<img src='https://img.halfrost.com/Prometheus_theme/Ghost_GScan.png'>
+</p>
+
+### 3. PageSpeed Insights score - Desktop 100 and Mobile 90
+
+<p align='center'>
+<img src='https://img.halfrost.com/Prometheus_theme/lighthouse_desktop.png'>
+</p>
+
+
+<p align='center'>
+<img src='https://img.halfrost.com/Prometheus_theme/lighthouse_mobile.png'>
+</p>
+
+### 4. Pingdom – Performance grade B (score 84) load time 1.82 second
+
+<p align='center'>
+<img src='https://img.halfrost.com/Prometheus_theme/pingdom.png'>
+</p>
+
+### 5. Gtmetrix
+
+<p align='center'>
+<img src='https://img.halfrost.com/Prometheus_theme/gtmetrix.png'>
+</p>
 
 ## Copyright & License
+
+![](https://img.halfrost.com/Prometheus_theme/MIT-License.png)
 
 Copyright (c) 2013-2015 Ghost Foundation - Released under the MIT License.
 
