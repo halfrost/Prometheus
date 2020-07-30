@@ -376,32 +376,35 @@ Visit your site, If everything goes right, you will see all the theme related te
 
 ## Test result
 
-### 1. Valid HTML5 coding.
+### 1. Ghost GScan – score 100 / 100
 
-### 2. 100% compatible with latest ghost – Ghost GScan score 100 / 100
+100% compatible with latest ghost
 
 <p align='center'>
 <img src='https://img.halfrost.com/Prometheus_theme/Ghost_GScan.png'>
 </p>
 
-### 3. PageSpeed Insights score - Desktop 100 and Mobile 90
+### 2. PageSpeed Insights - score Desktop 100 / Mobile 90
+
+Desktop full score:
 
 <p align='center'>
 <img src='https://img.halfrost.com/Prometheus_theme/lighthouse_desktop.png'>
 </p>
 
+Mobile 90 score:
 
 <p align='center'>
 <img src='https://img.halfrost.com/Prometheus_theme/lighthouse_mobile.png'>
 </p>
 
-### 4. Pingdom – Performance grade B (score 84) load time 1.82 second
+### 3. Pingdom – Performance grade B (score 84) load time 1.82 second
 
 <p align='center'>
 <img src='https://img.halfrost.com/Prometheus_theme/pingdom.png'>
 </p>
 
-### 5. Gtmetrix
+### 4. Gtmetrix - PageSpeed Score A(97%)
 
 <p align='center'>
 <img src='https://img.halfrost.com/Prometheus_theme/gtmetrix.png'>
