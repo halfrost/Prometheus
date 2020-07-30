@@ -65,7 +65,7 @@
 		<script src="{{asset "js/app.bundle.min.js"}}"></script>
         {{ghost_foot}}
 		<script>
-    		var serviceWorkerUri = '/serviceworker-v1.js';
+    		var serviceWorkerUri = '/service-worker.js';
       		if ('serviceWorker' in navigator) {
         		navigator.serviceWorker.register(serviceWorkerUri).then(function() {
           			if (navigator.serviceWorker.controller) {

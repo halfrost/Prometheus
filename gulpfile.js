@@ -18,6 +18,7 @@ var del = require('del');
 var zip = require('gulp-zip');
 var beautify = require('gulp-jsbeautifier');
 var browserSync = require('browser-sync').create();
+const workboxBuild = require('workbox-build');
 
 gulp.task('beautify', () =>
   gulp.src(['./*.css', './*.html', './*.js'])
@@ -69,7 +70,6 @@ gulp.task('concat-js', function() {
     return gulp.src([
         './assets/js/vendor/jquery-3.5.1.min.js',
         './assets/js/vendor/jquery.fitvids.js',
-        // './assets/js/vendor/highlight.pack.js',
         './assets/js/vendor/fuse.min.js',
         './assets/js/vendor/medium-zoom.min.js',
         './assets/js/vendor/clipboard.min.js',
@@ -103,6 +103,89 @@ gulp.task('clean', function() {
     return del(['./build', './dist']);
 });
 
+gulp.task('service-worker', () => {
+    return workboxBuild.generateSW({
+        cacheId: "halfrost",
+        offlineGoogleAnalytics: true,
+        skipWaiting: true,
+        clientsClaim: true,
+        globDirectory: 'build',
+        globPatterns: [
+            '**\/*.{htm,html,js,css,png,gif,svg}',
+        ],
+        runtimeCaching: [
+            {
+                urlPattern: new RegExp('https://halfrost.com/assets'),
+                handler: 'CacheFirst',
+                options: {
+                    cacheName: "halfrot-assets",
+                    // networkTimeoutSeconds: 5,
+                    cacheableResponse: {
+                        statuses: [0, 200],
+                    },
+                    expiration: {
+                        maxEntries: 60,
+                        maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
+                    },
+                },
+            },
+            {
+                urlPattern: new RegExp('https://fonts.googleapis.com'),
+                handler: 'StaleWhileRevalidate',
+                options: {
+                    cacheName: "google-fonts-stylesheets",
+                    // networkTimeoutSeconds: 5,
+                },
+            },
+            {
+                urlPattern: new RegExp('https://fonts.gstatic.com'),
+                handler: 'CacheFirst',
+                options: {
+                    cacheName: "google-fonts-webfonts",
+                    // networkTimeoutSeconds: 5,
+                    cacheableResponse: {
+                        statuses: [0, 200],
+                    },
+                    expiration: {
+                        maxEntries: 30,
+                        maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
+                    },
+                },
+            },
+            {
+                urlPattern: '/\.(?:png|jpg|jpeg|gif|svg)$/',
+                handler: 'CacheFirst',
+                options: {
+                    cacheName: "images",
+                    cacheableResponse: {
+                        statuses: [0, 200],
+                    },
+                    expiration: {
+                        maxEntries: 60,
+                        maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
+                    },
+                },
+            },
+            {
+                urlPattern: '/\.(?:htm|html|css|js)$/',
+                handler: 'StaleWhileRevalidate',
+                options: {
+                    cacheName: "static-resources",
+                },
+            },
+        ],
+        swDest: 'build/service-worker.js',
+    }).then(({warnings}) => {
+        // In case there are any warnings from workbox-build, log them.
+        for (const warning of warnings) {
+          console.warn(warning);
+        }
+        console.info('Service worker generation completed.');
+    }).catch((error) => {
+        console.warn('Service worker generation failed:', error);
+    });
+});
+
 gulp.task('build', gulp.series('clean','lint', 'css', 'concat-js', function () {
     var targetDir = 'build/';
 
@@ -130,6 +213,6 @@ gulp.task('zip', function () {
     .pipe(gulp.dest(targetDir));
 });
 
-gulp.task('upload', gulp.series('clean','build', 'zip'));
+gulp.task('upload', gulp.series('clean','build', 'service-worker', 'zip'));
 
 gulp.task('default', gulp.parallel('watch'));
