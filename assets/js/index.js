@@ -586,7 +586,9 @@
                             console.log('***$self是 = ',$self);
                             var width = Math.ceil($('.post-thumbnail-wrap').width());
                             console.log('width 是 = ',width);
-                            if (updatedUrl.indexOf('img.halfrost.com') > -1) {
+                            console.log('是否是 svg = ',updatedUrl,updatedUrl.indexOf('.ffy'));
+                            // exclude svg & gif
+                            if (updatedUrl.indexOf('img.halfrost.com') > -1 && updatedUrl.indexOf('.svg') == -1 && updatedUrl.indexOf('.gif') == -1) {
                                 // alert(1)
                                 if (settings.advanced_load === true) {
                                     updatedUrl += '?imageView2';

@@ -38,15 +38,16 @@
     	</script>
 		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 	</head>
+
 	<body class="{{body_class}}">
 		{{! insert header partial}}
 		{{> header}}
+		{{> search-popup}}
         <main class="main-content-area">
-        {{{body}}}
+        	{{{body}}}
 		</main>
         {{! insert footer partial}}
         {{> footer}}
-		{{> search-popup}}
 		{{#if @labs.members}}
 		{{> members/notifications}}
 		{{/if}}
