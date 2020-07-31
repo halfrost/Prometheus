@@ -204,7 +204,7 @@
 .footer_bg {
     position: absolute;
     top: -264px;
-    background: url("/assets/images/footer_bg.png") repeat-x scroll center 0;
+    background: url("https://img.halfrost.com/Blog/ArticleTitleImage/footer_bg.png") repeat-x scroll center 0;
     width: 100%;
     height: 264px;
     left: 0;
@@ -213,24 +213,24 @@
 }
 
 .footer_bg .footer_bg_one {
-    background: url("/assets/images/1.gif") no-repeat center center;
+    background: no-repeat center center;
     width: 60px;
     height: 96px;
     background-size:100%;
     position: absolute;
-    bottom: 40px;
+    bottom: -10px;
     left: 30%;
-    transform: scale(2.5);
+    transform: scale(2.7);
     -webkit-animation: myfirst 20s linear infinite;
     animation: myfirst 20s linear infinite;
 }
 
 .footer_bg .footer_bg_three {
-    background: url("/assets/images/3.gif") no-repeat center center;
+    background: no-repeat center center;
     width: 60px;
     height: 96px;
     background-size:100%;
-    bottom: 30px;
+    bottom: -46px;
     right: 38%;
     // transform: rotateY(180deg);
     transform: scale(4.2);
@@ -240,7 +240,7 @@
 }
 
 .footer_bg .footer_bg_two {
-    background: url("/assets/images/2.gif") no-repeat center center;
+    background: no-repeat center center;
     width: 60px;
     height: 96px;
     background-size:100%;
@@ -252,7 +252,7 @@
 }
 
 .footer_bg .footer_bg_four {
-    background: url("/assets/images/4.gif") no-repeat center center;
+    background: no-repeat center center;
     width: 60px;
     height: 96px;
     background-size:100%;

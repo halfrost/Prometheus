@@ -160,7 +160,7 @@ Delayed loading, loading only when sliding to the visible area, Ghost is not con
 
 ```language-html
 <!-- Set the alt value to cover or full-img to control the initial thumbnail of the article and whether it fills the screen -->
-<img data-url="https://luoleiorg.b0.upaiyun.com/blog/2015/12/book.jpg" class="lazy cover" alt="cover">
+<img data-url="https://img.halfrost.com/blog/2015/12/book.jpg" class="lazy cover" alt="cover">
 ```
 
 ### 2. WebP picture and resolution adaptation
@@ -230,7 +230,6 @@ This time I re-use [Sketch](https://www.sketchapp.com) to sort out the icons of 
             'github': iconFontTag + '-github',
             'douban': iconFontTag + '-douban',
             'google': iconFontTag + '-google',
-            'luolei': iconFontTag + '-luolei',
             'dribble': iconFontTag + '-dribble',
             'v2ex': iconFontTag + '-v2ex',
             'zhihu': iconFontTag + '-zhihu',
@@ -389,13 +388,13 @@ Visit your site, If everything goes right, you will see all the theme related te
 Desktop full score:
 
 <p align='center'>
-<img src='https://img.halfrost.com/Prometheus_theme/lighthouse_desktop.png'>
+<img src='https://img.halfrost.com/Prometheus_theme/lighthouse_desktop_0.png'>
 </p>
 
-Mobile 90 score:
+Mobile 95 score:
 
 <p align='center'>
-<img src='https://img.halfrost.com/Prometheus_theme/lighthouse_mobile.png'>
+<img src='https://img.halfrost.com/Prometheus_theme/lighthouse_mobile_0.png'>
 </p>
 
 ### 3. Pingdom – Performance grade B (score 84) load time 1.82 second
