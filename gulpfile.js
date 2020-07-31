@@ -51,6 +51,7 @@ gulp.task('css', function() {
     .pipe(gulp.dest('./partials/styles'))
     .pipe(browserSync.stream());
 });
+
 gulp.task('ampcss', function() {
     return gulp.src(['./assets/scss/ampstyle-light.scss', './assets/scss/ampstyle-dark.scss'])
     .pipe(plumber())
@@ -63,6 +64,7 @@ gulp.task('ampcss', function() {
     .pipe(rename({extname: ".hbs"}))
     .pipe(gulp.dest('./partials/styles'));
 });
+
 gulp.task('concat-js', function() {
     return gulp.src([
         './assets/js/vendor/jquery-3.5.1.min.js',
@@ -86,6 +88,7 @@ gulp.task('concat-js', function() {
     })) // 压缩成一行
     .pipe(gulp.dest('./assets/js'));
 });
+
 gulp.task('watch', gulp.series('css', 'ampcss', 'concat-js', function () {
     browserSync.init({
         proxy: "http://localhost:2368"
@@ -126,5 +129,7 @@ gulp.task('zip', function () {
     .pipe(zip(filename))
     .pipe(gulp.dest(targetDir));
 });
+
+gulp.task('upload', gulp.series('clean','build', 'zip'));
 
 gulp.task('default', gulp.parallel('watch'));
