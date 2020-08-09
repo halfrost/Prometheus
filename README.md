@@ -27,6 +27,8 @@ Prometheus Ghost theme is clean and very modern. The design is highly focused on
 
 Installing and customizing this theme is very easy. All required information is provided in the documentation.
 
+[Live Demo](https://halfrost.com) is here.
+
 ## First tell a story
 
 <p align='center'>
