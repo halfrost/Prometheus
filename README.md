@@ -411,6 +411,16 @@ Mobile 95 score:
 <img src='https://img.halfrost.com/Prometheus_theme/gtmetrix_0.png'>
 </p>
 
+## ♥️ Thanks
+
+If you like this project, welcome Star!
+
+
+[![Stargazers over time](https://starchart.cc/halfrost/Prometheus.svg)](https://starchart.cc/halfrost/Prometheus)
+
+
+
+
 ## Copyright & License
 
 ![](https://img.halfrost.com/Prometheus_theme/MIT-License.png)
