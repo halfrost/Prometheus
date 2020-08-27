@@ -5,6 +5,7 @@
 </p>
 
 <p align="center">
+<img src="https://img.shields.io/github/downloads/halfrost/Prometheus/total?label=Theme%20downloads&color=brightgreen">
 <img src="https://img.shields.io/badge/build-passing-brightgreen.svg">
 <img src="https://img.shields.io/badge/Language-%20JavaScript | CSS%20-f9e229.svg">
 <img src="https://img.shields.io/badge/Framework-Ghost | node.js%20-0eb984.svg">
@@ -12,15 +13,18 @@
 <img src="https://img.shields.io/badge/npm->v5.5.1-000000.svg">
 <img src="https://img.shields.io/badge/Ghost--CLI->1.13.0-orange.svg">
 <img src="https://img.shields.io/badge/Ghost--Version->3.0.0-80d4f9.svg">
-<img src="https://img.shields.io/github/downloads/halfrost/Prometheus/total?color=brightgreen">
-<a href="https://github.com/halfrost/Prometheus/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
 <img src="https://img.shields.io/badge/platform-%20iOS | Android | Mac | Web%20-ff69b4.svg">
-<a href="http://weibo.com/halfrost"><img src="https://img.shields.io/badge/weibo-@halfrost-f974ce.svg?colorA=f4292e"></a>
-<a href="https://twitter.com/halffrost"><img src="https://img.shields.io/badge/twitter-@halfrost-F8E81C.svg?colorA=009df2"></a>
-<a href="https://halfrost.com"><img src="https://img.shields.io/badge/Blog-halfrost-50E3C2.svg?style=flat&colorA=0083ea"></a>
+<img src="https://visitor-badge.laobi.icu/badge?page_id=halfrost.Prometheus">
+</p>
+
+<p align="center">
+<a href="https://github.com/halfrost/Prometheus/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/halfrost/Prometheus?label=License"></a>
+<a href="https://halfrost.com"><img src="https://img.shields.io/badge/Blog-Halfrost--Field-80d4f9.svg?style=flat"></a>
+<a href="http://weibo.com/halfrost"><img src="https://img.shields.io/badge/weibo-@halfrost-f974ce.svg?style=flat&colorA=f4292e"></a>
+<a href="https://twitter.com/halffrost"><img src="https://img.shields.io/badge/twitter-@halffrost-F8E81C.svg?style=flat&colorA=009df2"></a>
+<a href="https://www.zhihu.com/people/halfrost/activities"><img src="https://img.shields.io/badge/%E7%9F%A5%E4%B9%8E-@halfrost-fd6f32.svg?style=flat&colorA=0083ea"></a>
 <img src="https://img.shields.io/badge/made%20with-%3C3-red.svg">
 <a href="https://github.com/halfrost/Prometheus/pulls"><img src="https://img.shields.io/badge/PR-Welcome-brightgreen.svg"></a>
-<img src="https://visitor-badge.laobi.icu/badge?page_id=halfrost.Prometheus">
 </p>
 
 Prometheus Ghost theme is clean and very modern. The design is highly focused on typography. But there is also the perfect combination of image and white space in this design. This theme is perfect for a personal and professional blog. Also, the theme will fit in with perfectly with any fashion blog, food blog, movie blog, music blog or any other you can imagine. You could use this theme for an online magazine or journal also.
