@@ -403,13 +403,13 @@ Mobile 95 score:
 <img src='https://img.halfrost.com/Prometheus_theme/lighthouse_mobile_0.png'>
 </p>
 
-### 3. Pingdom – Performance grade B (score 84) load time 1.82 second
+### 3. [Pingdom](https://tools.pingdom.com/) – Performance grade B (score 86) load time 1.38 second
 
 <p align='center'>
 <img src='https://img.halfrost.com/Prometheus_theme/pingdom_0.png'>
 </p>
 
-### 4. Gtmetrix - PageSpeed Score A(97%)
+### 4. [Gtmetrix](https://gtmetrix.com/) - PageSpeed Score A(97%)
 
 <p align='center'>
 <img src='https://img.halfrost.com/Prometheus_theme/gtmetrix_0.png'>
