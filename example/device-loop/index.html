@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="UTF-8">
+
+		<title>Device loop animation</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Hakim El Hattab">
+
+		<link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+
+	</head>
+
+	<body>
+
+		<p>A device loop animation<br>as seen on <a href="https://slides.com" target="_blank">slides.com</a></p>
+
+		<div class="animation" data-animation-step="1">
+			<div class="device">
+				<div class="phone-home-button"></div>
+				<div class="tablet-home-button"></div>
+				<div class="screen-stand"><div class="leg"></div><div class="foot"></div></div>
+				<div class="display">
+					<div class="slide1"><div>Works on <em>desktops</em></div></div>
+					<div class="slide2"><div>Works on <em>tablets</em></div></div>
+					<div class="slide3"><div>Works on <em>phones</em></div></div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+
+			// this thing is js driven on slid.es so I didn't bother switching out for css animations
+			var duration = 7000, steps = 3, step = 1;
+
+			setInterval( function() {
+				document.querySelector( '.animation' ).setAttribute( 'data-animation-step', step = ++step > steps ? 1 : step );
+			}, duration / steps );
+
+		</script>
+
+		<!-- Third party scripts and sharing UI -->
+
+		<div class="credits">
+			<a href="https://github.com/hakimel/css/tree/master/device-loop">Source on GitHub</a>
+			<a href="https://twitter.com/hakimel">Follow @hakimel</a>
+			<a href="https://twitter.com/share?text=A%20device%20loop%20animation%20by%20@hakimel&url=http://lab.hakim.se/device-loop&related=hakimel" target="_blank">Tweet this</a>
+		</div>
+
+		<style type="text/css" media="screen">
+			.credits {
+				position: absolute;
+				right: 20px;
+				bottom: 25px;
+				font-size: 15px;
+				color: #fff;
+			}
+
+			.credits>* {
+				vertical-align: middle;
+				margin-left: 15px;
+			}
+
+			.credits a {
+				padding: 8px 10px;
+				color: #333;
+				border: 2px solid #aaa;
+				border-radius: 2px;
+				text-decoration: none;
+			}
+
+			.credits a:hover {
+				border-color: #666;
+				color: #000;
+			}
+		</style>
+
+		<script>
+			var _gaq = [['_setAccount', 'UA-15240703-1'], ['_trackPageview']];
+			(function(d, t) {
+			var g = d.createElement(t),
+			    s = d.getElementsByTagName(t)[0];
+			g.async = true;
+			g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g, s);
+			})(document, 'script');
+		</script>
+
+	</body>
+
+</html>
