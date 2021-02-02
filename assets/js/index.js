@@ -442,9 +442,11 @@
         
             window.addEventListener( 'resize', drawPath, false );
             window.addEventListener( 'scroll', sync, false );
-        
-            drawPath();
-        
+            
+            if (toc != null) {
+                drawPath();
+            }
+
             function drawPath() {
         
                 tocItems = [].slice.call( toc.querySelectorAll( 'li' ) );
@@ -468,7 +470,7 @@
         
                 var path = [];
                 var pathIndent;
-        
+                
                 tocItems.forEach( function( item, i ) {
         
                     var x = item.anchor.offsetLeft - 5,
@@ -523,17 +525,16 @@
                 if ($(window).scrollTop() + $(window).height() > $('.post-footer').offset().top) {
                     $('#toc').css("visibility","hidden");
                     $('.toc-marker').css("visibility","hidden");
-                    
                 } else {
                     $('#toc').css("visibility","visible");
                     $('.toc-marker').css("visibility","visible");
                 }
-
             }
             function sync() {
-        
+                if (tocItems == null) {
+                    return;
+                }
                 fixedTOC();
-
                 var windowHeight = window.innerHeight;
         
                 var pathStart = pathLength,
