@@ -51,7 +51,7 @@
     },
     "devDependencies": {
         "autoprefixer": "^9.8.5",
-        "browser-sync": "^2.26.10",
+        "browser-sync": "^2.26.14",
         "del": "^4.1.1",
         "gulp": "^4.0.2",
         "gulp-clean-css": "^4.3.0",
@@ -70,5 +70,7 @@
         "merge2": "^1.4.1",
         "postcss-css-variables": "^0.13.0"
     },
-    "dependencies": {}
+    "dependencies": {
+        "localtunnel": "^2.0.1"
+    }
 }
