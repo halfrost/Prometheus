@@ -1,11 +1,19 @@
 /*====================================================
   TABLE OF CONTENT
-  1. function declearetion
-  2. Initialization
+  1. global var
+  2. function declearetion
+  3. Initialization
 ====================================================*/
 (function ($) {
     /*===========================
     1. function declearetion
+    ===========================*/
+    var toc, tocPath, tocItems, pathLength, lastPathStart, lastPathEnd;
+    // Factor of screen size that the element must cross
+    // before it's considered visible
+    var TOP_MARGIN = 0.1, BOTTOM_MARGIN = 0.2;
+    /*===========================
+    2. function declearetion
     ===========================*/
     var ImageSmartLoader = {
         isWebPSupported: false,
@@ -426,157 +434,139 @@
         },
 
         tocScroll: function() {
-            var toc = document.querySelector( '#toc' );
-            var tocPath = document.querySelector( '.toc-marker path' );
-            var tocItems;
-        
-            // Factor of screen size that the element must cross
-            // before it's considered visible
-            var TOP_MARGIN = 0.1,
-                BOTTOM_MARGIN = 0.2;
-        
-            var pathLength;
-        
-            var lastPathStart,
-                lastPathEnd;
-        
-            window.addEventListener( 'resize', drawPath, false );
-            window.addEventListener( 'scroll', sync, false );
-            
+            console.log("调用了 tocScroll");
+            toc = document.querySelector( '#toc' );
+            tocPath = document.querySelector( '.toc-marker path' );
             if (toc != null) {
-                drawPath();
+                window.addEventListener( 'resize', themeApp.drawPath, false );
+                window.addEventListener( 'scroll', themeApp.syncTOC, false );
+                themeApp.drawPath();
+            }      
+        },
+
+        fixedTOC: function(){
+            console.log("调用了 fixedTOC");
+            if ( $('.post-header').outerHeight(true) + 80 > $(window).scrollTop()) {
+                $('#toc').css('top',$('.post-header').outerHeight(true));
+                $('#toc').css('position','absolute');
+                $('#toc').css('left','20px');
+                // $('#toc').css('right','20px');
+                //console.log("top absolute | toc offset = ", $('#toc').offset().top, "scrollTop = ",$(window).scrollTop());
+            } else {
+                // 把下面三行注释掉，让目录不固定。有些目录很长的文章，需要这样
+                $('#toc').css('top',0);
+                $('#toc').css('position','fixed');
+                $('#toc').css('left','35px');
+                // $('#toc').css('right','30px');
+                // console.log("top fixed | toc offset = ", $('#toc').offset().top, "scrollTop = ",$(window).scrollTop());
             }
 
-            function drawPath() {
-        
-                tocItems = [].slice.call( toc.querySelectorAll( 'li' ) );
-        
-                // Cache element references and measurements
-                tocItems = tocItems.map( function( item ) {
-                    var anchor = item.querySelector( 'a' );
-                    var target = document.getElementById( anchor.getAttribute( 'href' ).slice( 1 ) );
-        
-                    return {
-                        listItem: item,
-                        anchor: anchor,
-                        target: target
-                    };
-                } );
-        
-                // Remove missing targets
-                tocItems = tocItems.filter( function( item ) {
-                    return !!item.target;
-                } );
-        
-                var path = [];
-                var pathIndent;
-                
-                tocItems.forEach( function( item, i ) {
-        
-                    var x = item.anchor.offsetLeft - 5,
-                        y = item.anchor.offsetTop,
-                        height = item.anchor.offsetHeight;
-        
-                    if( i === 0 ) {
-                        path.push( 'M', x, y, 'L', x, y + height );
-                        item.pathStart = 0;
-                    }
-                    else {
-                        // Draw an additional line when there's a change in
-                        // indent levels
-                        if( pathIndent !== x ) path.push( 'L', pathIndent, y );
-        
-                        path.push( 'L', x, y );
-        
-                        // Set the current path so that we can measure it
-                        tocPath.setAttribute( 'd', path.join( ' ' ) );
-                        item.pathStart = tocPath.getTotalLength() || 0;
-        
-                        path.push( 'L', x, y + height );
-                    }
-        
-                    pathIndent = x;
-        
-                    tocPath.setAttribute( 'd', path.join( ' ' ) );
-                    item.pathEnd = tocPath.getTotalLength();
-        
-                } );
-        
-                pathLength = tocPath.getTotalLength();
-        
-                sync();
-        
+            if ($(window).scrollTop() + $(window).height() > $('.post-footer').offset().top) {
+                $('#toc').css("visibility","hidden");
+                $('.toc-marker').css("visibility","hidden");
+            } else {
+                $('#toc').css("visibility","visible");
+                $('.toc-marker').css("visibility","visible");
             }
+        },
+
+        drawPath: function(){
+            console.log("调用了 drawPath");
+            tocItems = [].slice.call( toc.querySelectorAll( 'li' ) );
+        
+            // Cache element references and measurements
+            tocItems = tocItems.map( function( item ) {
+                var anchor = item.querySelector( 'a' );
+                var target = document.getElementById( anchor.getAttribute( 'href' ).slice( 1 ) );
+    
+                return {
+                    listItem: item,
+                    anchor: anchor,
+                    target: target
+                };
+            } );
+    
+            // Remove missing targets
+            tocItems = tocItems.filter( function( item ) {
+                return !!item.target;
+            } );
+    
+            var path = [];
+            var pathIndent;
             
-            function fixedTOC() {
-                if ( $('.post-header').outerHeight(true) + 80 > $(window).scrollTop()) {
-                    $('#toc').css('top',$('.post-header').outerHeight(true));
-                    $('#toc').css('position','absolute');
-                    $('#toc').css('left','20px');
-                    //console.log("top absolute | toc offset = ", $('#toc').offset().top, "scrollTop = ",$(window).scrollTop());
-                } else {
-                    // 把下面三行注释掉，让目录不固定。有些目录很长的文章，需要这样
-                    $('#toc').css('top',0);
-                    $('#toc').css('position','fixed');
-                    $('#toc').css('left','35px');
-                    // console.log("top fixed | toc offset = ", $('#toc').offset().top, "scrollTop = ",$(window).scrollTop());
-                }
-
-                if ($(window).scrollTop() + $(window).height() > $('.post-footer').offset().top) {
-                    $('#toc').css("visibility","hidden");
-                    $('.toc-marker').css("visibility","hidden");
-                } else {
-                    $('#toc').css("visibility","visible");
-                    $('.toc-marker').css("visibility","visible");
-                }
-            }
-            function sync() {
-                if (tocItems == null) {
-                    return;
-                }
-                fixedTOC();
-                var windowHeight = window.innerHeight;
-        
-                var pathStart = pathLength,
-                    pathEnd = 0;
-        
-                var visibleItems = 0;
-        
-                tocItems.forEach( function( item ) {
-        
-                    var targetBounds = item.target.getBoundingClientRect();
-        
-                    if( targetBounds.bottom > windowHeight * TOP_MARGIN && targetBounds.top < windowHeight * ( 1 - BOTTOM_MARGIN ) ) {
-                        pathStart = Math.min( item.pathStart, pathStart );
-                        pathEnd = Math.max( item.pathEnd, pathEnd );
-        
-                        visibleItems += 1;
-        
-                        item.listItem.classList.add( 'visible' );
-                    }
-                    else {
-                        item.listItem.classList.remove( 'visible' );
-                    }
-        
-                } );
-        
-                // Specify the visible path or hide the path altogether
-                // if there are no visible items
-                if( visibleItems > 0 && pathStart < pathEnd ) {
-                    if( pathStart !== lastPathStart || pathEnd !== lastPathEnd ) {
-                        tocPath.setAttribute( 'stroke-dashoffset', '1' );
-                        tocPath.setAttribute( 'stroke-dasharray', '1, '+ pathStart +', '+ ( pathEnd - pathStart ) +', ' + pathLength );
-                        tocPath.setAttribute( 'opacity', 1 );
-                    }
+            tocItems.forEach( function( item, i ) {
+    
+                var x = item.anchor.offsetLeft - 5,
+                    y = item.anchor.offsetTop,
+                    height = item.anchor.offsetHeight;
+    
+                if( i === 0 ) {
+                    path.push( 'M', x, y, 'L', x, y + height );
+                    item.pathStart = 0;
                 }
                 else {
-                    tocPath.setAttribute( 'opacity', 0 );
+                    // Draw an additional line when there's a change in
+                    // indent levels
+                    if( pathIndent !== x ) path.push( 'L', pathIndent, y );
+    
+                    path.push( 'L', x, y );
+    
+                    // Set the current path so that we can measure it
+                    tocPath.setAttribute( 'd', path.join( ' ' ) );
+                    item.pathStart = tocPath.getTotalLength() || 0;
+    
+                    path.push( 'L', x, y + height );
                 }
-        
-                lastPathStart = pathStart;
-                lastPathEnd = pathEnd;
-        
-            }        
+    
+                pathIndent = x;
+    
+                tocPath.setAttribute( 'd', path.join( ' ' ) );
+                item.pathEnd = tocPath.getTotalLength();
+    
+            } );
+    
+            pathLength = tocPath.getTotalLength();
+            themeApp.syncTOC();
+        },
+
+        syncTOC: function () {
+            console.log("调用了 syncTOC");
+            if (tocItems == null) {
+                return;
+            }
+            themeApp.fixedTOC();
+            var windowHeight = window.innerHeight;
+            var pathStart = pathLength,
+                pathEnd = 0;
+            var visibleItems = 0;
+            console.log('tocItems = ', tocItems);
+            tocItems.forEach( function( item ) {
+                var targetBounds = item.target.getBoundingClientRect();
+                if( targetBounds.bottom > windowHeight * TOP_MARGIN && targetBounds.top < windowHeight * ( 1 - BOTTOM_MARGIN ) ) {
+                    pathStart = Math.min( item.pathStart, pathStart );
+                    pathEnd = Math.max( item.pathEnd, pathEnd );
+                    visibleItems += 1;
+                    item.listItem.classList.add( 'visible' );
+                }
+                else {
+                    item.listItem.classList.remove( 'visible' );
+                }
+            } );
+            // Specify the visible path or hide the path altogether
+            // if there are no visible items
+            if( visibleItems > 0 && pathStart < pathEnd ) {
+                if( pathStart !== lastPathStart || pathEnd !== lastPathEnd ) {
+                    tocPath.setAttribute( 'stroke-dashoffset', '1' );
+                    tocPath.setAttribute( 'stroke-dasharray', '1, '+ pathStart +', '+ ( pathEnd - pathStart ) +', ' + pathLength );
+                    //tocPath.setAttribute( 'opacity', 1 );
+                }
+            }
+            else {
+                //tocPath.setAttribute( 'opacity', 0 );
+            }
+    
+            lastPathStart = pathStart;
+            lastPathEnd = pathEnd;
         },
 
         initTOC: function() {
@@ -584,7 +574,7 @@
             $('#toc').initTOC({
                 selector: "h2, h3, h4, h5, h6",
                 scope: "article",
-                overwrite: false,
+                overwrite: true,
                 prefix: "toc"
             });
         },
@@ -608,7 +598,7 @@
         }
     };
     /*===========================
-    2. Initialization
+    3. Initialization
     ===========================*/
     $(document).ready(function () {
         themeApp.init();
@@ -834,6 +824,10 @@
             $(document).ready(function() {
                 console.log("document ready 了么？");
                 update();
+                if (toc != null) {
+                    console.log("document ready 中调用了 syncTOC");
+                    themeApp.syncTOC();
+                }
             });
 
             return this;
