@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{@site.lang}}">
+<html lang="{{@site.locale}}">
 	<head>
 		{{! Document Settings }}
 		<meta charset="UTF-8">
@@ -48,9 +48,6 @@
 		</main>
         {{! insert footer partial}}
         {{> footer}}
-		{{#if @labs.members}}
-		{{> members/notifications}}
-		{{/if}}
 		{{! scripts}}
         <script async="async">
 			var searchApi = "{{@site.url}}/ghost/api/v3/content/posts/?key={{>api-key}}&limit=all&fields=id,title,excerpt,custom_excerpt,url,published_at&formats=plaintext";

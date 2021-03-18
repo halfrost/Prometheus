@@ -15,19 +15,6 @@
     </div>
     <div class="container-fluid" style="width: 80%">
         <div class="row">
-            {{!-- <div class="col">
-                {{#if @labs.members}}
-                {{^if @member}}
-                {{#is "index, post, page, tag, author"}}
-                {{> subscription}}
-                {{/is}}
-                {{/if}}
-                {{/if}}
-                {{> social-links}}
-                <div class="copyright">
-                    &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a> - {{{t "Published with {ghostLink}" ghostLink="<a href=\"https://ghost.org/\">Ghost</a>"}}}
-                </div>
-            </div> --}}
             {{> widgets/footer-tags}}
             {{> widgets/footer-about}}
             {{> widgets/footer-newsletter}}

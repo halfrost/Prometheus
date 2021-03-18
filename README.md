@@ -363,7 +363,7 @@ Open `default.hbs` file from your theme folder.
 Add `data-theme="light"` in the html tag at line number 2. So that the line will become like below.
 
 ```
-<html lang="{{@site.lang}}" data-theme="light">
+<html lang="{{@site.locale}}" data-theme="light">
 ```
 
 ## Theme Translation
