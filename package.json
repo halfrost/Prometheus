@@ -3,10 +3,9 @@
     "description": "Minimal personal blog theme",
     "demo": "http://advant.gbjsolution.com",
     "homepage": "https://halfrost.com",
-    "version": "4.0.1",
+    "version": "5.0.0",
     "engines": {
-        "ghost": ">=4.0.0",
-        "ghost-api": "v4"
+        "ghost": ">=4.0.0"
     },
     "screenshots": {
         "desktop": "assets/screenshot-desktop.jpg",
@@ -34,6 +33,9 @@
     ],
     "config": {
         "posts_per_page": 6,
+        "card_assets": {
+            "exclude": ["bookmark", "gallery"]
+        },
         "image_sizes": {
             "s": {
                 "width": 300

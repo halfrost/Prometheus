@@ -2,8 +2,15 @@
     <div class="table-header text-center">
         <h3 class="pricing-table-title">{{t "Monthly"}}</h3>
         <div class="price">
-            <span class="currency">$</span><span class="value">{{@price.monthly}}</span>
-            <span class="duration">{{t "/ Month"}}</span>
+            {{#get "tiers" include="monthly_price" limit="all" as |tiers|}}
+            	{{! Loop through our tiers collection }}
+            	{{#foreach tiers}}
+            		{{#if monthly_price}}
+            			<span class="currency">$</span><span class="value">{{price monthly_price currency=currency}}</span>
+            			<span class="duration">{{t "/ Month"}}</span>
+            		{{/if}}
+            	{{/foreach}}
+            {{/get}}
         </div>
     </div>
     <ul class="table-details">
