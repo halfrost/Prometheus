@@ -34,7 +34,10 @@
     "config": {
         "posts_per_page": 6,
         "card_assets": {
-            "exclude": ["bookmark", "gallery"]
+            "exclude": [
+                "bookmark",
+                "gallery"
+            ]
         },
         "image_sizes": {
             "s": {
@@ -63,14 +66,15 @@
         "gulp-plumber": "^1.2.1",
         "gulp-postcss": "^8.0.0",
         "gulp-rename": "^1.4.0",
-        "gulp-sass": "^4.1.0",
+        "gulp-sass": "^5.1.0",
         "gulp-uglify": "^3.0.2",
         "gulp-wait": "0.0.2",
         "gulp-zip": "^5.0.2",
         "jshint": "^2.11.1",
         "jshint-stylish": "^2.2.1",
         "merge2": "^1.4.1",
-        "postcss-css-variables": "^0.13.0"
+        "postcss-css-variables": "^0.13.0",
+        "sass": "^1.77.1"
     },
     "dependencies": {
         "localtunnel": "^2.0.1"
